@@ -5,9 +5,15 @@ linkcolor: blue
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   pdf_document:
+    includes:
+      in_header: preamble.tex
+      before_body: before_body.tex
+      after_body: after_body.tex
     number_sections: true
     toc: true
     toc_depth: 3
+
+
 
 ---
 
@@ -16,13 +22,14 @@ library("reticulate")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+\pagenumbering{gobble}
 \newpage
+\pagenumbering{arabic} 
 
 
 # Welcome
 
-Welcome to the [**Spatial Cognition and Navigational Neuroscience**](scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
+Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
 
 Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! 
 
@@ -30,14 +37,20 @@ This lab manual is an introduction to how we do work and science in the SCANN la
 
 It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
 
-Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [here](https://github.com/ContextLab/lab-manual), [here](https://handbook-public.themusiclab.org/welcome),  [here](https://github.com/alylab/labmanual), and [here] (https://github.com/jpeelle/peellelab_manual/). 
+Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [here](https://github.com/ContextLab/lab-manual), [here](https://handbook-public.themusiclab.org/welcome),  [here](https://github.com/alylab/labmanual), and [here](https://github.com/jpeelle/peellelab_manual/). 
+
+You can also find SCANN lab: 
+
+- [On the web](https://scannlab.psych.ufl.edu)
+- [On Twitter](https://twitter.com/scannlab)
+- [On Github](https://github.com/scann-lab)
+- [On Open Science Framework](https://osf.io/4hbgz)^[You will also find our lab wiki here.]
 
 
+# Bill of Rights and Responsibilities
 
 * **Work with care**. 
 * **Our goal is research products**
-
-# Bill of Rights and Responsibilities
 
 # Lab Policies, Practices, and Expectations
 
