@@ -24,6 +24,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Welcome to the [**Spatial Cognition and Navigational Neuroscience**](scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
 
+Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! 
+
+This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started.
+
+It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
+
+Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [here](https://github.com/ContextLab/lab-manual), [here](https://handbook-public.themusiclab.org/welcome),  [here](https://github.com/alylab/labmanual), and [here] (https://github.com/jpeelle/peellelab_manual/). 
+
+
+
+* **Work with care**. 
+* **Our goal is research products**
+
 # Bill of Rights and Responsibilities
 
 # Lab Policies, Practices, and Expectations
