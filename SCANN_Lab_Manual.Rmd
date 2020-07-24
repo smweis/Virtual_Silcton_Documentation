@@ -9,7 +9,7 @@ output:
       after_body: after_body.tex
       before_body: before_body.tex
       in_header: preamble.tex
-    latex_engine: xelatex
+    latex_engine: pdflatex
     number_sections: yes
     toc: yes
 mainfont: Cambria
@@ -19,6 +19,7 @@ fontsize: 12pt
 ```{r setup, include=FALSE}
 library("reticulate")
 knitr::opts_chunk$set(echo = TRUE)
+knitr::include_graphics("./SCANN_Lab_Logo_NoOutline_With_Text.png")
 ```
 
 \pagenumbering{gobble}
@@ -30,9 +31,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
 
-Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started.It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
+Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started. It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
 
-
+![Lab logo](./SCANN_Lab_Logo_NoOutline_With_Text.png)
 
 Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [here](https://github.com/ContextLab/lab-manual), [here](https://handbook-public.themusiclab.org/welcome),  [here](https://github.com/alylab/labmanual), and [here](https://github.com/jpeelle/peellelab_manual/). 
 
@@ -46,28 +47,29 @@ You can also find SCANN lab:
 
 # Bill of Rights and Responsibilities
 
-In the SCANN lab, we practice careful, deliberate, open science. This means that you are 
+In the SCANN lab, we practice careful, deliberate, open science. This means that every person in the lab has a responsibility to make sure their projects are well-documented, reproducible, and undertaken with an eye toward the future. The following are a few more specific guidelines.
 
+## Responsibilities
+* **You are a team member first**
+  As a lab, we can only thrive by relying and counting on each other. Treat everyone in the lab (and anyone related to the lab, including participants, collaborators, mentors) with respect and care. Respect their time, their preferred hours, and their needs. Help them when they ask (within reason), and help build a culture of respect and honesty. 
 * **Work with care**. 
+  Measure twice, cut once. Document your workflows. Save and backup all raw data and code (on a minimum of two of these locations: Hipergator, Dropbox, OneDrive). In preparation phase, make sure everything is clearly labeled, and the experimental paradigm captures data as expected. It is best practice to write analysis code on simulated or pilot data as proof of principle and good sanity checking. In the experiment phase, make sure raw data are being regularly backed up. In the analysis phase, make sure difficult-to-reproduce products are also backed up, and that all analyses are reproducible and documented. In the submission phase, all materials should be able to uploaded to OSF, OpenNeuro, or another online repository in preparation for submission. 
 * **Our goal is research products**
+  Posters, presentations, and publications are the traditional academic products, and you will be expected to produce or contribute to these as a member of the lab. But we also value contributions of: data sets (documented and described), software packages (and analysis pipelines), and 'reproducible sandboxes' (Jupyter Notebooks). These research products are rarely peer-reviewed, but provide invaluable tools for the broader research world and their creation is not taken lightly. 
+
+## Rights
+* **You have the right to a work environment free from prejudice, bias, harrassment, and discrimination**  
 
 # Lab Policies, Practices, and Expectations
+
+## General Policies: 
+
+
+
+## Resources
+
+
 
 # Checklist and Signature Page
 
 
-
-
-## Including Code
-
-You can include R code in the document as follows:
-
-### Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
