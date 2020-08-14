@@ -5,6 +5,9 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   bookdown::gitbook:
     split_by: section
+    output_dir: "docs"
+    book_filename: "SCANN_Lab_Manual.Rmd"
+    delete_merged_file: false
   pdf_document:
     includes:
       after_body: after_body.tex

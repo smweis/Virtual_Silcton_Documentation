@@ -1,0 +1,6 @@
+book_filename: "SCANN_Lab_Manual"
+repo: https://github.com/Scann-Lab/Lab_Manual
+output_dir: docs
+rmd_files: ["SCANN_lab_Manual.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
