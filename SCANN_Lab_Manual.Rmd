@@ -3,11 +3,8 @@ title: "SCANN Lab Manual"
 author: "Steven M. Weisberg, PhD"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    df_print: paged
-    toc: yes
-    toc_float: true
-    numbered_sections: false  
+  bookdown::gitbook:
+    split_by: section
   pdf_document:
     includes:
       after_body: after_body.tex
@@ -36,6 +33,8 @@ knitr::include_graphics("./SCANN_Lab_Logo_NoOutline_With_Text.png")
 
 Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg. If you'd like to view this lab manual as a website, check it out [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Scann-Lab/Lab_Manual/master/SCANN_Lab_Manual.html?token=ABQDV4GZIYQLZUIZH3EPDO27H7JBC).
 
+If you are new to the lab, your first job is to read through this manual, then go through the [Onboarding checklist]. 
+
 Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started. It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
 
 ![Lab logo](./SCANN_Lab_Logo_NoOutline_With_Text.png)
@@ -47,7 +46,9 @@ You can also find SCANN lab:
 - [On the web](https://scannlab.psych.ufl.edu)
 - [On Twitter](https://twitter.com/scannlab)
 - [On Github](https://github.com/scann-lab)
-- [On Open Science Framework](https://osf.io/4hbgz)^[You will also find our lab wiki here.]
+- [On Open Science Framework](https://osf.io/4hbgz)[^OSF]
+
+[^OSF]: You will also find our lab wiki here.
 
 
 # Working in the lab
@@ -183,15 +184,88 @@ Undergraduate research assistants are expected to:
 ## Undergraduate Honors Students (TBD)
 Section under construction
 
+# Doing Science in the SCANN Lab
+
+The SCANN lab is committed to open science, careful work practices, and multi-disciplinary shenanigans! What does this mean? There are three inter-related areas that are important to our approach. 
+
+## Open science
+
+1. Data, material, and code from all projects will be hosted publicly and shared[^Within a reasonable timeframe; obviously, nothing will be shared before we are ready to publish or while we are working through the data]. In practice, this means projects will be hosted on one or all of the following sources: [OSF](osf.io), [Figshare](figshare.com), [OpenNeuro.org](OpenNeuro.org), [Github](github.com). 
+
+2. Projects will, whenever possible, be **pre-registered**. In practice, this means nearly all projects will be pre-registered in some form. Pilot projects may be the exception. See guides on [OSF](https://osf.io/prereg/) and [Aspredicted.org](aspredicted.org). 
+
+3. Papers will be made available in pre-print form (e.g., [biorxiv](biorxiv.org), [psyarxiv](https://psyarxiv.com/)). 
+
+## Data management
+
+1. Data you collect in the lab will be backed up in two of these three locations (in addition to your local computer): 
+  * UF Onedrive (folder shared with lab manager and/or Dr. Weisberg)
+  * UF Hipergator (/orange)
+  * Lab hard drives
+  
+2. Raw data MUST be backed up and not touched following lab protocols (with Readme.md documentation). Always work on a copy of the raw data when conducting analyses. 
+
+3. De-identified or anonymized raw data may also be hosted online for sharing. For fMRI data, structural scans must be de-faced (https://pypi.org/project/pydeface/). 
+
+## Careful work 
+
+You will hear me use the term Sanity Check. We should all strive to be a little bit obsessive about our data and analyses. Mistakes absolutely happen, but we should do as much as we can to prevent them and detect them. The following practices have helped me immensely. 
+
+* Develop a habit of documenting everything you do the *second time you do it*. (Why the second time? If you do it the first time, you may never do it again. If you do it a second time, you will almost certainly need to do it a third - it is now likely worth the time to document it). 
+
+* Use the [Lab Wiki](https://osf.io/d8ke4/). 
+
 # Communication 
 
+Science, especially as practiced in the SCANN Lab, is a collaborative endeavor, which means good communication is key. Here are the main ways the lab communicates.
+
+One thing we often forget about is communicating with ourselves. This means *good documentation* so people don't have to reinvent the wheel. We will follow 
+
 ## Lab meeting
+Lab meetings are held weekly during the semester (time TBD) and intermittently through the summer. Lab meetings are approximately two hours long. The first ~20-30 minutes consist of lab updates in which each lab member briefly (5 minutes or so) explains what constituted the bulk of their work that week; what progress was made, what hurdles were hit; and any general info they encountered relevant to the lab. The remaining 1-1.5 hours is provided for one lab member to give a presentation. The presentation can range widely (almost all formats are acceptable). Here are a few examples: 
+
+* A journal club / discussion of an article
+
+* A project proposal / plan
+
+* A discussion about a general issue in science (e.g., preregistration, p-hacking, etc.)
+
+* Technique or tutorial (relevant to almost anything in the lab - e.g., Git or how head direction cells work; an MVPA crash course or how to organize folders for a project)
+
+* A data talk (e.g., where you have data but need help thinking through what it means, what to do next, or what you might not have thought of)
+
+* A polished (practice) presentation or job talk
 
 ## In-person meetings
 
+In-person meetings (in person or via Zoom) are a great way to work directly and solve a particular problem or make a plan of action. But they are also usually very time-intensive. Lab members may have regularly scheduled meetings with me during the semester, but anyone should always feel free to schedule a meeting. Before asking about a meeting, however, ask yourself three things: 
+
+1. Could this be solved via email? 
+  If yes, send email. If no...
+
+2. What is the purpose of the meeting? (In other words, what is the agenda?) Make sure the purpose is in the email to schedule it. 
+
+3. What are the necessary inputs to the meeting? (Do we have all information we need to facilitate the meeting; if not, what are we waiting for? Are all necessary people involved?) 
+
+4. What are the expected outputs? Always ask yourself at the end of the meeting whether you know what the action items are (who will do what). 
+
 ## Slack
 
+Our lab [Slack](scannlab.slack.com) is the source for daily lab communication. Our communication via Slack takes three forms. 
+
+* Easy instant messaging (@everyone; @steve weisberg)
+
+* Communication about a particular topic. This is the purpose for channels. (#neurofeedback, #lab-purchasing). Feel free to start your own channel about a specific topic. Don't forget to invite the relevant people! 
+
+* Updates and integration with other services. Check out integrations with Google Calendar, Github, Trello, and more!
+
+## Trello
+
+Our lab to-do lists. The [Onboarding checklist] is on Trello. I recommend that everyone use Trello as their own to-do list manager, but I would strongly encourage using the shared to-do list feature for projects we're working on. Note that cards can be assigned due dates and assigned to specific people, who can indicate when they are finished particular tasks. 
+
 ## Email 
+
+Official communication, notifications, etc. I sometimes use interchangeably via Slack. The one difference is any communication regarding participants absolutely needs to happen through UF email. 
 
 # Resources
 
@@ -250,6 +324,6 @@ Active members of the lab would do well to track the literature on their own. He
 
 
 
-# Checklist and Signature Page
+# Onboarding checklist
 
 
