@@ -54,7 +54,7 @@ You can also find SCANN lab:
 [^OSF]: You will also find our lab wiki here.
 
 
-# Working in the lab
+## Working in the lab
 
 In the SCANN lab, we practice careful, deliberate, open science. This means that every person in the lab has a responsibility to make sure their projects are well-documented, reproducible, and undertaken with an eye toward the future. The following are a few more specific guidelines.
 
@@ -84,7 +84,7 @@ Work with care. Measure twice, cut once. Document your workflows. Save and backu
 * **Our goal is research products**
   Posters, presentations, and publications are the traditional academic products, and you will be expected to produce or contribute to these as a member of the lab. But we also value contributions of: data sets (documented and described), software packages (and analysis pipelines), and ‘reproducible sandboxes’ (Jupyter Notebooks). These research products are rarely peer-reviewed, but provide invaluable tools for the broader research world and their creation is not taken lightly.
 
-# Personnel Expectations {.tabset}
+## Personnel Expectations {.tabset}
 
 ## PI
 * I am responsible for the overall lab vision and direction. This mainly includes developing project ideas and obtaining lab funding. But on a daily basis, it also means I am responsible for ensuring the lab produces research products. 
@@ -187,7 +187,7 @@ Undergraduate research assistants are expected to:
 ## Undergraduate Honors Students (TBD)
 Section under construction
 
-# Doing Science in the SCANN Lab
+## Doing Science in the SCANN Lab
 
 The SCANN lab is committed to open science, careful work practices, and multi-disciplinary shenanigans! What does this mean? There are three inter-related areas that are important to our approach. 
 
@@ -218,7 +218,7 @@ You will hear me use the term Sanity Check. We should all strive to be a little 
 
 * Use the [Lab Wiki](https://osf.io/d8ke4/). 
 
-# Communication 
+## Communication 
 
 Science, especially as practiced in the SCANN Lab, is a collaborative endeavor, which means good communication is key. Here are the main ways the lab communicates.
 
@@ -270,7 +270,7 @@ Our lab to-do lists. The [Onboarding checklist] is on Trello. I recommend that e
 
 Official communication, notifications, etc. I sometimes use interchangeably via Slack. The one difference is any communication regarding participants absolutely needs to happen through UF email. 
 
-# Resources
+## Resources
 
 ## General Lab
 
@@ -327,6 +327,6 @@ Active members of the lab would do well to track the literature on their own. He
 
 
 
-# Onboarding checklist
+## Onboarding checklist
 
 
