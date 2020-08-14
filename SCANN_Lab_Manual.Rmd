@@ -34,7 +34,7 @@ knitr::include_graphics("./SCANN_Lab_Logo_NoOutline_With_Text.png")
 
 # Welcome
 
-Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
+Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg. If you'd like to view this lab manual as a website, check it out [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Scann-Lab/Lab_Manual/master/SCANN_Lab_Manual.html?token=ABQDV4GZIYQLZUIZH3EPDO27H7JBC).
 
 Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started. It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack). 
 
@@ -50,7 +50,7 @@ You can also find SCANN lab:
 - [On Open Science Framework](https://osf.io/4hbgz)^[You will also find our lab wiki here.]
 
 
-# All Lab Members
+# Working in the lab
 
 In the SCANN lab, we practice careful, deliberate, open science. This means that every person in the lab has a responsibility to make sure their projects are well-documented, reproducible, and undertaken with an eye toward the future. The following are a few more specific guidelines.
 
@@ -64,10 +64,15 @@ We have a strong focus on inclusion, diversity, and a harassment-free workplace.
 
 * **You have the right to criticize ideas.** You are expected to criticize your own ideas! But you should also think critically about the ideas of others (including and perhaps especially Dr. Weisberg.) And, when you criticize an idea: focus your criticism on the idea not on the person who came up with (including yourself!)
 
+* **You have the right to maintain a healthy work-life balance.** I hope that you love working in the lab, but this does not mean slavish devotion ;). 
+
 ## Responsibilities
 * **All lab members will prioritize a healthy and supportive lab culture.** 
-  The SCANN lab is deeply committed to maintaining a harrassment-free and inclusive culture. All lab members are expected to treat each other with respect, professionalism, and general courtesy. We strive for diversity, anti-racism, and inclusivity. Some guiding principles are [here](https://coco-net.org/wp-content/uploads/2019/11/Coco-WhiteSupCulture-ENG4.pdf). We also follow [UF harrassment policy](https://hr.ufl.edu/forms-policies/policies-managers/sexual-harassment/). 
-  
+  The SCANN lab is deeply committed to maintaining a harrassment-free and inclusive culture. All lab members are expected to treat each other with respect, professionalism, and general courtesy. This also means you have a responsibility to ensuring you maintain a healthy work-life balance (whatever this means for you). We strive for diversity, anti-racism, and inclusivity. Some guiding principles are [here](https://coco-net.org/wp-content/uploads/2019/11/Coco-WhiteSupCulture-ENG4.pdf). We also follow [UF harrassment policy](https://hr.ufl.edu/forms-policies/policies-managers/sexual-harassment/). 
+
+* **This is a professional work environment.** 
+We keep things professional both for ourselves and especially when we interact with people outside of the lab and *most especially* participants. We owe our participants a huge debt of gratitude, regardless of their compensation, because they are taking the time to provide us with their data. Treat each one with the utmost respect and care. Professionalism means appropriate dress and respectful demeanor (cursing, loud music, messiness discouraged). Professionalism also means upholding your commitments - being on time for your shifts; cleaning up after yourself; sticking to deadlines. It also means communicating effectively. (To reiterate - you can make mistakes! Professionalism means communicating about them when you do!) Lastly, professionalism means appropriateness in all things (including humor; off-color jokes or jokes at the expense of others will not be tolerated). This applies for all times you're at work, but again *especially* when running participants. Finally - professionalism does NOT MEAN no fun! Work should absolutely be fun in a way that is fun for everyone!  
+
 * **You are a team member first.**
   As a lab, we can only thrive by relying and counting on each other. Treat everyone in the lab (and anyone related to the lab, including participants, collaborators, mentors) with respect and care. Respect their time, their preferred hours, and their needs. Help them when they ask (within reason), and help build a culture of respect and honesty.
 Work with care. Measure twice, cut once. Document your workflows. Save and backup all raw data and code (on a minimum of two of these locations: Hipergator, Dropbox, OneDrive). In preparation phase, make sure everything is clearly labeled, and the experimental paradigm captures data as expected. It is best practice to write analysis code on simulated or pilot data as proof of principle and good sanity checking. In the experiment phase, make sure raw data are being regularly backed up. In the analysis phase, make sure difficult-to-reproduce products are also backed up, and that all analyses are reproducible and documented. In the submission phase, all materials should be able to uploaded to OSF, OpenNeuro, or another online repository in preparation for submission.
@@ -82,19 +87,166 @@ Work with care. Measure twice, cut once. Document your workflows. Save and backu
 * I am responsible for contributing to the professional development of all lab members. I will try to prioritize this depending on the goals of each individual, but the better we can communicate about your goals, the more successful I will be in this regard. 
 * I will support your general education in psychology, broader education in related fields, and specific education in the cognitive neuroscience of spatial navigation. 
 * I will contribute to all ongoing projects in the form of: commenting on written drafts, presentations, and posters; helping develop and troubleshoot analyses; ensuring all resources needed for a project are available; providing opportunities for networking, collaboration, and professional development; designing and implementing experiments and protocols; helping manage the lab infrastructure (including analysis pipelines, data backup, and data storage). 
+* I will support the physical and mental health and safety of everyone in the lab. 
 
 ## PhD Students
-  PhD students are expected 
+In general PhD students have a fairly loose leash as long as they are making progress on projects. In practice, this likely means there will crunch times where you're working hard to get things done and lighter times, when you can take it easy. Please let the PI know, though, if you plan to take extended time off (more than a few days).
+
+PhD students are expected to: 
+
+* Develop and manage an independent project. 
+
+* Know the literature and learn the skills related to their project. 
+
+* Have a strong grasp of (nearly all aspects of) cognitive neuroscience; a breadth of knowledge from areas closely related (psychology, mostly); and a familiarity with related disciplines (biology, anthropology, philosophy, etc.)
+
+* Grow skills in writing, data analysis, experiment administration and protocols, and presentation. 
+
+* Generate (ideally and roughly) one research product per year in the lab. 
+
+* Seek out opportunities for awards (fellowships, travel awards)
+
+* Advocate for what they think and what they need to do their jobs
+
+* Develop (or maintain) healthy work habits and a good balance.
 
 ## Lab Manager
+The lab manager should have a more regular schedule to ensure a stability in the lab. Due to the nature of OPS positions at UF, 8 hours per day is expected, and these hours should occur roughly between 8am and 6pm. There will be exceptions to this - weekend or late night fMRI scanning sessions come to mind - and these hours can be 'made up for' during the week. Time off requests can be somewhat informal, but should be submitted to the PI in writing so we have a record of such things. 
 
-## Undergraduate Research Assistants (PSY4911)
+The Lab Manager is expected to: 
 
-## General Policies: 
+* Facilitate lab business, including: 
 
+  * Recruiting participants
 
+  * Organizing and documenting data storage and backups
 
-## Resources
+  * Updating the lab website and Twitter
+
+* Facilitate projects, including: 
+
+  * Managing human subject payments
+
+  * IRB protocol updates
+
+  * Putting projects online (via Prolific, M-Turk, Pavlovia, etc.)
+
+  * Running experiments
+
+* Contribute to their own project (this will depend on the particular person, but all lab managers will have the opportunity to work on their own research project(s)).
+
+* Develop and maintain code, including: 
+
+  * Lab github
+
+  * Lab Hipergator account(s)
+
+  * Virtual Silcton
+
+* Develop and maintain documentation, including: 
+
+  * Lab experimental and consent protocols
+
+  * fMRI administration checklists
+
+  * Virtual Silcton website administration protocols
+
+  * fMRI pipelines and data analysis
+
+## Undergraduate RAs (PSY4911)
+Undergraduate research assistants help with research duties. But, especially if this is your first time working in a research lab, you should not just blindly go about your work and do what your told. Look for ways you can actively contribute to the lab. This includes generating your own ideas, but also developing your own skills. You should not have empty time in the lab, but rather pick a skill you're interested in learning (consult with your grad mentor or Dr. Weisberg if necessary), and spend your free lab time teaching yourself. 
+
+Undergraduate research assistants are expected to:
+
+* Work in the lab 3-hours per credit per week; the general minimum is 9-hours per week (though the number of credits can be less than 3)
+
+* Contribute to a project, including: 
+  
+  * Recruiting participants
+  
+  * Running participants 
+  
+  * Developing a project (collecting stimuli, coding the study)
+  
+  * Coding data
+  
+  * Analyzing data (to some extent)
+  
+* Develop their own skills, including: 
+
+  * Knowledge of fMRI
+  
+  * Ability to code in Python, R, Matlab, and C# (Unity3D). 
+  
+  * Knowledge of the literature of cognitive neuroscience as pertains to their projects.
+  
+## Undergraduate Honors Students (TBD)
+Section under construction
+
+# Communication 
+
+## Lab meeting
+
+## In-person meetings
+
+## Slack
+
+## Email 
+
+# Resources
+
+## General Lab
+
+### RMarkdown
+
+* This lab manual is written in RMarkdown. If you'd like to contribute, you should! 
+
+### Zotero
+
+## Literature
+
+Below are a few seminal lists of readings that any lab member can start with. Pick a topic and dive in. 
+
+Active members of the lab would do well to track the literature on their own. Here a few tips for doing so: 
+
+* Set up Google Scholar alerts 
+
+* Set up Feedly and integrate that with journals you read regularly
+
+* Become active on Cog. Neuro Twitter (seriously, I find way more articles that I actually read in this way than the other two methods!)
+
+### Cognitive Neuroscience
+
+### fMRI
+
+### Spatial Navigation 
+
+## Coding
+
+### General 
+
+* Git
+
+* Bash
+
+* Tools
+  
+  * Anaconda for Python
+  
+  * Atom editor
+
+### fMRI
+
+* 
+
+### Unity3D
+
+### R
+
+### Python
+
+### Matlab
+
 
 
 
