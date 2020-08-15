@@ -1,0 +1,30 @@
+# Doing Science in the SCANN Lab
+
+The SCANN lab is committed to open science, careful work practices, and multi-disciplinary shenanigans! What does this mean? There are three inter-related areas that are important to our approach.
+
+## Open science
+
+1. Data, material, and code from all projects will be hosted publicly and shared[^Within a reasonable timeframe; obviously, nothing will be shared before we are ready to publish or while we are working through the data]. In practice, this means projects will be hosted on one or all of the following sources: [OSF](osf.io), [Figshare](figshare.com), [OpenNeuro.org](OpenNeuro.org), [Github](github.com).
+
+2. Projects will, whenever possible, be **pre-registered**. In practice, this means nearly all projects will be pre-registered in some form. Pilot projects may be the exception. See guides on [OSF](https://osf.io/prereg/) and [Aspredicted.org](aspredicted.org).
+
+3. Papers will be made available in pre-print form (e.g., [biorxiv](biorxiv.org), [psyarxiv](https://psyarxiv.com/)).
+
+## Data management
+
+1. Data you collect in the lab will be backed up in two of these three locations (in addition to your local computer):
+  * UF Onedrive (folder shared with lab manager and/or Dr. Weisberg)
+  * UF Hipergator (/orange)
+  * Lab hard drives
+
+2. Raw data MUST be backed up and not touched following lab protocols (with Readme.md documentation). Always work on a copy of the raw data when conducting analyses.
+
+3. De-identified or anonymized raw data may also be hosted online for sharing. For fMRI data, structural scans must be de-faced (https://pypi.org/project/pydeface/).
+
+## Careful work
+
+You will hear me use the term Sanity Check. We should all strive to be a little bit obsessive about our data and analyses. Mistakes absolutely happen, but we should do as much as we can to prevent them and detect them. The following practices have helped me immensely.
+
+* Develop a habit of documenting everything you do the *second time you do it*. (Why the second time? If you do it the first time, you may never do it again. If you do it a second time, you will almost certainly need to do it a third - it is now likely worth the time to document it).
+
+* Use the [Lab Wiki](https://osf.io/d8ke4/).

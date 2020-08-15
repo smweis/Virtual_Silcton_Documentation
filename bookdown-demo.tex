@@ -1,0 +1,2888 @@
+\documentclass[12pt,]{book}
+\usepackage{lmodern}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Lab Handbook},
+            pdfauthor={Candice Morey},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Lab Handbook}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Candice Morey}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-10-27}
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Joining a lab}\label{joining-a-lab}
+
+\begin{quote}
+No man is an island,
+
+Entire of itself,
+
+Every man is a piece of the continent,
+
+A part of the main.
+
+--- John Donne
+\end{quote}
+
+Although you will be familiar with the names of a handful of scientific
+heroes, science does not actually advance from the rapid insights of
+rare geniuses. Scientific knowledge accumulates through the consistent,
+often painstaking, efforts of groups of people. Across the world, webs
+of laboratories focusing on related topics work toward the common goal
+of understanding human memory and communicating how best to use our
+emerging knowledge to improve peoples' lives. You have opened this
+manual because you have joined one such group. The purpose of this
+manual is to help you understand your role in this endeavor and how to
+contribute in a way that makes your work maximally useful both to your
+local colleagues, your international colleagues, and the public, both
+now and branching into the future.
+
+Joining a lab is about taking what you have to offer - your intellect,
+your skills, your diligence - and transforming them into new
+information. This is not just about you working for the lab: the lab
+also helps you acquire new skills, start your work from a more advanced
+point than you would be capable of on your own, and eventually boost the
+signal for transmitting the knowledge you helped create. Everyone
+contributing to the lab's functioning - undergraduate researchers just
+starting out, early career researchers, university support staff, the
+principal investigator - plays a vital role in this effort. To maximize
+the utility of the work we all do, it is crucial for everyone to:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Know where to find information about the lab and the procedures we
+  follow
+\item
+  Use the common conventions and procedures we have established
+\item
+  Propose and implement improvements to this workflow as new, better
+  methods become available
+\item
+  Communicate clearly and openly about our work
+\end{enumerate}
+
+Lab procedures have been designed to ensure that the effort you put into
+your lab work goes as far as possible. Implementing these procedures may
+require learning something you don't currently know how to do, or doing
+a task a bit differently than you have done in another lab. We have
+examples and support available to help you manage this and learn
+quickly. No one should need to re-invent anything in this lab that can
+be copied and modified. You will not be starting your work from scratch,
+but with at least some building blocks that other researchers have
+prepared before.
+
+\section{Hierarchy}\label{hierarchy}
+
+\subsection{Our core team}\label{our-core-team}
+
+Labs naturally have a hierarchy. While there is no unimportant work in
+the lab (it's all important), there is some work that requires a mature
+knowledge of the literature and a bird's eye view of our international
+colleagues' latest work. The \textbf{\emph{PI}} (for Principal
+Investigator) and more senior research assistants are more likely to
+have this perspective. The most senior staff are also the most
+permanent, and will know the most about what we have done before, what
+other labs looking at similar topics are doing right now, and what the
+most glaring gaps in our knowledge about human memory are. The PI in
+particular will be the person most likely to be able to see how all the
+projects in the lab relate to each other and to other contemporary
+research, to see opportunities for publishing individual pieces of
+research or combining apparently different strains of research into a
+single article. The PI's ability to do this well depends on everyone's
+good documentation of their work and open communication about it.
+Ensuring that the state of your project is always discoverable to the PI
+increases the chances that it can form part of an important
+communication, which benefits everyone involved.
+
+\textbf{\emph{Post-docs}} (for post-doctoral researchers) have already
+earned their PhD, but have not yet started their own lab. Post-docs work
+here in order to learn more about working memory, get a bit more
+research experience and more publications, or learn about a method that
+they did not have the chance to learn about during their post-graduate
+studies. We are currently trying to secure funding to offer
+post-doctoral researchers the chance to work on particular projects, but
+we would also be interested in hosting post-doctoral researchers who
+want to apply for their own funding to work at Cardiff University on
+something related to working memory. Interested people should contact
+Candice Morey
+(\href{mailto:MoreyC@cardiff.ac.uk}{\nolinkurl{MoreyC@cardiff.ac.uk}})
+to discuss ideas for proposals.
+
+Post-docs are the most senior members of the lab after the PI. Depending
+on their mission, they might be working on their own project related to
+the lab's aims, or they might be leading a project that the PI secured
+funding for. They have experience working in other labs, and can bring
+their knowledge to our procedures and help us improve them.
+
+\textbf{\emph{Postgraduate Researchers}} (PGRs) are undertaking lab work
+as part of their preparation of a postgraduate thesis. PGRs are usually
+PhD students working for 3 years, or maybe 1 + 3 years if their funding
+also includes a year of MSc study. PGRs' main priority is completing a
+coherent body of research for their thesis. All of the research they
+undertake for that project could end up being published on its own, but
+pieces could also be integrated into other lab projects. This is one
+reason cross-project continuity is important. PGRs will usually move on
+to a research job elsewhere once their education is complete. At that
+point, research they carried out that hasn't been published yet may not
+be their top priority, and the PI and post-docs can be helpful in
+ensuring that unfinished strands of work continue to flourish.
+
+PGRs may also be paid researchers carrying out designated, funded
+laboratory work. For most intents, temporary paid PGRs play similar
+roles to PhD students, but paid PGRs will be expected to work on
+multiple projects, as hours permit. Paid PGRs will have the chance to be
+involved deeply in projects, and may have the opportunity to take
+ownership of a line of research. Unlike PhD students, paid PGR time may
+be re-directed by the PI to deal with urgent work, like collecting data
+needed for an invited revision.
+
+\textbf{\emph{Undergraduate Researchers}} (UGRs) are a diverse group of
+students with a variety of reasons for joining the lab. Some will join
+the lab to carry out their final-year project, and will be active lab
+members from 1 October until 30 April of a single academic year. Others
+might be visiting students (on Erasmus fellowships or an internship
+scheme) working for a set period as long as a calendar year. Others
+might be working for a short period during the summer (e.g., on a CUROP
+fellowship). Most UGRs are involved for less than a year, and therefore
+must be integrated into a larger project. UGRs learn basic research
+skills working in the lab, and if involved in a self-contained project
+(like a UG dissertation), they also take responsibility for interim
+communications about the work they carried out. Because their time in
+the lab is so limited, it is very important that UG research is
+well-documented so that the lab can efficiently carry it forward.
+
+\subsection{How the hierarchy works}\label{how-the-hierarchy-works}
+
+The PI, for better or worse, shoulders responsibility for the work
+conducted by her lab group. While everyone involved in the work will be
+acknowledged when work we have done is published or praised, the PI will
+always be primarily responsible for correcting problems when they arise,
+no matter who really caused them. Our work can be questioned years after
+it has been carried out and published, meaning the PI is the only person
+committed to this for long enough to realistically keep this
+committment.
+
+For some post-doctoral and PGR projects, the researchers involved might
+share a long-term commitment to the research and be the ``local PI'' on
+the work. In those cases, they will act as the primary person
+responsible for those projects. Even so, the PI must always have access
+to enough information about these projects to independently reproduce
+analyses and replicate findings.
+
+While the PI thinks in terms of large, multi-experiment projects, lab
+researchers at all levels will have the responsibility for individual
+experiments, projects, or component projects. Elements of any project
+must always be documented. Every project has designated milestones at
+which documentation should be completed, backed-up, and shared (at least
+with the lab group, often publicly). This standard workflow will be
+described in more depth later. Highlights:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Whenever a project is communicated at a conference or published, the
+  documentation, anonymized data, and reproducible analysis scripts
+  supporting the communication must go live unless doing so would
+  violate our ethics agreement (which in our lab, should not ordinarily
+  happen).
+\item
+  Whenever a lab member moves on from the lab, every project s/he led
+  must be documented and made accessible to the PI on
+  \textbf{\emph{OSF}} (for Open Science Framework; osf.io). At the
+  point, if the project is not published, the PI must be given full
+  editing authority along with the former lab member.
+\end{enumerate}
+
+The work we do in the lab is the PI's life's work. You can count on her
+to see where the projects you did that were not publishable on their own
+may become useful when combined with the output of other projects. In
+our list of publications, the contributions of UGR and PGR lab members
+are emphasized. Data sufficient for a research paper can take years to
+accumulate; in some of these cases, the student co-authors had completed
+their piece of the project many years before the paper was published.
+The ongoing work of our lab can help boost your work even after you have
+moved on, but that is only possible if the remaining lab members can
+fully understand and reproduce the work you did.
+
+No one can accomplish the work we are striving to do alone. By joining
+this lab, you are jumping into a big, partially-completed project,
+whether you realize it or not. Help me make your efforts flourish for
+this big endeavor and for your career by learning about how this one cog
+in the grand machinery of cognitive science operates.
+
+\section{Current lab personnel}\label{current-lab-personnel}
+
+Dr.~Candice Coker Morey, Prinicipal Investigator
+
+Dr.~Tanya Joseph, Post-doctoral Research Assistant
+
+\subsection{PGRs}\label{pgrs}
+
+\subsection{UGRs}\label{ugrs}
+
+Laura Bentley
+
+Emily Charnaud
+
+Kirsten McDermott
+
+Jone McKeever Garay
+
+Eden Rendell
+
+\section{School of Psychology staff who support
+us}\label{school-of-psychology-staff-who-support-us}
+
+\begin{itemize}
+\item
+  IT services
+  (\href{mailto:it-servicedesk@cardiff.ac.uk}{\nolinkurl{it-servicedesk@cardiff.ac.uk}})
+  help with computing equipment needs.
+\item
+  Research administrators
+  (\href{mailto:psych-research-admin@cardiff.ac.uk}{\nolinkurl{psych-research-admin@cardiff.ac.uk}})
+  help with putting together and submitting grant applications.
+\item
+  Open Access adminstrators need to know when a paper has been accepted
+  for publication, and can help facilitate making it OA and paying OA
+  journal fees (Lisa Kennedy,
+  \href{mailto:Psych-OpenAccess@cardiff.ac.uk}{\nolinkurl{Psych-OpenAccess@cardiff.ac.uk}})
+\item
+  Open Science Working Group (OSWG; Candice Morey and Chris Chambers,
+  Chairs) offers advice on working transparently and shapes the School
+  of Psychology's policy on research transparency
+\end{itemize}
+
+\section{Local collabortors and academics interested in memory or
+related
+things}\label{local-collabortors-and-academics-interested-in-memory-or-related-things}
+
+\href{http://psych.cf.ac.uk/contactsandpeople/jonesdm.php}{Prof.~Dylan
+Jones}
+
+\href{http://psych.cf.ac.uk/contactsandpeople/macken.php}{Prof.~Bill
+Macken}
+
+\href{http://psych.cf.ac.uk/contactsandpeople/moreyr.php}{Dr.~Richard
+Morey}
+
+\href{http://psych.cf.ac.uk/contactsandpeople/morganphil.php}{Dr.~Phil
+Morgan}
+
+\href{http://psych.cf.ac.uk/contactsandpeople/evanslh.php}{Dr.~Lisa
+Evans}
+
+\section{Current and recent international
+collaborators}\label{current-and-recent-international-collaborators}
+
+\href{https://medhealth.leeds.ac.uk/profile/1300/958/richard_allen}{Dr.~Richard
+Allen, Leeds University}
+
+\href{https://www.boystownhospital.org/research/Faculty/Pages/Angela-AuBuchon.aspx}{Dr.~Angela
+AuBuchon, Boys Town National Research Hospital}
+
+\href{https://www.ed.ac.uk/profile/bonnie-auyeung}{Dr.~Bonnie Auyeung,
+University of Edinburgh}
+
+\href{https://www.strath.ac.uk/staff/brownlouisedr/}{Dr.~Louise Brown,
+University of Strathclyde}
+
+\href{https://www.ed.ac.uk/profile/nicolas-chevalier}{Dr.~Nic Chevalier,
+University of Edinburgh}
+
+\href{http://memory.psych.missouri.edu/cowan.shtml}{Prof.~Nelson Cowan,
+University of Missouri}
+
+\href{https://www.qmu.ac.uk/schools-and-divisions/psychology-and-sociology/psychology-and-sociology-staff/dr-stephen-darling/}{Dr.~Steve
+Darling, Queen Margaret University}
+
+\href{https://www.lsu.edu/hss/psychology/faculty/cognitive/elliott.php}{Prof.~Emily
+Elliott, Louisiana State University}
+
+\href{https://medhealth.leeds.ac.uk/profile/1300/956/jelena_havelka}{Dr.~Jelena
+Havelka, Leeds University}
+
+\href{https://www.uni-koblenz-landau.de/en/campus-landau/fb8/entwicklungspsychologie-und-padagogische-psychologie-en/team/prof-julia-karbach}{Prof.~Julia
+Karbach, University of Koblenz-Landau}
+
+\href{https://www.unige.ch/fapse/decopsy/group/patrick/}{Dr.~Naomi
+Langerock, University of Geneva}
+
+\href{https://psychology.missouri.edu/people/rhodes}{Dr.~Stephen Rhodes,
+University of Missouri}
+
+\href{https://www.unige.ch/fapse/decopsy/group/evie/}{Dr.~Evie Vergauwe,
+University of Geneva}
+
+\href{https://www.sheffield.ac.uk/psychology/staff/academic/claudia-von_bastian}{Dr.~Claudia
+von Bastian, Sheffield University}
+
+\section{External PGRs}\label{external-pgrs}
+
+Erminia Fiorentino, University of Edinburgh
+
+Anthea Allan, Queen Margaret University
+
+\section{Alumni}\label{alumni}
+
+Dr Jason Doherty (PGR co-supervisee, University of Edinburgh)
+
+Dr.~Jaroslaw Lelonkiewcisz (PGR, University of Edinburgh)
+
+Dr.~Jonathan Mall (PGR supervisee, Rijksuniversiteit Groningen)
+
+Dr.~Edyta Sasin (PGR co-supervisee, Rijksuniversiteit Groningen)
+
+Dr.~Florian Sense (PGR co-supervisee \& UGR project, Rijksuniversiteit
+Groningen)
+
+Anthea Allan (MSc project, University of Edinburgh)
+
+Margot Holweg (MSc project, Rijksuniversiteit Groningen)
+
+Monica Miron (MSc project, University of Edinburgh)
+
+Lewis Montgomery (MSc project, University of Edinburgh)
+
+Rob Nijenkamp (MSc project, Rijksuniversiteit Groningen)
+
+Marina Nikoletsopoulou (MSc project, University of Edinburgh)
+
+Lieke Roetmann (MSc project, University of Edinburgh)
+
+Karim Rivera-Lares (MSc project, University of Edinburgh)
+
+Madeleine van der Reijden (MSc project, Rijksuniversiteit Groningen)
+
+Gary Wells (MSc project, University of Edinburgh)
+
+Andrea Winkens (MSc project, Rijksuniversiteit Groningen)
+
+Ieva Zeromskaite (MSc project, University of Edinburgh)
+
+Amy Andrews (UGR, University of Edinburgh)
+
+Libby Best (UGR project, Cardiff University)
+
+Dr.~Malte Bieler (UGR project, Rijksuniversiteit Groningen)
+
+Rieke Buggenthin (UGR project, Rijksuniversiteit Gronginen)
+
+Yongqui Cong (UGR project, Rijksuniversiteit Groningen)
+
+Gita Gudka (UGR project, Cardiff University)
+
+Christian Hummeluhr (UGR, Rijksuniversiteit Groningen)
+
+Will King (UGR project, University of Edinburgh)
+
+Franziska Lehnert (UGR project, Rijksuniversiteit Groningen)
+
+Tuomos Ludstrom (UGR, Rijksuniversiteit Groningen)
+
+Robin Macy (UGR project, University of Edinburgh)
+
+Silvana Mareva (UGR, University of Edinburgh)
+
+Leire Martin Mendez (UGR, Rijksuniversiteit Groningen)
+
+Anne Muth (UGR project, Rijksuniversiteit Groningen)
+
+Sophia Oelmann (UGR project, Rijksuniversiteit Groningen)
+
+Viktorija Pratuseviciute (UGR project, University of Edinburgh)
+
+Mindi Price (UGR, Rijksuniversiteit Groningen)
+
+Christina Protopapa (UGR project, Cardiff University)
+
+Nelly Rahmede (UGR project, Rijksuniversiteit Groningen)
+
+Lee Robson (UGR project, University of Edinburgh)
+
+Gintare Siugzdinyte (UGR project, University of Edinburgh)
+
+Teddy Spassova (UGR project, University of Edinburgh)
+
+Dr.~Michael J. Wolff (UGR project, Rijksuniversiteit Groningen)
+
+Dr.~Berry van den Berg (UGR project, Rijksuniversiteit Groningen)
+
+Yixia Zheng (UGR project, Rijksuniversiteit Groningen)
+
+\chapter{Preparing for a stellar project}\label{intro}
+
+You may be joining the lab hoping to publish some of your work. We
+definitely aim for the work we carry out to be good enough to promote to
+colleagues around the world. We always want our work to be convincing
+and to make an impact. This section lays out our guiding philosophies
+for making that happen.
+
+\section{Choosing a research
+question}\label{choosing-a-research-question}
+
+Researchers just beginning often struggle with choosing a good research
+question. That's no surprise: this is really difficult. There are a lot
+of factors to consider, both in terms of logistics and potential impact.
+Under pressure to find a question, the junior researcher might settle
+for a trivial extension that does not have much theoretical depth (e.g.,
+replicating an interesting finding in a different population).
+Extensions like that are not necessarily uninteresting, but they usually
+lack theoretical drive (e.g., is there a good reason to think that the
+finding would differ in that population?). The strongest research
+questions also lead to one of a small set of possible conclusions, not
+just did it or did it not work. Ideally, you want to be clear about what
+the competing predictions are, and develop a design where you could
+learn something even from finding a null effect.
+
+It is also difficult to estimate how much time a project will take. Even
+with many years' experience, I cannot do this reliably.
+Enthusiastically, young researchers starting their first project often
+come up with huge, impractical ideas that would be impossible to
+complete under their time and resource constraints.
+
+You should definitely think about what research questions interest you,
+and you should even think grandly about what you would like to
+accomplish. But after you have done that, let your PI help. Your PI will
+have the background knowledge you currently lack to identify ways to
+refine your ideas and give them more theoretical depth. She will be able
+to suggest directions you can look into. She will know whether what you
+are considering is feasible or not (but beware anyway, she is way too
+optimistic).
+
+The ability to hone in on a focused and interesting question will
+develop as you accumulate knowledge. I definitely couldn't do it as an
+UG, and I knew at the time I couldn't. To get a start on my honor's
+research, I asked one of my mentors for help. After listening to
+\href{https://psy.fsu.edu/faculty/kistnerj/kistner.dp.php}{Prof.~Janet
+Kistner} give an informal presentation at a lab meeting, I approached
+her about doing an UG dissertation (it was optional at FSU). My starting
+pitch was simply that I found her group's project about the development
+of motivation interesting, and that I would like to learn more about it,
+and did she think there was any possibility to carry it further with an
+UG dissertation project? I wasn't confident that I could independently
+identify a good way to contribute, but I could explain why this research
+appealed to me (it was the clever operationalization and manipulation)
+and indicate that I wanted to learn more about it. So, you do not need
+to have a brilliant idea ready - you just need to think about your
+interests and goals enough to express them to your PI. Then together you
+will weigh options and refine them.
+
+Shifting to the PGR level, you have often identified your topic before
+you even arrive on campus. Some brief advice for prospective PGRs
+(because I get a lot of oddball requests): when you are seeking
+supervision as a PGR, you should be seeking someone who can evaluate the
+research you want to do. Never spam PIs from whole departments with your
+request for supervision. Do not bother cognitive psychologists with your
+proposal about dentistry, or agricultural business administration, or
+using Western blot (I've seriously received an earnest, seemingly
+personal email from a student who wanted to visit my lab to learn
+Western blot techniques!). Put in the effort to identify potential
+supervisors who actively do work in the field you are proposing to work
+in. You are unlikely to even get a response from the others. Even if you
+do, it will just be confusing (uh, what makes you think I can teach you
+Western blot?).
+
+Assuming you have chosen this lab for good reasons, the first step on
+arrival at your PGR lab is to discuss your PGR proposal with your
+supervisor. The proposals we request for admitting students are short
+and lack much detail. They might contain good ideas, but they are not
+really plans of action. First thing: sit down with your PI and flesh out
+a more thorough and detailed plan.
+
+There are three main principles that I try to work into any research
+project:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Try to think of a design that can offer you more than one way to
+  address your point.
+\item
+  Think about minimizing measurement noise.
+\item
+  Show all your final work, preferably publicly.
+\end{enumerate}
+
+I'll elaborate on the first two points now. There is so much to say
+about the third point that there is a whole chapter about it later.
+
+\section{Planning for converging
+evidence}\label{planning-for-converging-evidence}
+
+There are many ways to write an adequate scientific article. Often,
+scientific articles consist of only one experiment, analyzing one
+dependent variable. Sometimes a report this simple is striking and
+clean, and all you wanted to know about that topic. However, usually
+such a report leaves a lot of unanswered questions. In the best-case
+versions, the single-experiment paper reports a beautifully designed
+study, with obvious predictions, clear results, with results coming from
+multiple dependent measures and all converging on the same answer. I
+don't believe that these lovely, succinct papers come from single-shot
+attempts. I think they come from extensive piloting, and eventually the
+judicious decision to write a brief paper about the ultimate design
+rather than write a long paper including every step that led to the
+ultimate design. While we will never hide the preliminary work that went
+into a published paper, the ultimate communication we make will reflect
+the evidence that we are confident about: experiments conducted after
+piloting, when we are sure we understand how the task is working. Though
+you should not assume that all the data you collect will be publishable
+quality, or that you will write a paper about each experiment you
+conduct, you will save yourself some effort though if you consider in
+advance what kinds of evidence might help you make a converging case,
+and how much of that evidence you can work into your experimental
+designs.
+
+One important tip is to always measure and record the rawest dependent
+variables possible. For example, we are always measuring accuracy in our
+work. With accuracy, you can record whether a given response was correct
+or incorrect. That might be all you are planning to analyze, but it
+limits you. It might be interesting to know in what way a wrong response
+was wrong. You might not realize it at the start of your project, you
+might later think of a way to use errors to determine between two
+otherwise vague possibilities. By recording only ``right'' or ``wrong'',
+you are losing information that might have been useful.
+
+I've regretted decisions about this myself. I have a few data sets
+measuring spatial serial order reconstruction via mouse click responses.
+My program recorded a lot, but I did not manage to get it to record
+response times for every mouse click. There are exquisite analyses that
+can be done with this information (e.g., Chevalier, James, Wiebe,
+Nelson, \& Espy, 2014) that I cannot perform on those data sets (e.g.,
+Morey \& Miron, 2016; Morey, Mareva, Lelonkiewicz, \& Chevalier, 2018).
+
+Our resources are always limited: there is never as much money, or time,
+or participant energy as we could spend. Make the most of your resources
+and record as much as you can about your participants' response.
+Sometimes it will take extra effort in programming your experiment, but
+if you get to N=40 and then decide you want those data, you will not
+only have to figure it out, but you will have to begin collecting data
+again. Figure it out first, or at least weigh the risk of recording less
+with the PI before beginning data collection.
+
+Sometimes, convergence of evidence will only be possible with multiple
+experiments. Assuming that we have the resources, we want to write one
+very convincing paper rather than several papers with evidence that
+doesn't support a complete argument. This also lets you better control
+your narrative; writing about one isolated and interesting result, you
+will need to discuss the myriad possibilities for interpretation that
+you have not yet ruled out. Putting multiple lines of evidence in one
+paper means that you can rule out more interpretations, which
+strengthens the interpretation your data support.
+
+It is unlikely that you will be running an experiment, then publishing
+it, and repeating that process, so you want to plan for serial data
+collection, for efficiently processing results, for being ready to
+collect data during convenient seasons for participants, etc. if you
+want to write convincing papers that are bursting with brilliantly clear
+evidence.
+
+\section{Minimizing noise}\label{minimizing-noise}
+
+Another factor that separates the so-so evidence from the convincing
+evidence is how clear and obvious the effect looks. Of course we will be
+doing inferential statistics, but ideally these only confirm what is
+already obvious in your plots. This means you should collect more data
+than you think you need to detect an effect of a particular size (more
+on that later). You should also think carefully about all of the
+irrelevant factors that could affect your participants' responses and do
+what you can to neutralize them in your experiment's design and
+protocol. These are things like interruptions (phones beeping in the
+middle of a task, fire alarms sounding), irritating background noises,
+fatigue, contingencies that unintentionally reinforce random responding,
+or individual differences beyond those we normally expect (e.g.,
+participants under the influence of a drug). Much of our lab's standard
+procedures have been adopted through experience and practice to minimize
+extraneous measurement error. Adapting your protocol from an existing
+one helps you benefit from someone else's experiences.
+
+\section{Illustrations of scope and output of student
+projects}\label{illustrations-of-scope-and-output-of-student-projects}
+
+It can be difficult to imagine what a reasonable project looks like if
+you haven't done one. It is also difficult to generalize enough to say
+what a great UG dissertation or PG thesis looks like. I'll try though.
+Natually every project is custom, but I've attempted to illustrate a
+holotype - the modal characteristics of a solid, successful project -
+for UG and PG projects.
+
+\subsection{Holotype: UG dissertation timeline and
+workload}\label{holotype-ug-dissertation-timeline-and-workload}
+
+In the UG dissertation scheme at Cardiff University there are milestones
+built into the system. You must have a working title after about 2
+weeks, and you must have written a short working abstract after about 4
+weeks. There is little time for thinking about what research question
+you are asking and how you will answer it, because by the end of October
+you need to be implementing. Start off in week 1 (or earlier if it suits
+everyone) by meeting with your PI and informally chatting about your
+interests and what skills you hope to learn during the project. Your PI
+will have a mental short list of possibilities and can quickly see which
+ones are most likely to suit you, and how they might be adapted to suit
+you better. You should leave this meeting with a few ideas and a list of
+readings.
+
+Your project will be one experiment with at least 30 participants. If
+you are working collaboratively with other students, you might be
+running a series together or a larger, more complex design that requires
+a larger sample.
+
+Once you have settled on a question, find your deadline, work backwards,
+estimate how much time you want in between major milestones (e.g.,
+getting feedback from your presentation and submitting, writing after
+finishing your analyses, analyzing your data after collecting them,
+etc.). You will probably find that you want to have at least begun data
+collection before winter break. This is also a bit early in terms of
+when most UG students collect data, so you will have plenty of
+participants.
+
+This gives you one month to implement your experimental design and
+develop your protocol. Here is where your PI can help. There will be
+lots of ready-programmed experiments available from other lab projects.
+Your PI can help you limit your choice of paradigm to one that the lab
+already uses in some form, identify modifications you may need to make,
+and help you see how these modifications fit with what has been done
+previously. You will learn a little about programming, but unless you
+already know how, it will be extremely hard to learn to program and
+create a useful program from scratch in a month. Before collecting data,
+you will have already:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Written an experimental protocol explaining step-by-step \emph{how} to
+  run a session
+\item
+  Tested at least one pilot participant to make sure your protocol
+  includes every step needed
+\item
+  Gone over the output from your program with one of the senior
+  researchers to make sure it records everything you need to answer your
+  research questions
+\item
+  Scheduled a real participant for a time when one of the senior
+  researchers in the lab can supervise and check that your
+  implementation of the protocol is fine
+\item
+  Created an Open Science Framework page for your experiment (with the
+  PI as a full-fledged user), uploaded your experimental software, your
+  protocol, paperwork, and a written description of your method and
+  planned analyses
+\end{enumerate}
+
+When you return from winter break, you will finish your data collection
+and begin processing your data. Here is another moment to seek advice
+from the PI. Our lab manual codifies many useful procedures for
+processing data, but they require understanding R scripts well enough to
+copy and modify existing scripts. Your supervisor can help you with
+this, and direct you to ways to learn how to get specific things you
+need from the data. You should complete our standard anonymizing steps
+on your compiled raw data (either on your own or with help from a senior
+lab member), and then save the resulting data file to your Open Science
+Framework page. You may now analyze the data and prepare for your March
+lab meeting presentation, where you will receive feedback on your
+analyses. After that, you have a few weeks to finish writing.
+
+\subsection{Holotype: PhD thesis timeline and
+workload}\label{holotype-phd-thesis-timeline-and-workload}
+
+The PhD thesis is a substantial body of work carried out over three
+years. A good series of PhD studies should produce at least one
+substantial journal article. Usually, a single ``chapter'' of the PhD
+includes the contents of one published or publishable paper. Such a
+chapter may contain a single experiment or a series of related
+experiments. A good PhD thesis will contain at least three empirical
+chapters, plus an introduction chapter and a concluding chapter.
+
+A PhD thesis must be cohesive. It cannot include chapters about
+different things, because the introduction and concluding chapters must
+make clear how the work fits together. So, you must stick closely to
+whatever topic you and your PI agree on when you begin.
+
+It is a good idea to identify tasks that you can complete in parallel so
+that you are not reactively collecting data, seeing how it went,
+deciding what to do, and repeating the process. I think it is ideal to
+jump-start the PhD project by simultaneously working on a related lab
+project while designing your own first project. This gives you hands-on
+experience with the lab procedures you will be using so that you can
+start your own project quickly when it is ready, and potentially
+involves you in one lab publication besides any that come from your PhD
+experiments. An ideal timeline could involve starting with related data
+collection upon arrival, discussing a way to meta-analyze your topic
+with your PI and working on that alongside data collection, and then
+using the knowledge acquired from meta-analysis to plan your first
+experiments. You want to be ready to collect some data in the spring,
+but to plan for the bulk of your data collection to occur in the
+academic Year 2 and the fall of Year 3, when participants are widely
+available. Ideally, January - September of Year 3 is for writing,
+knowing that you could probably collect another experiment in the spring
+semester if you think it would help.
+
+Each empirical chapter should be a self-contained empirical paper (that
+perhaps has been submitted for publication). You will have been
+preparing these gradually during Year 2 and the beginning of Year 3, so
+some of the months reserved for finishing writing will be spent
+implementing feedback from peer review. Ideally you will also have some
+time to consider preparing applications for post-doctoral research
+posts.
+
+\section{Making the most of your
+time}\label{making-the-most-of-your-time}
+
+Do those timelines sound reasonable? Experience has taught me that there
+is somehow never enough time. Every hour you can save by relying on
+existing procedures and pipelines will help you make the most of your
+effort. You will also naturally find ways to innovate our pipeline as
+you work, so as others have paid it forward to you by programming
+experiments you can modify and figuring out useful R functions and
+scripting processes that you may copy, you will pay it forward by
+periodically incorporating something you have discovered into our
+process.
+
+\chapter{Lab meetings}\label{lab-meetings}
+
+Every two weeks (unless there's something unusual going on), our whole
+group shall meet to discuss our ongoing work, progress, plans,
+logistics, etc. The content of each meeting will be arranged and
+communicated ahead of time. All lab members are expected to attend lab
+meeting if at all possible. Lab members should avoid scheduling anything
+during lab meeting time.
+
+\section{Time and place}\label{time-and-place}
+
+Every other Monday (beginning 15 October 2018), 16:10-17:30, 7.10 Tower.
+Lab meetings will definitely occur during term time. They may occur
+during some term breaks depending on who all is working across the
+break.
+
+\section{Standing agenda}\label{standing-agenda}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Logistics: Is anything broken? Are there scheduling
+  conflicts/difficulties? Programs to troubleshoot?
+\item
+  Progress report: PI will ask a selection of members for a progress
+  report
+\item
+  OSF Review: We'll check whether any milestones have been reached
+  lately
+\item
+  Research content (ordered by priority; we won't do all things every
+  meeting): Lab members starting a new study will give their elevator
+  speech and demo their program, lab members with new data will describe
+  it for us (must have a graph!), we will discuss a relevant research
+  paper
+\end{enumerate}
+
+\section{What's in it for everyone}\label{whats-in-it-for-everyone}
+
+You may wonder why we do this. One reason is that it is an efficient way
+for the PI to get information from everyone. The PI will see lab members
+on other days and times too, but it is useful to know that there is a
+specific, repeated occasion when we will regularly see each other.
+
+Another reason is that it is unhealthy for researchers to struggle alone
+with difficulties. We prioritize trouble-shooting in lab meetings so
+that anyone experiencing a problem has a regular opportunity to talk
+about it with a supportive group of people. It is also useful for others
+to hear about these problems even if they are not directly affected
+because 1) it normalizes the fact that everyone struggles with
+logisitics and programming sometimes, 2) the same problem may impact you
+eventually, and by attending to others' concerns in lab meeting, you
+will at least be familiar with it.
+
+We also need a regular moment to mark the interim successes that occur
+during research projects that don't merit wide attention. Finishing a
+pilot-testing, submitting a conference presentation, finding something
+interesting in an analysis are all moments that call for some
+celebration, but will only be interesting to like-minded geeks.
+
+Finally, you may not yet personally see how another lab member's work
+relates to your's, but it does. Hearing about this work and reading
+papers together builds our common knowledge space and affords
+opportunities for generating new ideas. I hope these meetings will
+always be interesting. Inevitably they will sometimes be boring. But
+please make the effort to attend and participate. Though you may
+sometimes not see the immediate gain, you never know when our meetings
+bring some opportunity for you to improve your project or contribute to
+someone else's.
+
+\section{Project-specific meetings}\label{project-specific-meetings}
+
+Sub-groups of us shall sometimes meet for specific business that doesn't
+involve the whole lab. For instance, many lab members are students, and
+students may have contact hours with the PI related to their course that
+non-student lab members won't attend. The personnel involved in
+particular projects will convene \emph{Data Round-up Meetings}, in which
+we compile, anonymize, exclude ineligible participants from a data set,
+and securely back-up the data ahead of the analysis.
+
+\chapter{Seminars at Cardiff
+University}\label{seminars-at-cardiff-university}
+
+One of the perks of working at a university is that you are expected to
+spend some of your time developing your interests and participating in
+university life. You are encouraged to attend seminars whenever
+something that interests you is on offer. You may want to keep the times
+of these regularly-occurring seminars free during term time.
+
+\begin{itemize}
+\tightlist
+\item
+  School of Psychology Colloquium: Fridays from 14:10-15:00, usually in
+  12.11 Tower
+\item
+  Developmental / Environmental / Social / Cognitive Seminar: some
+  Wednesdays, 12:10-13:00, 12.11 Tower
+\item
+  Open Science Working Group: Join the mailing list (maintained by Chris
+  Chambers,
+  \href{mailto:ChambersC1@cardiff.ac.uk}{\nolinkurl{ChambersC1@cardiff.ac.uk}})
+  and watch for announcements. Meetings usually include a catered lunch
+  and require an RSVP.
+\item
+  Cognitive Development Group: some Thursdays, 14:00-15:00, 3.11
+\item
+  Memory Journal Club: monthly, watch for emails, time and location
+  vary. One person presents a paper for discussion. Content is usually
+  neuroscience.
+\item
+  Brain Mapping Seminar: Mondays, 12:10-13:00, CUBRIC Seminar Room 2
+\item
+  Postgraduate Internal Seminar Series: Thursdays, 13:10-14:00, location
+  alternates between lounge on 5th floor of Tower and CUBRIC Seminar
+  Room 2
+\end{itemize}
+
+\chapter{Student projects we support at Cardiff
+University}\label{student-projects-we-support-at-cardiff-university}
+
+\section{Postgraduate researchers}\label{postgraduate-researchers}
+
+\subsection{PhD projects}\label{phd-projects}
+
+We currently consider applications for PhD projects. One line, to work
+on a PhD project based on the PI's main research interests, is currently
+available. The successful candidate would begin in October 2019. Two
+ideas for projects are on offer, but it is likely that only one
+candidate, working on one of these projects, may be funded. This
+position is only available to students with access to local fees (e.g.,
+UK/EU residents).
+
+\textbf{Explaining interference in working memory}: Morey has
+demonstrated that visual information is fragile, and is disrupted by
+many kinds of cognitive tasks, not only visual or spatial tasks (see
+Morey (2018) for a summary of the evidence). This contrasts with verbal
+information: there is a lot of robust evidence that verbal information
+may be maintained nearly as well when doing an irrelevant non-verbal
+task as when focusing only on the verbal memory task. The successful
+candidate will work with the PI to design a series of experiments
+comparing alternative explanations for this pattern, and delineating the
+boundary conditions of this pattern to better inform theory. The
+candidate will have access to preliminary pilot data to jump-start his
+or her work.
+
+\textbf{Maintenance of spatial information, with and without intent}:
+Memory for novel, arbitrary collections of spatial locations appears to
+be much more limited than memory for verbal information. Yet some
+evidence suggests that spatial information of verbal labels or visual
+content is autmatically encoded and maintained at least for a short
+period. The successful candidate will apply new electrophysiological
+methods, using scalp alpha readings to infer which spatial locations are
+maintained, to compare spatial location memory under a variety of
+circumstances. The successful candidate will work with the PI to design
+a series of experiments comparing alternatives. The candidate will have
+access to preliminary pilot data to jump-start his or her work.
+
+This opening is funded by the School of Psychology. Details on how to
+apply will be available in late 2018 or early 2019. The School of
+Psychology expects candidates to have minimally a 2:1 Bachelor's degree.
+Realistically, short-listed candidates for School-funded PhDs tend to
+have a first-class degree (either Bachelor's or Master's, or both). The
+basic position is a 3-year funded PhD, but exceptional candidates will
+be considered for a Graduate Teaching (GTA) position. GTAs perform light
+UG instruction alongside their PhD work and receive increased funding
+for 4 years.
+
+There is also an opportunity to undertake a PhD in meta-scientific
+research, supervised jointly by Dr.~Candice Morey and Prof.~Chris
+Chambers. See our
+\href{https://www.findaphd.com/search/ProjectDetails.aspx?PJID=100639}{advert}
+for details.
+
+There are other routes to funding a PhD that prospective students may
+also explore. Cardiff University offers limited funding for
+international student fee waivers and stipends. Some opportunities are
+general, apply to students from anywhere in the world, and there are
+some scholarships available to prospective students from particular
+countries.
+
+Several UK funding agencies (including Wellcome, ESRC, and Leverhulme)
+offer PhD studentships. These opportunities tend to be student-led: the
+student is expected to write the proposal and application. Even so, it
+is a big advantage to have the advice and assistance of the potential
+supervisor in crafting an application for a PhD scholarship. Dr.~Morey
+will assist excellent prospective students with applications provided
+that 1) the research proposed aligns closely with her research
+interests, 2) the student demonstrates capability to carry out a PhD
+project (e.g., has a strong prior academic record, strong communication
+skills, and excellent references from previous mentors), and 3) the
+prospective student makes contact in enough time to develop and prepare
+the proposal ahead of the funder's deadline. (Note: ``in time'' for
+something like this is, realistically, at least a full month before
+anything needs to be submitted.)
+
+\subsection{DEdPsy, Educational
+Psychology}\label{dedpsy-educational-psychology}
+
+Some of the developmental work we do could serve to support the research
+training of DEdPsy students. Please get in touch with Dr.~Candice Morey
+if you are interested in hearing about project opportunities and
+discussing the educational relevance of our basic memory research.
+
+\subsection{Taught MSc student
+projects}\label{taught-msc-student-projects}
+
+We are happy to host students taking part in the \textbf{Neuroimaging
+Methods and Applications}, \textbf{Children's Psychological Disorders},
+and \textbf{Social Science Research} MSc degrees. Appropriate project
+suggestions will be available annually. Feel free to get in touch with
+Candice Morey to discuss ideas.
+
+\section{Undergraduate researchers}\label{undergraduate-researchers}
+
+\subsection{Final year UG projects}\label{final-year-ug-projects}
+
+Every year we host final year UG projects. A selection of project
+descriptions are available in the course handbook every spring. We often
+offer both developmental and cognitive opportunities. Upon joining the
+lab, students receive an updated list of opportunities for projects.
+Note though that some projects require the participation of mulitple
+student researchers. Choice of project is always a function of both
+logistic contraints and student preference.
+
+\subsection{Intercalcated Psychology and Medicine student
+projects}\label{intercalcated-psychology-and-medicine-student-projects}
+
+Some of our basic research is suitable training for Medicine students
+spending a year learning Psychology. Project options for intercalcated
+students are sometimes made available in the course handbook.
+
+\subsection{Professional placements}\label{professional-placements}
+
+In some years, we may have the capacity to offer a professional
+placement to students on a Psychology with Professional Placement
+course. These positions will be advertised at eligible institutions.
+Interested students may enquire if they do not see an advertisement in
+their programme; we may possibly be able to accomodate a placement
+student even if we have not advertized.
+
+Our placement will be entirely research-focused. This may not fulfill
+the requirements of all placement programmes.
+
+\subsection{CUROP and SPRINT summer research
+projects}\label{curop-and-sprint-summer-research-projects}
+
+Cardiff University and the School of Psychology offer funded summer
+internships for current students. Interested students should get in
+touch with Dr.~Morey as early as possible in the spring. Project
+descriptions will be available in the spring.
+
+\section{Pre-university students}\label{pre-university-students}
+
+\subsection{Nuffield summer intern
+placements}\label{nuffield-summer-intern-placements}
+
+We are willing to offer research experiences to teenagers interested in
+learning about cognitive and developmental psychology some summers. When
+we have an opening, we will list it in the relevant places.
+
+\chapter{Lab spaces we use}\label{lab-spaces-we-use}
+
+We do basic cognitive research with young adults and children as
+participants. Sometimes we make use of special equipment (e.g., eye
+trackers, EEG). These needs mean we have a stake in several laboratory
+spaces within the School of Psychology.
+
+\section{64 Park Place, room 0.05}\label{park-place-room-0.05}
+
+This lab is available for use by anyone in the School of Psychology, but
+in practice it is used mainly by us. The room contains two
+sound-attenuated chambers with work stations both inside and outside the
+chambers. Priority for using this space: studies with adult participants
+in which participants must run singly, and for which noise reduction is
+very important. (This describes most of our research.)
+
+\subsection{Access to 64 PP 0.05}\label{access-to-64-pp-0.05}
+
+Request swipe-card access from the PI, who will forward your request to
+\href{mailto:psychlocks@cardiff.ac.uk}{\nolinkurl{psychlocks@cardiff.ac.uk}}.
+
+\subsection{Security in 64 PP 0.05}\label{security-in-64-pp-0.05}
+
+64 PP is only accessible to personnel with swipe-card access. The
+Cardiff University Film Unit is based there, several staff have their
+offices there, and many PhD student's desks are in the building. During
+regular working hours, there should always be people around to help in
+case of an emergency. Note the signs indicating fire escape routes and
+current first aiders.
+
+As with any building that has restricted access, you should not allow
+anyone to follow you in when you enter, and you should not admit someone
+requesting to enter if you do not know who they are and what they are
+there for.
+
+\subsection{Booking 64 PP 0.05}\label{booking-64-pp-0.05}
+
+Whether you are programming your study, pilot-testing your study, or
+running participants, you need to schedule any work time in 64 PP 0.05
+or risk being kicked out because another person scheduled it properly.
+
+We maintain an Outlook calendar for this lab so that you may
+conveniently book it. You may request access to the calendar from the
+PI. Once granted access, you will be able to view and edit the calendar
+``64 Park Place 0.05'' from your university MS Outlook account.
+
+In general, you may book the lab any time it is apparently free. But do
+keep in mind that other people may need to use it too, especially during
+peak participant-running times.
+
+We want to always faciliate efficient use of the space. Please consider
+the following when booking:
+
+\begin{itemize}
+\item
+  You should make separate reservations per booth so that we can tell if
+  both or only one booth is in use at a particular time.
+\item
+  Don't ``block-book'' the booths to run particpants for a long period
+  (i.e., a whole day). You may actually use the room for a long period
+  like a whole day, but make a separate reservation in the calendar for
+  each discrete event (e.g., a 1.5-hour session with a participant).
+  This way, if some of your bookings are not taken or cancelled, you can
+  update the calendar so that the rest of us can see if there are times
+  when the booths might be free.
+\item
+  Besides the date and time, your reservation should include your name,
+  and information about what you are doing (e.g., ``participant'',
+  ``programming'', etc.), and which booth you are reserving. This
+  information helps other users know whether they may be able to step in
+  during the booking, and in the event of a mis-communication about
+  scheduling, helps prioritize.
+\item
+  If booths somehow become over-committed, priority will go to running
+  scheduled participants over programming or preparing. During peak
+  times, plan to do any programming or preparing somewhere else, and
+  when you need to use the lab to install your programs and test them,
+  plan to do that during a time that is inconvenient for participant
+  testing.
+\end{itemize}
+
+\subsection{Peak usage}\label{peak-usage}
+
+The lab will be busiest during term times. That's mid October until mid
+December, mid-January until Easter break, during the regular work day
+(e.g., 9:30 - 16:30). Whenever possible, do not plan on having access to
+the lab for programming during peak times. During peak times, the best
+times to use the lab for preparing a protocol, installing programs, or
+retrieving data are early in the morning (e.g., before 9:30) and during
+times when both Year 1s and Year 2s have lectures. For Autumn 2018,
+that's Thursdays and Fridays from 10:00-11:00.
+
+\subsection{Storage}\label{storage}
+
+There are shelves in the lab which you may use to store things that you
+use while in the lab (e.g., experimental paperwork, notebooks, etc.).
+Bring some sort of container to keep your things in, and label it with
+your name. After you complete a study, you should remove the paperwork
+associated with that study from the lab. Please do not leave personal
+items in the lab after you are finished working there. When you are no
+longer collecting data for the lab or working in 0.05 regularly, remove
+the things you have stored there. The contents of the shelves will be
+periodically binned to avoid clutter, and anything associated with a
+former lab member that's left behind will be binned or appropriated by
+someone else.
+
+\section{CUCHDS}\label{cuchds}
+
+\url{http://psych.cf.ac.uk/cuchds/}
+
+\section{Laboratories in CUBRIC}\label{laboratories-in-cubric}
+
+\subsection{EEG}\label{eeg}
+
+\url{http://www.cardiff.ac.uk/cardiff-university-brain-research-imaging-centre/facilities/electroencephalography-labs}
+
+\subsection{EyeLink}\label{eyelink}
+
+\url{http://www.cardiff.ac.uk/cardiff-university-brain-research-imaging-centre/facilities/cognitive-testing-labs}
+
+\chapter{Working transparently on
+OSF}\label{working-transparently-on-osf}
+
+In Chapter 1, I described how we are working together on something
+bigger than any single project. My role is both to facilitate your
+project while you are completing it and to carry it forward when
+possible after you are finished with it. To do both of those I things, I
+need to be able to see your work. I need to know what you have finished
+(and by extension, what you are currently working on) and I need to be
+able to find your finish products and comprehend them even if I look
+them up years after you finished them. That means that you need to
+curate your work in some place that I can always access. By
+\emph{curate}, I mean create support that guides me through your work so
+that I, or any one else, can figure out exactly what you did.
+
+It is a chore to curate the materials and data from a project after it
+is already finished. You forget quite a lot even in the months between
+starting and finishing a short project. However, while you are working
+on the project you are actually doing the work I mean when I say
+\emph{curating}: you frequently need to explain to me or other
+colleagues how your experiment works or what you did to the data. So,
+what I insist on is that you do this in a permanent way by putting this
+information on \textbf{\emph{OSF}} (that's for Open Science Framework),
+rather than in a private way like jotting it down on your private
+notebook.
+
+\section{The OSF environment}\label{the-osf-environment}
+
+The OSF is a web-based repository that scientists use to organize their
+research. OSF is free to use. Sign up for an account on OSF by visiting
+osf.io and clicking the green \textbf{Sign Up} button at the top of the
+page.
+
+Depending on what you are working on, you may need to create a new
+project or you may be added as a Contributor to an existing project.
+
+\subsection{Creating a new project}\label{creating-a-new-project}
+
+Most projects we do will share a common structure: they will include
+directories for preliminary planning, experimenter paperwork, run files,
+data and analysis scripts, and communications. If your new project will
+contain most of these, then you can start by searching OSF for the ``OSF
+Research Project Template'' designed by Candice Morey. You can look at
+the descriptions of the components, and if you like, duplicate this
+template and use it for your new project. To duplicate it, click the
+button on the upper right side of the screen that looks like a little
+branch. A menu will appear below.
+
+\includegraphics{osf_fork.png}
+
+If you choose ``Duplicate this template'', then OSF will create a new
+project with the same directory structure. You can then fill in the
+details, delete directories you may not need, or change the names of
+directories. If you choose ``Fork this Project'', OSF will create a new
+project copying everything about the forked page, including the Wiki
+content and the project description. All of that can be edited in your
+new project.
+
+Remember that your project, though new to you, may be embedded with some
+related ongoing project. If so, it might make more sense for you to be
+added to that existing project as a contributor. Identifying which
+circumstance you are in will be one of the first things you and the PI
+sort out.
+
+\subsection{Becoming a contributor}\label{becoming-a-contributor}
+
+One of the lab members may add you as a contributor to an existing OSF
+page. This will enable you to at least read, and probably read and edit,
+the existing page. Our projects usually have the same directory
+structure, but the number of sub-directories in each section may vary
+depending on how many studies fall under one project heading. If you are
+added to an existing project, first familiarize yourself with what is
+there and how it is organized. Then, work discuss with one of the other
+contributors how you should add to the page. Most likely, there will
+sub-directories in each folder corresponding to each related project,
+and you will be asked to create sub-directories for your project.
+
+\subsection{Naming conventions}\label{naming-conventions}
+
+For the files you see on OSF, there should be some commonalities in how
+they are named. You will need to come up with a scheme for naming the
+files associated with your project. This should not be something too
+generic like ``dissertation consent form.doc'' or ``experiment 1'': if
+that were allowed we would have dozens of files with the same names.
+Pick a short name or acronym for your project that says something about
+what is unique about it. Then, use that short name to name your files.
+So, instead of ``consent form.pdf'' your file might be
+``wmSpanPrefix\_consentForm.pdf''. Note also the use of the underscore:
+it is good practice never to include spaces in file names. Note also the
+initial word is lowercase and subsequent words are capitalized. This
+formatting is called \emph{camelCase}. We frequently have to type file
+names in contexts where the name must be reproduced exactly for code to
+run, so it is very helpful if you consistently apply camelCase to all
+your final names.
+
+\subsection{Contributors}\label{contributors}
+
+You can see who all the \emph{contributors} on a project are by clicking
+the \textbf{\emph{Contributors}} button on the upper ribbon. You may be
+able to add new contributors if you would like for someone else to be
+able to see your page. You can choose whether to let a new contributor
+only read your page or also edit your project page.
+
+At minimum, you and your PI should both be contributors to your project.
+The PI should always have at least Read + Write access, and possibly
+Adminstrator access.
+
+A \emph{bibliographic} contributor is someone who will share in
+authorship on any presentations or papers that result from the project.
+If you want to share your page with an outside colleague (maybe as part
+of a job application, or maybe with a peer who is reviewing your work
+for you) you can add them as a non-bibliographic contributor. If this
+person only needs to have a look at your project, then alternatively you
+can provide them with a view-only link without adding them to the
+project as a contributor.
+
+\subsection{Public versus private}\label{public-versus-private}
+
+Usually, your project will start out as private, and eventually may
+become public. Our standard is to set a project to ``Public'' once we
+have communicated the data outside the lab by presenting it at a
+conference or submitting a manuscript.
+
+There may occasionally be good reason never to make a project public,
+for instance if we cannot ensure that our participants' identities are
+anonymous. However, normally we can easily do this.
+
+\subsection{Wikis}\label{wikis}
+
+OSF allows you to describe each project directory and sub-directory with
+a Wiki. Take a look at the Wikis on the OSF Research Project Template
+for an example of what you might typically want to know about the
+contents of a directory.
+
+\section{Using your OSF project page to monitor
+progress}\label{using-your-osf-project-page-to-monitor-progress}
+
+We will both be able to clearly see how your work is progressing from
+the updates on your OSF page. The pace of progress will vary but the
+order of events will be pretty consistent. I'll briefly describe the
+usual project components in the usual order. Each of these steps has its
+own chapter with more detail later.
+
+\subsection{First you generate a plan}\label{first-you-generate-a-plan}
+
+When we first start discussing the project, we will converge on an
+experimental design and will work out the possible outcomes we might
+observe given that design. This may take a while, through a process of
+reading and discussion. Eventually, you should aim to note down your
+plans and predictions in a document, and post this document in your
+Preliminary Plans sub-directory.
+
+Your Preliminary Plans directory may also include work you did that
+informed your plan. For example, see the Preliminary Plans directory in
+\emph{A complex effect of memory load on processing speed}.
+
+\subsection{Then you prepare your
+materials}\label{then-you-prepare-your-materials}
+
+You will need to get, modify, or create software to display stimuli and
+collect responses, craft a consent form and debriefing statement for
+your participants, work up an experimental protocol, and test that these
+materials work to all the contributors' satisfaction.
+
+Once we are happy the materials (i.e., they have been pilot-tested, the
+output has been checked, etc.) they go in their appropriate
+sub-directories.
+
+\subsection{Then you work on data
+analysis}\label{then-you-work-on-data-analysis}
+
+Once you have stopped acquiring data, you should compile it into one
+file (or we may do this together in a \emph{Data Round-up Meeting}),
+anonymize it (more on that later), and upload it to the Data and
+Analysis Scripts directory. You can add analyses when you have finished
+them.
+
+\subsection{Finally, you communicate your
+research}\label{finally-you-communicate-your-research}
+
+When your written report or presentation is complete, you upload it to
+your Papers and Presentations directory.
+
+At any time during your project, I will be able to see what is on OSF,
+and with that know what you are finished with, what you should be
+currently working on. Knowing this will help me give you useful feedback
+at the appropriate time and be better prepared to help with whatever you
+might be grappling with.
+
+\section{Registering milestones}\label{registering-milestones}
+
+OSF provides free storage for your materials and data. You can think of
+it as a back-up system that encompasses not just your data, but also
+your thoughts about your project. That turns out to be really important
+because we need to keep track of what we believed before seeing the data
+versus what we believed based on the data.
+
+Making a \emph{registration} creates a frozen, time-stamped version of
+your project. Registrations cannot be changed, while projects can.
+Someone could remove data from a project, but not from a registration.
+It makes sense to register your project at key moments where you might
+want a permanent record of what you thought before the next phase.
+Generally, we want to register a project:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  When we have recoreded the definitive study design and predictions
+\item
+  After the anonymized data are uploaded
+\item
+  When the analyses are finished
+\item
+  When the manuscript is submitted (repeat as necessary)
+\item
+  When the manuscript is published
+\end{enumerate}
+
+These registrations back-up your work, but also allow you to prove when
+your hypotheses preceded the data.
+
+\section{When copying is okay}\label{when-copying-is-okay}
+
+You may be added to an ongoing project, and assume responsibility for
+some new component of that project. The project might already include
+materials you could use. But is it a problem to just use them, rather
+than create your own from scratch?
+
+There are some research materials that it is always okay to copy, or
+modify slightly for a new purpose. You should always make your consent
+form from the lab's template. Doing this ensures that important legalese
+that should be in the form is always there. You do not need to come up
+with new, original ways to program the same experiment or script the
+same analysis; it is always fine to copy an existing sample and modify
+it slightly to meet your needs. You should acknowledge the original
+creator when doing this, if the original creator is not already a
+bibliographic contributor on your project (if s/he is, then s/he will
+already get acknowledged in your work).
+
+You should not absolutely copy text destined for your manuscript, if you
+are producing a dissertation or thesis based on the work. Dissertations
+and theses differ from group-written manuscripts in that a student is
+composing them to show what s/he has learned about the work and about
+writing an empirical report in general. If your project is a
+dissertation or thesis, you must write your work originally, not quote
+or refer heavily to the method or result from a related lab project. You
+may look at any example documents we have to see what the other authors
+included, but then close the example and write your own.
+
+If you are working on a project that follows on from another one and is
+not being submitted for a university degree, then you probably could
+copy text from related Method sections and modify it as needed. In a
+serial report of several experiments, the Method and Results of
+experiments that follow from previous ones are often streamlined by
+referring back to the first. This is fine for a manuscript intended for
+publication; in fact, you want to aim for brevity when possible.
+
+\chapter{Research ethics}\label{research-ethics}
+
+\section{Basic principles}\label{basic-principles}
+
+Scientists have done appalling things for the sake of advancing
+knowledge, such as intentionally infecting people with diseases, robbing
+graveyards for corpses to dissect, and leading participants to believe
+that they had critically injured someone else. To prevent scientists
+from committing such violations (as well as less dramatically awful
+ones), international conventions now protect the health, privacy, and
+autonomy of people participating in scientific research.
+
+Researchers should be familiar with the Declaration of Helsinki.
+Generally, issues for concern may involve administering medical
+treatments that might end up causing harm, deceiving the participants,
+working with participants who are vulnerable and cannot consent on their
+own behalf, and protecting participants' sensitive data from actors who
+may use it for nefarious purposes. We do not carry out any research that
+involves experimental medical treatment or relies on adminstration of
+drugs. We also do not carry out any research that involves deceiving or
+fooling the participants. We sometimes work with children (who cannot
+provide consent) and though the data we collect is not obviously
+``sensitive'' or useful to criminals, we acknowledge that we may not be
+capable of imagining such a use for it, and are therefore under
+obligation to protect participants' identities.
+
+The research we carry out does not even approach the inhumane violations
+that inspired the international conventions on research ethics.
+Nonetheless there are some principles we must always bear in mind to
+ensure that our participants are never made to work against their will,
+never put at risk beyond the risks they experience going about their
+daily lives, and always receive whatever compensation they were
+expecting when they agreed to take part in the study.
+
+\subsection{Informed consent}\label{informed-consent}
+
+All adult participants in our studies must explicitly consent to take
+part in the research. To do this in any meaningful way, they must always
+be given enough information about the study to understand what
+participating will be like and an honest assessment of the risks and
+rewards expected from participating. All participants must be offered
+this information and must indicate with a signature that they accept the
+main points before they are exposed to our studies.
+
+A template consent form is available in the shared lab OneDrive folder,
+in directory \emph{templateForms}. The main things that must always be
+included in the information form:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A description of what the participant must do: This is from the
+  participant's perspective. It does not need to say anything about what
+  we are manipulating or why. It needs to describe what the session will
+  be like for the participant. Usually, a session will involve seeing
+  some things on a computer screen, trying to remember them, and
+  indicating somehow via computer whether they remember those things or
+  not. The description should be procedural and should not bias the
+  participant in favor of a particular outcome.
+\item
+  A statement about any risks and rewards involved: Usually, our studies
+  do not put the participant at any risk beyond what they experience in
+  daily life. They might feel bored or tired during the session. They
+  are agreeing to participate voluntarily, and depending on the
+  circumstances, may receive experimental credits toward a course or a
+  small amount of money for completing the session.
+\item
+  A statement about what we do with their data: We are committed to
+  transparently sharing all of the data that support our claims with the
+  public. But that does not mean that an individual participant's
+  identity should be publicly exposed. We must tell participants that we
+  will eventually make the data set they are contributing towards
+  available, but before we do, details that could identify them
+  personally will be removed. The most obvious personal details (e.g.,
+  name, student id, address, etc.) we do not usually collect at all, and
+  if we do, we never store them with the experimental data.
+\item
+  Finally, participants must be given information about who to contact
+  if they are uncomfortable with any part of the research project. This
+  will be the PI responsible (Candice Morey) and the administrator of
+  the School Research Ethics Committee
+  (\href{mailto:psychethics@cardiff.ac.uk}{\nolinkurl{psychethics@cardiff.ac.uk}}).
+\end{enumerate}
+
+\subsection{Anonymity}\label{anonymity}
+
+Be sure to read the section in this manual about Data Security for a
+full description of university and lab policy on protecting
+participants' privacy. The short version is that we do not save
+``personal'' or ``identifiable'' data, usually at all, and never with
+the experimental data. It is our responsibility to ensure that we do not
+save details that could render our data identifiable unless it is
+absolutely essential, and when we do, that we use a procedure that makes
+it easy to sever any link between the experimental ids and real-life
+ids. We apply this procedure as soon as possible, and once it is
+applied, we can no longer tell which data came from which person. Signed
+consent forms must be saved for 7 years. The consent forms we save
+should therefore \emph{never} include the arbitrary id assigned to the
+participant's data. See also our procedures for
+\protect\hyperlink{identifiers-and-data}{identifiers}.
+
+\subsection{Educational debriefing}\label{educational-debriefing}
+
+Whether the participants are part of the university community or from
+the local community at large, part of the university's mission is to
+educate. At the end of their session, all participants must be offered
+information about the research presented in jargon-free language.
+Participants should also be given information about where they may learn
+more, and should be given the opportunity to question the researcher
+working with them or the PI if desired.
+
+\section{Applying these principles in our
+lab}\label{applying-these-principles-in-our-lab}
+
+Individual researchers will not typically need to acquire ethics
+approval independently. Most research projects will fall under one of
+our existing, approved generic
+\protect\hyperlink{ethics-approvals-currently-in-place}{headings}.
+Individual researchers will need to ensure that their experimental
+paperwork, data recording procedures, and protocol are all aligned with
+these principles:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Written consent is always obtained.
+\item
+  Consent includes explicit acknowledgement that anonymized data may be
+  shared online.
+\item
+  Arbitrary \protect\hyperlink{identifiers-and-data}{participant ids}
+  are never associated with participant's signed consent form.
+\item
+  Any document that links personal ids with arbitrary ids must is
+  treated as \textbf{confidential}. It cannot be accessible (in digital
+  or print form) to anyone unnamed on the ethics application. It must be
+  possible to destroy once the links are no longer needed. Once that
+  destruction occurs, it must be truly impossible to re-forge the links.
+  There cannot be a back-up way to reconstruct these links from any
+  recorded data we preserve.
+\item
+  An appropriate education debriefing is prepared for every project.
+  Sample debriefings are available in the shared lab OneDrive folder, in
+  the \emph{templateForms} directory.
+\end{enumerate}
+
+\section{Assigning participant
+identifiers}\label{assigning-participant-identifiers}
+
+Assigning an arbitrary id number to each participant is one of the most
+important bits of lab procedure to get right to maintain data security.
+This is important both for ensuring that you know which data come from a
+single unique participant, and for ensuring that all the data you spend
+time collecting are preserved and usable.
+
+\subsection{Ids are always unique!}\label{ids-are-always-unique}
+
+Never re-use a participant number in the same project. Even if you know
+data will be invalid (e.g., test participant, doesn't meet inclusion
+criteria). This can cause confusion later, or can over-write files that
+you may not want to be overwritten.
+
+Always use the same participant number for the same person (e.g., if you
+are collecting data at multiple time points from the same person).
+
+\emph{Vignette:} An ambitious MSc project involved collecting data from
+participants in two sessions. Participants ran two sessions each,
+performing two of the combinations in each session. Eventually though,
+all of these data needed to be analyzed together. (After all, that is
+the advantage of going to the effort to get the same data in each
+participant - you get to do a within-participant analysis.) The student
+ran each session with a unique identifier. This certainly prevented any
+data from being accidentally overwritten, but it meant that when it was
+time to analyze the data, we needed a way to code which ids were
+actually the same people. There is no elegant way to do this, because
+there was no regularity between the ids to exploit (coding requires
+regular expressions). Below is the code we used to assign new
+participant ids to both of the data sets from each participant.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Also, need to link subject numbers. Student ran same participants on unique id numbers in different sessions. Table of links}
+\CommentTok{# 1=29}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{1} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{29}\NormalTok{]=}\DecValTok{129}
+\CommentTok{# 2=19}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{2} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{19}\NormalTok{]=}\DecValTok{219}
+\CommentTok{# 3=16}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{3} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{16}\NormalTok{]=}\DecValTok{316}
+\CommentTok{# 4=25}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{4} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{25}\NormalTok{]=}\DecValTok{425}
+\CommentTok{# 5=32}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{5} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{32}\NormalTok{]=}\DecValTok{532}
+\CommentTok{# 6=13}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{6} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{13}\NormalTok{]=}\DecValTok{613}
+\CommentTok{# 7=14}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{7} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{14}\NormalTok{]=}\DecValTok{714}
+\CommentTok{# 8=24}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{8} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{24}\NormalTok{]=}\DecValTok{824}
+\CommentTok{# 9=15}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{9} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{15}\NormalTok{]=}\DecValTok{915}
+\CommentTok{# 10=17}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{10} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{17}\NormalTok{]=}\DecValTok{1017}
+\CommentTok{# 11=39}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{11} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{39}\NormalTok{]=}\DecValTok{1139}
+\CommentTok{# 18=23}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{18} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{23}\NormalTok{]=}\DecValTok{1823}
+\CommentTok{# 22=36}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{22} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{36}\NormalTok{]=}\DecValTok{2236}
+\CommentTok{# 26=49}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{26} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{49}\NormalTok{]=}\DecValTok{2649}
+\CommentTok{# 27=31}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{27} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{31}\NormalTok{]=}\DecValTok{2731}
+\CommentTok{# 28=60}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{28} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{60}\NormalTok{]=}\DecValTok{2860}
+\CommentTok{# 30=42}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{30} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{42}\NormalTok{]=}\DecValTok{3042}
+\CommentTok{# 33=54}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{33} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{54}\NormalTok{]=}\DecValTok{3354}
+\CommentTok{# 34=63}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{34} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{63}\NormalTok{]=}\DecValTok{3463}
+\CommentTok{# 35=40}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{35} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{40}\NormalTok{]=}\DecValTok{3540}
+\CommentTok{# 37=46}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{37} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{46}\NormalTok{]=}\DecValTok{3746}
+\CommentTok{# 38=48}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{38} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{48}\NormalTok{]=}\DecValTok{3848}
+\CommentTok{# 41=65}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{41} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{65}\NormalTok{]=}\DecValTok{4165}
+\CommentTok{# 43=59}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{43} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{59}\NormalTok{]=}\DecValTok{4359}
+\CommentTok{# 44=75}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{44} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{75}\NormalTok{]=}\DecValTok{4475}
+\CommentTok{# 45=52}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{45} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{52}\NormalTok{]=}\DecValTok{4552}
+\CommentTok{# 47=78}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{47} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{78}\NormalTok{]=}\DecValTok{4778}
+\CommentTok{# 50=57}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{50} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{57}\NormalTok{]=}\DecValTok{5057}
+\CommentTok{# 51=69}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{51} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{69}\NormalTok{]=}\DecValTok{5169}
+\CommentTok{# 53=55}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{53} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{55}\NormalTok{]=}\DecValTok{5355}
+\CommentTok{# 56=66}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{56} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{66}\NormalTok{]=}\DecValTok{5666}
+\CommentTok{# 58=67}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{58} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{67}\NormalTok{]=}\DecValTok{5867}
+\CommentTok{# 61=64}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{61} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{64}\NormalTok{]=}\DecValTok{6164}
+\CommentTok{# 62=71}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{62} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{71}\NormalTok{]=}\DecValTok{6271}
+\CommentTok{# 68=74}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{68} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{74}\NormalTok{]=}\DecValTok{6874}
+\CommentTok{# 70=72}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{70} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{72}\NormalTok{]=}\DecValTok{7072}
+\CommentTok{# 73=76}
+\NormalTok{d}\OperatorTok{$}\NormalTok{Subject[d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{73} \OperatorTok{|}\StringTok{ }\NormalTok{d}\OperatorTok{$}\NormalTok{Subject}\OperatorTok{==}\DecValTok{76}\NormalTok{]=}\DecValTok{7376}
+\end{Highlighting}
+\end{Shaded}
+
+While this code solved the immediate problem, it was a clunky solution
+that could have introduced many new errors that would be difficult to
+detect. What if the student lost his notes indicating which participant
+ids should be paired before running the analysis? What if those notes
+contained discrepancies he could not sort out (e.g., writing down the
+same id accidentally for two participants)?
+
+Furthermore, the inelegant coding solution needed to manage this is also
+prone to human error. Mis-typing an id number could mean creation of a
+bogus pairing, accidentally assigning three sessions to one person, etc.
+After doing this, we had to check carefully that all resulting ids had
+the right number of sessions, trials, and conditions.
+
+In the end, this worked out fine. But work and hassle would have been
+avoided if each participant were given a consistent id to start with, or
+alternatively if an id system was used that resulted in unique session
+ids that were related in some regular way. This problem would of course
+have been compounded if the design had been more complicated (e.g., what
+if there were \textgreater{} 2 sessions?) and as the sample size
+increased (imagine sorting this for 150 participants instead of
+\textasciitilde{}30).
+
+\subsection{Ids are always arbitrary,
+anonymous}\label{ids-are-always-arbitrary-anonymous}
+
+The system you choose for assigning participant numbers should not
+preserve any links between the participant's identity in real-life and
+their identity as a unique contributor to your data set. Ids should not
+be derived from any university-linked identifier, address, or birthdate.
+They should not include the date or time of the session. Typical ways to
+assign ids are to choose a starting number and increment upward with
+each new participant.
+
+If you are running a multi-experiment project, it is a good idea to
+segregate the participant ids of subsequent experiments in some way that
+makes them obviously distinct from previous experiments in the sequence
+(e.g., experiment 1 starts from 100, experiment 2 from 200, etc.). This
+way, if you ever combine data to perform a multi-experiment analysis,
+you still have unique participant ids.
+
+\hypertarget{ethics-approvals-currently-in-place}{\section{Ethics
+approvals currently in
+place}\label{ethics-approvals-currently-in-place}}
+
+\subsection{Limits of memory
+(EC.17.09.12.4952G)}\label{limits-of-memory-ec.17.09.12.4952g}
+
+This is a generic approval valid until 31 August 2022. This heading
+covers behavioural studies with adults (17-40 years old) in which
+participants are asked to try to remember something, sometimes while
+also doing something else. This heading currently applies to
+single-session studies of 90 minutes or less.
+
+A new risk assessment will be due prior to the expiration of the
+project.
+
+\subsection{Memory storage and processing across the lifespan
+(EC.18.09.185339GR)}\label{memory-storage-and-processing-across-the-lifespan-ec.18.09.185339gr}
+
+This is a generic approval valid until 30 September 2023. This heading
+covers behavioural studies with adults and children, eye-tracking, and
+multi-session data collection. Examples of studies under this heading
+include manipulations of complex span tasks and the Flavell et al
+Registered Replication Report.
+
+A new rish assessment will be due prior to the expiration of the
+project.
+
+\chapter{Ethics at Cardiff School of
+Psychology}\label{ethics-at-cardiff-school-of-psychology}
+
+Ethical approval is an essential part of conducting research. At Cardiff
+University, each academic school has its own School Research Ethics
+committee (SREC) that is responsible for ensuring that all research
+carried out within the School has been subject to an ethical review.The
+university's procedure for ethical review allows staff and students to
+achieve research excellence and produce work with the highest standards
+of research integrity and professionalism.
+
+\section{Who needs to apply?}\label{who-needs-to-apply}
+
+Staff and students conducting research on humans must apply for ethical
+approval. In some cases, ethical approval may have been granted by an
+external organisation (e.g., NHS) and this approval letter must be
+submitted to the SREC.
+
+\section{How to apply for ethical
+review?}\label{how-to-apply-for-ethical-review}
+
+A great starting point for information and resources about the ethical
+review process can be found at
+\href{https://inside.psych.cf.ac.uk/}{InsidePsych}. Log in with your
+Cardiff University credentials and navigate to the
+\emph{\textbf{Ethics}} tab which can be found in the Undergraduate,
+Postgraduate, and Staff pages.
+
+\subsection{Types of applications}\label{types-of-applications}
+
+All applications and supporting documents must be emailed to the Ethics
+committee at
+\href{mailto:psychethics@cardiff.ac.uk}{\nolinkurl{psychethics@cardiff.ac.uk}}
+
+\textbf{1. Fast track applications:} This procedure is used for
+proposals that do not raise any ethical issues and recruits participants
+from the School's participant panel. To recruit from the panel, you will
+need to sign up for a researcher account on the School of Psychology's
+\href{https://cardiff.sona-systems.com/Default.aspx?ReturnUrl=/}{Experimental
+Management System} and obtain ethical approval before you begin
+recruiting participants. Fast track applications can also be used to
+make minor amendments to a project that has been previously approved.
+These applications must be submitted by midday on a Friday and a
+decision will be made within 7-10 days.
+
+\textbf{2. Full applications:} These applications require more detailed
+descriptions of the experimental procedures, research design, and
+ethical considerations. Full applications must be submitted at least two
+weeks before the Ethics Committee's next meeting. The committee usually
+meets on the first Tuesday of every month.
+
+Full applications are used when a research project involves (a)
+recruiting special groups of participants (e.g., children, people in
+custody, those lacking capacity to give consent, or people engaged in
+illegal activities); (b) highly sensitive topics (e.g., domestic
+violence, terrorism, etc), (c) the use of a drug (e.g., tobacco,
+caffeine, or alcohol), or (d) the collection or use of human tissue. In
+essence, if the research poses an ethical consideration, a full
+application must be submitted for review.
+
+\textbf{3. Generic applications:} Sometimes, researchers may have a
+range of studies they would like to conduct within a research paradigm.
+In these cases, a generic application can be completed so long as there
+is sufficient description of the different studies they wish to
+undertake.
+
+For example, a researcher may want to study the effectiveness of recall
+in different situations. A generic application can be submitted so long
+as the different studies within this paradigm are described, for
+example, testing memory in a noisy environment or after participants
+have had a cup of coffee. Depending on the ethical considerations in the
+study, these applications may either be a fast track or full
+application. \textbf{Undergraduate students are not permitted to apply
+for generic approval.}
+
+\textbf{4. Amendments to approved projects:} Sometimes, changes may be
+made to a project that already has ethical approval. If they are changes
+to the research team or the project end date then send an email to the
+Ethics Committee with the details of the change and the project's ethics
+reference number. All other changes require the submission of a new
+ethics proforma along with the previous ethics reference number for the
+project. Remember to provide sufficient detail about the changes as if
+they are minor amendments they will be dealt with through the fast track
+route while if they are major changes they will be considered in the
+same way as a full proposal.
+
+\section{What forms will I need to
+complete?}\label{what-forms-will-i-need-to-complete}
+
+\subsection{Ethics proforma}\label{ethics-proforma}
+
+An ethics proforma must be completed for all applications except those
+seeking approval for minor amendments. The proforma can be downloaded
+\href{https://inside.psych.cf.ac.uk/}{here}. You will also find guidance
+notes for the proforma on this page. The proforma asks for details about
+your study - who is conducting it, who are the participants, and what
+methods will be employed. If you are conducting a project with no
+foreseeable ethical considerations then your application will be
+considered under the fast track route and you will need to describe the
+study in Box A. If you are conducting a project that raises ethical
+considerations then choose Box B and write a full proposal.
+
+\subsection{Full proposal}\label{full-proposal}
+
+The purpose of a full proposal is to provide the Ethics committee with
+sufficient information about the project to help them evaluate the
+ethical implications and any detrimental impact that the study may have
+on prospective participants. Make sure to number the pages in the
+proposal and label appendices correctly. In addition to submitting the
+proforma, your proposal must contain the following information:
+
+\begin{itemize}
+\item
+  \textbf{Project overview:} Include information about the aims of the
+  study, the rationale, and methodology. You must also mention the
+  estimated start date and duration of the project.
+\item
+  \textbf{Participants:} State how many participants you intend on
+  recruiting, how old they will be, and how you will recruit them.
+  Remember to mention any inclusion / exclusion criteria as well. If you
+  intend on using flyers or e-mails to recruit participants you can
+  include these documents in the appendix. If you are recruiting
+  children from schools then include a Gatekeeper letter which will be
+  used to contact head teachers when requesting their participation
+  (samples can be downloaded from the Ethics section of
+  \href{https://inside.psych.cf.ac.uk/}{InsidePsych}).
+\item
+  \textbf{Materials and procedure:} Highlight what materials will be
+  used (e.g., a computer and keyboard), the general procedure during
+  data collection (i.e., obtaining informed consent, conducting the
+  experimental task or questionnaire, and debriefing), and procedures
+  for storage of personal and experimental data. Again, include related
+  documents (e.g., questionnaires, information sheets, etc) as
+  appendices.
+\item
+  \textbf{Ethical considerations:} A brief description of the ethical
+  considerations associated with the study along with a proposed plan of
+  action to reduce their impact.
+\end{itemize}
+
+\subsection{Risk assessment}\label{risk-assessment}
+
+Risk assessments are a mandatory part of the ethical review process.
+When you fill in the proforma, you will also be required to complete an
+online risk assessment form (link available within the proforma). This
+form is designed to provide an overall estimate of the risk involved in
+the project and who is likely to be affected. You will be asked to rate,
+on a scale of 1 to 5, the likelihood of a hazard causing a problem and
+the severity of injury resulting from the hazard. For example, equipment
+like computers may pose a risk of electric shock, however, with control
+measures like PAT testing the likelihood of electric shocks may be low
+(rated as 1 - very unlikely) while the severity may be rated as 3 to
+indicate that an electric shock may lead to some temporary injuries.
+
+Once you have completed and submitted the form, you will receive an
+email to indicate if a full risk assessment is needed. If so, the email
+will also contain a link for the full risk assessment form, guidance
+notes, and details for where to send the completed form. You will have
+to give information about the hazard, measures to mitigate its impact,
+and ratings for the likelihood and severity of the hazard.
+\textbf{Please note you cannot submit your ethics application to the
+committee without a complete risk assessment.} When planning an
+application, assume that you will be asked to revise your risk
+assessment based on feedback, which may take a few extra days. Once your
+risk assessment is approved, you will receive a unique \emph{Risk
+assessment receipt number} via email. You must include this receipt
+number in your Ethics Proforma when you submit (your application will be
+returned to you if this information is not included).
+
+You can now submit your ethics proforma together with the proposal (if
+required) and any supporting documents for ethical review!
+\textbf{Remember, you CANNOT begin any research activities until your
+application has been approved by the Ethics Committee.}
+
+\chapter{Data security}\label{data-security}
+
+Data security refers to the principles followed to protect our data.
+There are two sides to this: ensuring that our data are not lost and
+ensuring that aspects of our data that are personal are kept
+confidential.
+
+All lab personnel should complete the
+\href{https://intranet.cardiff.ac.uk/staff/news/view/211993-information-security-training-when-will-you-complete-yours}{web-based
+Data Security training module} offered by Cardiff University.
+
+The data we post publicly online should not afford participants'
+identities to be discovered. There nonetheless remains some information
+in the data file that interested parties could use in conjunction with
+other known information to identify a participant. Suppose you are a
+private investigator, and your client wants you to spy on her child at
+university. You know your mark is enrolled on the Psychology degree, and
+you find out that completing this degree involves participating in
+laboratory studies. You think these studies might be a source of key
+information about how well your mark can remember abstract visual
+images, so you follow him to the laboratory, noting the date and time he
+participated. Once the data are posted online, you can download them and
+find the participant whose data were recorded on that date and time,
+even if no other information in the data uniquely identifies your mark.
+Knowing what we know about the distortibility of data, we can take those
+visual recognition task data and dubiously infer all sorts of
+maliciousness.
+
+This is obviously ridiculous, but technically possible. It is referred
+to as the \emph{motivated intruder test}, and we cannot consider our
+data truly anonymous if a motivated intruder could easily uncover and
+exploit the indirect links between anonymous data and identifiable
+information we may have access to. To comply with EU privacy
+regulations, we need to take steps to protect participant identities
+even when we think our data are harmless. This holds regardless of
+whether we plan to make the anonymous data set publicly available.
+Unless you are storing the data only on secured Cardiff University
+resources, it must be properly anonymized. This means that before we
+anonymize it, data cannot be held even temporarily on personal disks, on
+DropBox, or Google Docs, and cannot be emailed to non-university email
+addresses.
+
+\section{Backing up digital data}\label{backing-up-digital-data}
+
+\subsection{During data collection}\label{during-data-collection}
+
+All lab personnel will be given access to a OneDrive folder
+``labBackUp\_cmorey''. While data collection is ongoing, the researcher
+responsible for data collection should add newly acquired data to the
+OneDrive lab back-up every day new data are acquired. There are
+sub-directories in \emph{labBackUp\_cmorey} for all the physical spaces
+we use to collect data. Simply copy the your experiment directory on the
+physical machine to the corresponding sub-directory in
+\emph{labBackUp\_cmorey}.
+
+Note that here it will be necessary to make sure that your experimental
+directory has a unique name. The short-hand name you use for your
+project can be used for this. Do not choose names like ``project'',
+``dissertation'', ``thesis'', ``experiment 1''.
+
+These data are \emph{confidential} because they include timestamps that,
+if linked to the participant's EMS schedule or to information the
+participant discloses publicly about their participation in experiments,
+their identity could be reconstructed. As such, you should not save
+these data onto personal computers or drives.
+
+\subsection{When data collection is
+closed}\label{when-data-collection-is-closed}
+
+Once we have decided not to collect any more data on a project, it is
+time to compile and anonymize that data set. This should always occur
+before any analyses are attempted, and must always be done in a scripted
+fashion. For lab members not fluent in scripting, this should be done in
+a face-to-face meeting with the PI or another senior lab member. This is
+the \textbf{Data Round-up Meeting}.
+
+Everyone involved in data collection should attend the \textbf{Data
+Round-up Meeting}, because we will at the same time make decisions about
+participant exclusions. Everyone who collected data should bring their
+lab notebook. If a face-to-face meeting including all personnel is
+impossible, data collectors should at least make their lab notebook
+available to the PI for this meeting, and have prepared a summary of
+which participants they think must be left out and why.
+
+First, the team shall compile the data associated with the project from
+the \emph{labBackUp\_cmorey} folder. It is essential that this folder is
+up-to-date ahead of the meeting - data collectors, please ensure that
+you have copied all data to the back up ahead of time.
+
+At the meeting, we will use this code to compile each individual
+backed-up data file into a single data frame, \emph{d}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d =}\StringTok{ }\KeywordTok{map_df}\NormalTok{(}\KeywordTok{list.files}\NormalTok{(}\DataTypeTok{path =} \StringTok{""}\NormalTok{, }\DataTypeTok{full.names =} \OtherTok{TRUE}\NormalTok{), }
+\NormalTok{                 read_csv, }\DataTypeTok{col_names =}\NormalTok{ T)}
+\end{Highlighting}
+\end{Shaded}
+
+This code creates a dataframe called \emph{d} that includes all the .csv
+files in the project directory, which will be entered into the
+\emph{path} argument.
+
+We shall then examine \emph{d}'s headings for information that could
+identify the participant. Anything that has to do with the date and time
+of the session must be omitted. Recorded birthdates must be omitted.
+Usually, we would not have recorded anything more personal than that,
+but if so, it must be omitted at this stage.
+
+Obviously, we do need the participants' ages to describe our sample. We
+can calculate that. First, it is a good idea to first look at the
+entries for any year-of-birth or birthdate variable to make sure they
+are plausible.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{unique}\NormalTok{(d}\OperatorTok{$}\NormalTok{YoB)}
+\end{Highlighting}
+\end{Shaded}
+
+This code will produce a list of each unique value at YoB in the data
+frame. Check that they all seem plausible. If they are not, consider
+whether a weird value might have been a typo by figuring out who
+interacted with that participant and consulting the relevant notebook.
+The people in the room must reach an agreement on what to do in the
+event of a weird value. Options include: considering the age missing for
+that participant, omitting the participant if they fall outside the
+recruited age range, judging that a transposition was entered (e.g.,
+entering a YoB of 2020 rather than 2002 was an error because the
+participant was definitely an adult, or that a 2-digit value like 98
+actually meant 1998). In cases where the typo seems obvious, we can
+decide to fix it, but this must be documented in the script.
+
+If we recorded \emph{Year of Birth}, we can now create a new variable
+converting birth year to age at the time of the study. For most
+purposes, this does not need to be very precise. We can do this with a
+simple \emph{mutate}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{d =}\StringTok{ }\NormalTok{d }\OperatorTok{%>%}\StringTok{ }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{age =} \DecValTok{2018} \OperatorTok{-}\StringTok{ }\NormalTok{YoB) }\CommentTok{# current year - column name containing the birth year}
+\end{Highlighting}
+\end{Shaded}
+
+If we recorded the full birthdate, we probably need age in more
+precision. The function \emph{lubridate} is useful for sorting out
+birthdates and calculating precise ages from birthdates and run dates.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{ (lubridate)}
+\CommentTok{# lubridate example here}
+\end{Highlighting}
+\end{Shaded}
+
+Once we have created whatever new, anonymous variables we need from the
+potentially identifying data, we can create a new data set with the
+identifiable data omitted. We would do that with script like this:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Remove columns that contain ids or timestamps (times could limit the pool to specific people given that the location of the test is known)}
+\NormalTok{symsp =}\StringTok{ }\NormalTok{symsp }\OperatorTok{%>%}\StringTok{ }\KeywordTok{select}\NormalTok{(}\OperatorTok{-}\KeywordTok{c}\NormalTok{(Clock.Information, Email, SessionDate, SessionTime)) }\CommentTok{# The "-" negates the select, meaning that everything *except* the named columns remain.}
+\end{Highlighting}
+\end{Shaded}
+
+Include all the variables you want to omit within the -c() list. The
+resulting data frame will include everything except those variables.
+View the resulting data frame to check that this indeed worked.
+
+This new data frame is the one we will analyze. Save it now to the PI's
+local directory, and also upload it to the OSF page for this project so
+all of the lab personnel who need to use it can access it.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Save it - this is the version that goes on OSF}
+\KeywordTok{write_csv}\NormalTok{(symsp, }\StringTok{"symSpan_RuG_anon.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+We may occasionally need the identifiable data, particularly the
+timestamps in it. If we need to prove that the data were collected after
+a certain date, these timestamps are strong evidence. But the original
+data need to be kept only in a secure place that is never accessible
+publicly and that is regularly automatically backed up. Currently the
+only available spaces that meet this requirement are the Shared and Home
+drives. Our policy: the compiled, non-anonymized data are stored on
+Candice Morey's Home drive. She will store the script we write to
+anonymize the data and the original data on a sub-directory of My
+Documents/dataSets\_cardiff on her Home Drive.
+
+\subsection{Cleaning up lab
+directories}\label{cleaning-up-lab-directories}
+
+After we have compiled the data, created anonymized versions, and backed
+up the original data to Candice's H drive, it should not matter whether
+the original data files stored on \emph{labBackUp\_cmorey} or on local
+machines are lost. These sources are sufficiently secure for our data,
+which are at most \emph{confidential}, never \emph{highly confidential}.
+In the event that we collect \emph{highly confidential} data, such data
+should be deleted from local machines and OneDrive as soon as we have
+the compiled data backed up to the more secure H drive. For data that is
+\emph{confidential} we need not rush to delete it. We shall allow most
+data to exist on \emph{labBackUp\_cmorey} until the space is required
+for newer data, and then delete the oldest files that have been compiled
+and backed up first. The researcher responsible for the data should
+delete it from the local machine where it was collected after data
+round-up for that project is finished.
+
+\subsection{Summary}\label{summary}
+
+Individual data files may be found on the local machine on which they
+were collected, unless there has been a crash or overwriting error.
+Assuming our lab back up procedure was followed, individual data files
+should be redundantly available on our shared OneDrive back-up.
+
+Once we have compiled and anonymized the data, it will not be necessary
+to access the individual data files. Lab personnel associated with a
+project shall all have access to the anonymized data via our shared OSF
+project page. This anonymized data file may be saved redundantly
+anywhere. It will not contain sensitive information.
+
+If you somehow lose the anonymized data file and it is somehow gone from
+OSF, we can recover it by re-running the anonymization script we created
+on the original compiled data. The PI controls access to the original
+data, so requests for recovery from the original data must go through
+her. If we need the original data to prove something about the time
+period of data collection, the PI must also arrange access.
+
+\section{Processing paperwork}\label{processing-paperwork}
+
+\subsection{Consent forms}\label{consent-forms}
+
+Hopefully, the only paper associated with your project is the signed
+consent forms. These are definitely identifiable - they contain the
+participants' names and dates they took part. We must keep copies of
+these because it is necessary that we be able to prove that a particular
+person consented to take part in our research, if the person ever
+claimed s/he did not give consent.
+
+Once data collection on your project is closed, you must turn these
+papers over to the PI. First, scan the consent forms into one .pdf
+document. Enter the PI's email address as recipient. Make sure this is
+done before the compilation meeting. During the compilation meeting, we
+shall check that the number of pages in the .pdf consent scan matches
+the number of participants in the study. If not, we may need to discover
+which participant did not consent, and remove that participant's data
+using the timestamp information. Candice will save the consents .pdf to
+her H drive. The paper consents will be destroyed in the next
+confidential waste pick-up.
+
+The consents sub-directory on Candice's H-drive is organized by year. We
+are required to keep the signed consent forms for 7 years. Annually, she
+shall delete the sub-directories more than 7 years old.
+
+\subsection{Paper data}\label{paper-data}
+
+If your study involves data collection on paper forms, you must back
+these up digitally by scanning them to .pdf as soon as your data
+collection closes. While collecting data, you should leave the paper
+forms in an organized space within the lab.
+
+Paper data should also exclude personally identifiable information. It
+will also be considered \emph{confidential} because some combination of
+lab personnel could work out the identity of the participant by linking
+the participant id on the paperwork with corresponding digial data with
+a timestamp. This is why paper data should remain in the secure lab.
+Once scanned, the digital file shall be saved to the appropriate
+OneDrive directory and to Candice Morey's H drive.
+
+Data requiring transcription or coding must be duplicated by two
+independent coders, with any disgreements resolved by a third person.
+For projects involving coding or transcription, once we have multiple
+ratings the raters and PI (or a senior researcher) shall meet to compare
+the ratings and arbitrate any differences. In this meeting, the two
+rater's transcriptions shall be merged, a resulting measure evaluated,
+and ultimately the resulting agreed measure shall be merged with the
+other project data. All steps will be documented via script. Once this
+has been completed, and the data have been uploaded to OSF (for
+anonymized data) or Candice's H-drive (for nonanoymous data), the paper
+forms shall be destroyed via Confidential Waste collection.
+
+\section{Confidentiality}\label{confidentiality}
+
+We have procedures built into our back-up process to prevent
+potentially-identifiable research data from leaving the secure
+univerisity environment. However, our biggest efforts for solving this
+problem are taken during data collection and study design. Whenever
+possible (which is nearly always), we do not record any identifiable
+information about our participants. Unless you need precise information
+about their ages at test, we do not record birth dates. We never record
+proper names or any stable identification number with experimental data.
+When we need to link a participant's data across multiple sessions, we
+will do this with a key of real-life identity and contact information to
+participant numbers, which is destroyed once we have finished collecting
+data. When we need to use such a key, it is maintained by one
+researcher, and stored within the secured university environment.
+
+Our ethics approval states that we shall destroy this key when data
+collection is finished. For projects involving a key, key destruction
+will be the last item on the agenda of the \textbf{Data Round-up
+Meeting}. Once we have compiled and written the anonymous data files, we
+shall run tests to be sure that we have correctly matched up participant
+ids across sessions. Once satisfied of this, we shall delete all copies
+of the key.
+
+\chapter{Designing your study}\label{designing-your-study}
+
+Investing time into designing your study pays off in the long run.
+Testing participants is tedious, hard work. During some periods and for
+some kinds of participants, it is expensive. You want to be as sure as
+possible that the experiments you run are capable of addressing the
+points that you are trying to address. What's more, you want your
+experiments to address these points thoroughly and well.
+
+We always try to design experiments according to the following
+principles, unless we have a very good reason to deviate from them.
+
+\section{Use computers whenever possible to control stimulus
+presentation and response
+collection}\label{use-computers-whenever-possible-to-control-stimulus-presentation-and-response-collection}
+
+Back in the late 1990s when I was an undergraduate student interested in
+cognitive psychology, I worked in several labs trying to figure out what
+kind of research I wanted to specialize in. One thing became completely
+clear with experience, and it is even more true now than it was then: if
+you are serious about becoming a cognitive psychologist, you must be
+proficient at getting computers to work for you. Without decent tech
+skills, your work will always be sub-par. Yes, some classic papers were
+written in which the researchers presented their stimuli in low-tech
+ways, and the quality of the results were based on their great ideas and
+committment to conscientiousness. But see, even if you have a comparable
+commitment to conscientiousness and comparably great ideas, there will
+be someone else who has those things and also has sufficiently good
+technical skills to automate their research designs. And in 99 cases out
+of 100, that automation will improve the project. Why is that?
+
+\subsection{People make more mistakes}\label{people-make-more-mistakes}
+
+Suppose you want to show participants a stimulus for 1 second. For our
+research, it may not be extremely important whether the participant is
+exposed to the stimulus for 900 ms versus 1200 vs vs 1000 ms, the
+fluctuations in time you might expect if a human is reading out stimuli
+or manually displaying them on flashcards. But you don't really know, do
+you? Suppose a reviewer asks for some confirmation about timing, or
+thinks that a particular pattern in the data might make sense for
+stimuli presented for 1100 ms, but would be surprising if they were
+presented for \textless{} 1000 ms. You will need to be reasonably
+certain about major elements of your methods, and reasonable certainty
+won't be possible with human-manual presentation.
+
+Computers have brief hiccups that can cause events to be displaced from
+their stated timeline slightly. These displacements are usually on the
+order of 7 ms, and these blips are recorded. People deviate way more.
+Suppose you are showing a participant stimuli on a series of flashcards,
+aiming for exposures of 1 second each, and you need to sneeze. There is
+going to be an irregularity of way more than 7 ms. What's more, you will
+have to decide, in real-time, whether to record the presence of that
+regularity in the trial somewhere, which will again take more than 7 ms.
+If you decide not to, then we will not know from the data that the
+irregularity occurred, and that trial may be analyzed as though it were
+normal. There isn't a great solution for this. But with a good
+experimental presentation program, we would always be able to check
+whether our assumptions about timing were met, and if not, how much
+deviation there was. We could quickly exclude any trial with massive
+irregularities if we decided it was important to do so.
+
+Another example: people are notoriously terrible at judging randomness.
+If we want some variable to be presented in random order, a human will
+have trouble distributing the levels of that variable in a random way.
+What's more, different humans will have somewhat different ideas about
+which patterns look random and which don't. It's better to let machines
+sort this out, based on some rules we restrict them with.
+
+\subsection{People are biased}\label{people-are-biased}
+
+The first rule of objective research is that your hypothesis should not
+be allowed to affect the outcome of a test. This becomes impossible to
+regulate when the human delivering the stimuli and recording the
+responses has a hypothesis about how participants will perform under
+various conditions. Effects of experimenter bias on test outcomes have
+been demonstrated in many settings.
+\href{https://en.wikipedia.org/wiki/Tryon\%27s_Rat_Experiment}{An
+example}: Tryon ran a research program in the 1930s and 1940s aiming to
+test genetic inheritance of intelligence in rats. He tested rats on
+completing a maze, and segregated the rats into groups based on how well
+they got through the maze. He let the ones with the fewest errors
+interbreed and the ones with the most errors interbreed, and tested
+their offspring on mazes for generations. The rats in the ``bright''
+population got better and better than the rats in the ``dull''
+populations generations after the first selection occurred.
+
+This may not be so surprising: nearly everyone believes that
+intelligence is at least partially genetic. But there was more to
+Tryon's measure than just that smart rats breeding with other smart rats
+produces smart baby rats. Tryon's studies were not blind. The
+researchers working with the rats knew which ones were ``bright'' and
+which were ``dull''. Rosenthal and Kode (1963) replicated the research
+design, but randomly assigned rats from the same population to
+``bright'' and ``dull'' groups. There were in fact no systematic
+differences between their ``bright'' and ``dull'' rats, except that the
+researchers working with them believed that there were. Rosenthal and
+Kode found the same effects as Tryon: the ``bright'' rats produced
+offspring better at completing mazes than the ``dull'' rats.
+
+One can imagine how this played out, and the many sources where bias
+that might affect the rats behavior itself or even just the recordings
+could be introduced. The researchers would have cared for the rats,
+making sure they had food, water, stimulation, and clean bedding. The
+researchers would have put the rats in the maze, counted their errors
+and timed their performance. The ``bright'' rats might have been petted
+more, had their food and water refilled more often or more quickly. When
+being put in the maze, there could have been differences in judging what
+was an error, or systematic differences in how quickly the stop watch
+was triggered and stopped. If you expect the ``bright'' rat to go very
+fast, perhaps you very attentive to its run, and extra vigilant about
+stopping the timer.
+
+This bias isn't restricted to rats. It can happen any time a person has
+to make a judgment, however minor, about what a participant did, or make
+a decision about when to deliver a stimulus, stop a clock, record an
+error, etc. Can this be counteracted? We could take care to always
+ensure data collectors do not know the hypothesis. But then who would
+collect data? Usually, students collect data for their own project,
+which they have contributed to developing. They can hardly keep
+themselves from forming expectations about the results. The best and
+most practical way to restrict experimenter bias is to take as many
+decisions as possible out of the hands of the human experimenters during
+data collection.
+
+\subsection{\texorpdfstring{It's more work in the end \emph{not} to
+automate}{It's more work in the end not to automate}}\label{its-more-work-in-the-end-not-to-automate}
+
+All of our data will eventually need to be quantitatively analyzed. Even
+data that may begin as qualitative, like responses to questions about
+how participants performed a task, would eventually need to be coded as
+falling into one response category or another for some kind of
+quantitative analysis. So, if you plan to have participants manually
+write responses, or if you code their spoken responses in real time by
+hand, you will still need to transfer all of that data to a .csv file.
+Errors will certainly be introduced when transcribing, so it would not
+be enough for one person to transcribe these data: it would need to be
+done independently by two people, compared, and then discrepancies would
+need to be transcribed again.
+
+Properly programmed and tested, the computer cannot mistake which button
+the participant pressed, or where the participant clicked the mouse, or
+what the participant typed. The computer's ``judgments'' need to be
+checked at the start, to be sure we know it is systematically recording
+what we meant for it to record, but once we are satisfied, we can be
+confident that it is recording these responses the same way every time.
+It will not get tired and make random errors. It will not forget which
+button is which. So the responses it records do not usually need the
+time-consuming checking that human-coded data need. A little time spent
+upfront will therefore save you hours of painstaking work later.
+
+\section{Work from a good example}\label{work-from-a-good-example}
+
+Whether you are a skilled programmer or totally new to it, your first
+step to programming your study should be to find an example program that
+does part of what you need, and work from that. Even though we are
+currently switching from closed-source E-Prime to open-source PsychoPy,
+we already have programs or programs-in-progress that execute spatial
+and verbal memory span tasks, display spatial locations around a
+circular perimeter, and administer complex span. Don't start from
+nothing: break down what you need for your program to do, and ask other
+lab members for advice finding examples.
+
+Examples can come from inside or outside the lab, but if you are
+programming something that is incrementally different from something we
+already have, you should work from the lab version. This is important
+because we want to make sure that different iterations of our studies
+differ only in the ways we are aware of. If, when exploring programs
+from other labs, you discover a better way of implementing something,
+put that on the agenda for the next lab meeting, and explain what we
+would gain from adopting the other method. Then 1) we all learn
+something new, 2) we decide as a group whether the method you discovered
+is worth implementing across projects, 3) we are all at least aware if
+one task iteration is going to differ in implementation from other
+similar implementations.
+
+Another reason to work from an in-lab example when implementing your
+project is that it increases the likelihood that programming conventions
+some of us may have previously agreed upon persist in new programs. It
+is always rough figuring out just what someone else's code does. The
+platforms we favor have some features that help with this, and by
+working from an in-lab example, you may be able to continue in the style
+that the rest of us understand.
+
+Most importantly, we don't have a formal ban on closed-source software.
+We may sometimes use E-Prime, MatLab, or whatever when it is convenient
+to do so. Good reasons for this include: carrying on from existing
+projects that use those platforms (e.g., avoiding ``changing horses
+mid-stream''), or when we are collaborating with colleagues who insist
+on these (though we will generally try to persuade them to let us
+provide open-source materials). If you are starting a new project,
+assume that you will be using open-source software. We do not want to
+use closed-source software indefinitely, and starting anything new with
+it perpetuates its use. Consider (especially if you are a student) that
+your next job may not include access to E-Prime or MatLab, so learning
+an open-source solution makes it more likely that you can continue
+working with the platform you become familiar with later, rather than
+being forced by a new employer to learn something else.
+
+We favor open-source programming platforms that make use of some sort of
+graphical user interface, like PsychoPy and OpenSesame. Even if you are
+an expert coder, you should plan to implement as such as possible using
+the GUI framework. This is because our lab will never exclusively
+feature expert coders who can follow along with your code. Our group
+will always include students who are brand-new to programming and
+coding, and we need our general-purpose materials to be comprehensible
+to new users who may wish to use them as a starting point later. Many
+(maybe most?) of our programs will include some code components, but
+when it is possible to build in the interface, that's what we do.
+Because we need for newbies to comprehend things, code components should
+be obsessively commented.
+
+\section{Record as much as you can}\label{record-as-much-as-you-can}
+
+Though we are committed to documenting our hypotheses and analysis
+pipelines before collecting data, it is inevitable that we will
+sometimes think of a great way to test a hypothesis later. There is
+nothing inherently wrong with data-driven analysis, so long as we are
+honest about what we predicted before seeing outcomes, so we should try
+to facilitate getting as much out of each precious data collection
+opportunity as possible. Programmers must of course ensure that the
+dependent variables needed for planned analyses are recorded properly,
+but they should also consider whether other elements of the response may
+also be conveniently collected. Examples:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Your main interest may be response accuracies, but that should not
+  prevent you from also collecting response speeds (and checking that
+  you know how your program records them)
+\item
+  Your main dependent variable might be whether a whole sequential
+  response is 100\% correct or not, but that should not prevent you from
+  collecting the components of the response (e.g., that the participant
+  responded 8675309, not just that they got a list ``right'' or
+  ``wrong'').
+\end{enumerate}
+
+There could be good reasons to aurally record spoken responses, to have
+response speeds for individual elements in a list response, for elements
+I've not yet imagined. You should record as much as you ethically can,
+and try to think in advance of the ways in which various response
+elements would work together to converge on a hypothesis (and include
+those in your preregistration when possible). If you want an element
+later and did not record it, the only solution is to collect data again,
+which costs time and (sometimes) money.
+
+\section{There are always exceptions}\label{there-are-always-exceptions}
+
+There will sometimes be projects for which we don't follow these
+principles. Sometimes, we will have a good reason for wanting
+participants to give natural, vocal responses, which currently cannot be
+evaluated in real-time by a computer. There are bound to be other
+exceptions. Expedience is \textbf{not} a good reason though. If you have
+no idea how to implement something, ask for the support of the group.
+
+\chapter{Experimental protocols}\label{experimental-protocols}
+
+The experimental protocol is like a recipe for running your experiment.
+Each experimenter responsible for a discrete data-collection initiative
+must write the script for completing a run. This script should be
+sufficiently thorough that a trust-worthy, non-lab-member psychologist
+could run it correctly from the script alone. Imagine that you
+experience an emergency shortly before your participant is scheduled to
+arrive. Your protocol should be detailed enough that you could run into
+the Tower building, find another Year 3 or PG student, give them your
+protocol, and they could do everything from setting up the lab to saving
+the data.
+
+(Note, we would \textbf{never} actually do that. Of course non-lab
+members cannot do our lab work - see data security. But nonetheless your
+protocol should be detailed enough to allow it.)
+
+\section{Writing your protocol}\label{writing-your-protocol}
+
+The PI will direct you to an appropriate example protocol to work from.
+Where possible, you may copy from the existing protocol. There no point
+using your creativity to find new ways to describe instituting similar
+set-ups. Familiarity also helps other lab members know when procedures
+were the same and when they differed.
+
+Writing a protocol is an exercise in theory-of-mind. You need to think
+carefully about what someone else does not know about your procedure,
+and address each point you can think of explicitly.
+
+Our paradigms will typically include the following sections.
+
+\subsection{Setting up}\label{setting-up}
+
+Your protocol should start with whatever must be done \emph{before} the
+first participant arrives. As a general rule, set-up should be complete
+10 minutes before the participant is expected. Assume this, and work
+backwards for determining how early setting up the lab for your
+procedure must begin.
+
+Set-up will typically include rebooting the computer(s), applying or
+checking any settings (e.g., for volume, screen refreshing, color
+temperature, etc.) specific to your experiment, and arranging the
+workspace. Include every detail that needs to be applied or checked for
+your experiment.
+
+\subsection{Greeting and consent}\label{greeting-and-consent}
+
+How will your participant find the lab? Will s/he be able to reach it on
+their own, or do you need to meet them outside? You want the participant
+to feel welcomed and not stressed about getting there, so plan to do
+what it takes to ensure they know where to go.
+
+Remember that your participant might never have been in a lab before.
+They might not know what they may touch, where they may sit, etc.
+Instruct them on everything - where to sit down, where to place their
+things, etc. If they bring food or drink in, they may not have it during
+the session, but you may be able to keep it somewhere safe for them
+while they are working.
+
+After the participant is settled, the first thing they must do is
+consent to take part in the study. Consider how you will present consent
+to them, and how you will emphasize the main points of the consent
+document.
+
+\subsection{Instructions and practice}\label{instructions-and-practice}
+
+All of our experiments should be designed to guide participants through
+the task, so that after an initial practice period the experimenter is
+confident that the participant understands what to do. The best means
+for doing this will vary dependning on your project. Here are some
+general principles that we have found to be effective:
+
+Do not plan to have your participants read through instructions on their
+own. Of course they \emph{can} read, but always keep in mind that many
+participants want to get in and out of the lab as quickly as possible.
+They will assume that they can just figure it out, and click through
+instructions like it's their iPhone legal agreement update. They will
+get to a trial, and call you over because they do not know when to
+respond or what button to press.
+
+Either use the on-screen instructions to remind yourself of how you will
+aurally explain the instructions to the participant, or implement a
+read-instruction system where the participant cannot advance past a
+screen on their own. One way to do this is to end the instructions with
+something like ``Now, get the researcher's attention before
+continuing'', without telling participants how to get off the screen
+(and choosing a non-obvious exit key that the experimenter knows as the
+only way to advance). This way, you have the opportunity to check that
+the participant understands what they are about to do before they begin.
+
+Include practice trials, and design them to be representative of
+experimental trials, but easier. Over-represent the easiest conditions
+in your practice block so that it will be really obvious to participants
+what to do. Consider including an accuracy criterion for advancing to
+the experimental trials, where the participant has to repeat the
+practice block until they have proven they know how to do the task.
+(Note: this is more advisable for some paradigms or components than
+others, and only possible to implement for conditions where you expect
+very high accuracy.)
+
+Explain in your protocol how to guide participants through the
+instructions and practice. After you have run some pilot participants,
+you may want to update this section after seeing what they find
+difficult.
+
+\subsection{Monitoring or on-call}\label{monitoring-or-on-call}
+
+For most of our studies, participants complete the experimental trials
+independently after passing the practice block. There may be elements of
+participants behavior that the researcher must monitor or record. If so,
+what are these? How do you make recordings? What decisions will the
+researcher need to make? Detail these instructions carefully so that
+another could reproduce exactly what you do to monitor the participant.
+
+If the researcher is simply ``on-call'', waiting for the participant to
+finish, what is the researcher allowed to do? Is it fine to do some
+quiet work during this time? Use the protocol to let the researcher know
+that.
+
+For what reasons is the participant likely to need assistance during
+this time? Is there a new block of trials with different instructions?
+Are there breaks? How often? Include these details in your protocol so
+that the researcher knows what to expect. Participants might ask about
+these details too.
+
+\subsection{Saving and break-down}\label{saving-and-break-down}
+
+When the participant is finished, the researcher should thank them,
+debrief them (and pay them, if they are working for pay). The researcher
+should escort the participant out of the secure lab area or building
+(for the participant's convenience as well as to comply with safety and
+security rules). What else needs to happen at the end of a run? Is there
+anything to be recorded? How should the researcher save the new data?
+After the final participant of the day, how should the lab be shut down?
+If the participant is getting EMS credits, how does one apply those?
+
+\subsection{Exceptions and unsual
+events}\label{exceptions-and-unsual-events}
+
+These typically include what to do if a participant decides to withdraw
+consent. Participants may withdraw for any reason. They may request to
+have their data deleted. In case they do, you should detail how one
+would find the new data, and all the steps needed to show them it has
+been deleted.
+
+If the participant is taking part for money and withdraws consent, it is
+only necessary to pay them for the amount of time they spent. Deciding
+how to pro-rate participant can be sensitive. A good general rule is to
+round up to the nearest quarter hour and apply the advertized hourly
+rate.
+
+If the participant is taking part for EMS credit, then how to proceed
+depends on the reason they give. Do ask why they are withdrawing
+consent, and delete their data if requested. Depending on the reason for
+withdrawing, their credit might be pro-rated similarly to applying
+payment. This should always be discussed with the PI.
+
+\section{Testing your protocol}\label{testing-your-protocol}
+
+New protocols must always be tested, and perhaps revised, before
+beginning your study. If your experiment is part of an existing series,
+you may be authorized to skip testing because subsequent experiments are
+likely to be very similar to others in the series. But if your protocol
+is for a new project, or you are new to the lab, you must take it
+through the following tests.
+
+First, run through it yourself. Try not to bring any unwritten knowledge
+to interpreting your protocol. See if there is anything you need to add.
+You should always do a complete run of your experiment too, to check
+that it really does what you expect it do, stops when you think it will
+stop, etc.
+
+Then get another lab member to go through the protocol, and to actually
+perform the set-up as the protocol instructs. If the lab member cannot
+do it correctly based on the protocol instructions, then revise the
+protocol based on their feedback and try again. The lab member may also
+have suggestions for the remainder of the protocol for you to implement.
+Run the lab member through your experiment if you have not already
+pilot-tested it within the lab. The lab member may have suggestions for
+tweaking your instructions, or may help find uncaught errors or bugs.
+
+Once another lab member believes the protocol is fairly complete and the
+experiment runs as intended, the protocol and experiment should be shown
+to the PI. (Note: Depending on how much support the researcher needed to
+program the experiment, the PI may already have seen the experiment
+itself by this point.) If the PI finds it complete, then she will
+authorize you to schedule a naive particpant for a time that she (or
+another senior lab member) can observe. The observing lab member will be
+present for the set-up, at least the instructions/practice if not the
+whole run, and break-down to see how the protocol worked and how closely
+the researcher followed it. After this exercise, the observing lab
+member and researcher will discuss how the run went, whether any changes
+need to be made. If no changes need to be made, then the run may be
+considered the first participant in the study. This participant number
+may need to be marked for exclusion if major changes are requested. This
+decision should be explicit, and recorded in the notes the researcher
+keeps about participant runs.
+
+\section{Clearance to begin}\label{clearance-to-begin}
+
+Once the researcher has completed a supervised run, and the supervising
+lab member finds the run successful, with no changes to implement, then
+the researcher is cleared to begin recruiting the necessary number of
+participants.
+
+\chapter{Dealing with the unexpected during data collection with adult,
+student
+participants}\label{dealing-with-the-unexpected-during-data-collection-with-adult-student-participants}
+
+We design experimental materials to be easily administered and as
+fail-safe as possible. However, that doesn't mean that nothing can go
+wrong during your data collection. Here is a description of how
+participant running usually goes, and then anecdotal exceptions that
+have occurred to us more than once.
+
+\section{The slow participant}\label{the-slow-participant}
+
+Most student participants are not new to taking part in research, and
+understand the drill. They want to get in and out of a session as
+quickly as possible. This is so typical that we must account for it in
+the design of experiments and ensure that participants learn that they
+will not benefit from random responding. However, some participants take
+much longer than is typical to respond. Sometimes, we never learn why,
+we simply see that their session takes a long time and their response
+speeds are much slower than average. Sometimes, these participants wish
+to discuss how they are doing the task in detail with the experimenter.
+If a participant wants to discuss the experiment with you, always engage
+with them as far as possible (up to explaining the hypothesis, which you
+can do after they finish).
+
+\section{The inattentive participant}\label{the-inattentive-participant}
+
+Remember how most student participants have learned that it is in their
+best interest to finish as quickly as possible? Some will try to speed
+everything along: they will grab the mouse and start trying to enter
+information without knowing what they are doing, will start mashing
+SPACE, ENTER and random keys to get the study going. Data from this
+behavior would not signify anything. This is the reason our policy is
+always to personally explain instructions and have a supervised practice
+session. Practice sessions should be designed so that the experimenter
+is certain the participant understands the task, and that the
+participant is not inadvertently rewarded for speeding through examples
+and instructions.
+
+Sometimes we cannot ensure that a participant will not choose to
+randomly respond after they are left on their own. Our tasks are often
+hard, and it would not always be reasonable to impose an accuracy
+criterion (though sometimes it is). Our strategy is to ensure that they
+know how to do the task, not to set it up in such a way that
+non-responding would allow them to finish earlier, and to build in some
+trials that are meant to detect insincere attempts. Usually, this means
+including some very easy condition. Even if these trials are not meant
+to be part of the main design, they can be used to check that the
+participant understood what to do and was not responding randomly.
+
+\section{Sleepy, sick, or inebriated
+participants}\label{sleepy-sick-or-inebriated-participants}
+
+Student life is difficult, and sometimes you will greet a participant
+who isn't in fit condition to be working on anything. The PI has seen
+participants who came over directly from the pub, who were so ill that
+they ought to have been in bed, or who were so tired they could hardly
+sit up. These participants are trying too hard to meet their
+requirements. If you encounter a participant in this state, the best
+option is to offer to reschedule them. They will not learn anything from
+trying to take part.
+
+\section{The participant with a lot of
+questions}\label{the-participant-with-a-lot-of-questions}
+
+Occasionally, a participant will want to know a lot of detail about how
+the study works or what will be done with the data. Intellectual
+curiousity is always to be encouraged. Engage with questions as best you
+can, but if you do not feel up to answering all of them, refer the
+participant to the PI or another senior, responsible researcher.
+
+Often these participants want to see their own data. Our general policy
+is only to release anonymized data sets. Note down this participant's
+email address so that we can alert him or her when the anonymized data
+are available. In some cases, we may be okay with giving the participant
+their own data set as well. The reason that we generally do not do this
+is that in our experimental tasks, usually there is little (if anything)
+to be learned from one person's performance. There is nothing diagnostic
+we would be able to say about certain task scores, and there is some
+worry that a participant might try to read too much into their
+performance. Giving access to the anonymized data would be sufficient to
+let them have a go at data analysis and satisfy their curiosity about
+the results.
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}

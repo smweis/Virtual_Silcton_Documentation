@@ -1,0 +1,54 @@
+
+# Resources
+
+## General Lab
+
+### RMarkdown
+
+* This lab manual is written in RMarkdown. If you'd like to contribute, you should!
+
+### Zotero
+
+## Literature
+
+Below are a few seminal lists of readings that any lab member can start with. Pick a topic and dive in.
+
+Active members of the lab would do well to track the literature on their own. Here a few tips for doing so:
+
+* Set up Google Scholar alerts
+
+* Set up Feedly and integrate that with journals you read regularly
+
+* Become active on Cog. Neuro Twitter (seriously, I find way more articles that I actually read in this way than the other two methods!)
+
+### Cognitive Neuroscience
+
+### fMRI
+
+### Spatial Navigation
+
+## Coding
+
+### General
+
+* Git
+
+* Bash
+
+* Tools
+
+  * Anaconda for Python
+
+  * Atom editor
+
+### fMRI
+
+*
+
+### Unity3D
+
+### R
+
+### Python
+
+### Matlab

@@ -1,6 +1,6 @@
 book_filename: "SCANN_Lab_Manual"
-repo: https://github.com/Scann-Lab/Lab_Manual
-output_dir: docs
-rmd_files: ["index.Rmd", "SCANN_Lab_Manual.Rmd"]
-clean: [packages.bib, bookdown.bbl]
-new_session: yes
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+output_dir: "docs"
