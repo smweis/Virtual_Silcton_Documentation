@@ -1,0 +1,546 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[
+  12pt,
+]{book}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Helvetica}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={SCANN Lab Manual},
+  pdfauthor={Steven M. Weisberg, PhD},
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{titling}
+
+\pretitle{%
+  \begin{center}
+  \LARGE
+  \includegraphics[width=12cm,height=6cm]{SCANN_Lab_Logo_NoOutline_With_Text.png}\\[\bigskipamount]
+}
+\posttitle{\end{center}}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{SCANN Lab Manual}
+\author{Steven M. Weisberg, PhD}
+\date{15 August, 2020}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\setstretch{1.5}
+\hypertarget{welcome}{%
+\chapter{Welcome}\label{welcome}}
+
+Welcome to the \href{https://scannlab.psych.ufl.edu}{\textbf{Spatial Cognition and Navigational Neuroscience}} Laboratory at the University of Florida, directed by Steven Weisberg.
+
+If you are new to the lab, your first job is to read through this manual, then go through the \href{onboarding}{Onboarding checklist}.
+
+Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started. It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack).
+
+\begin{figure}
+\centering
+\includegraphics{./SCANN_Lab_Logo_NoOutline_With_Text.png}
+\caption{Lab logo}
+\end{figure}
+
+Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is \href{https://github.com/scann-lab/lab_manual}{here}, but we have also borrowed heavily from others, including \href{https://github.com/ContextLab/lab-manual}{Jeremy Manning}, \href{https://handbook-public.themusiclab.org/welcome}{Samuel Mehr}, \href{https://github.com/alylab/labmanual}{Mariam Aly}, and \href{https://github.com/jpeelle/peellelab_manual/}{Jonathan Peelle}, and \href{https://ccmorey.github.io/labHandbook/}{Candice Morey}.
+
+You can find the SCANN lab across the internet:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://scannlab.psych.ufl.edu}{On the web}
+\item
+  \href{https://twitter.com/scannlab}{On Twitter}
+\item
+  \href{https://github.com/scann-lab}{On Github}
+\item
+  \href{https://osf.io/4hbgz}{On Open Science Framework}\footnote{You will also find our lab wiki here.}
+\end{itemize}
+
+\hypertarget{working-in-the-lab}{%
+\chapter{Working in the lab}\label{working-in-the-lab}}
+
+In the SCANN lab, we practice careful, deliberate, open science. This means that every person in the lab has a responsibility to make sure their projects are well-documented, reproducible, and undertaken with an eye toward the future. The following are a few more specific guidelines.
+
+\hypertarget{rights}{%
+\section{Rights}\label{rights}}
+
+\begin{itemize}
+\item
+  \textbf{You have the right to a work environment free from prejudice, bias, harrassment, and discrimination}
+  We have a strong focus on inclusion, diversity, and a harassment-free workplace. At all times, we treat each other, our participants, and our science with respect. (This does not mean we cannot argue - passionately, if need be. Dissenting opinions and knowing when to stand up for your opinion and when to back down, are in fact critical aspects of the scientific process.) You have the right a workplace culture that supports you, your career, and your expressions (as long as these rights don't violate the rights of others.)
+\item
+  \textbf{You have the right to make mistakes.} No one is perfect. Dr.~Weisberg has (probably) made bigger mistakes than you will during your time in the lab. (Ask him sometime.) Science is hard, and the work we do is at the edge of knowledge. This is very cool. But also means we are much more likely to make mistakes that we don't catch right away. Below, you'll see what your responsibilities are if (when) you make a mistake.
+\item
+  \textbf{You have the right to have ideas.} No matter how strange.
+\item
+  \textbf{You have the right to criticize ideas.} You are expected to criticize your own ideas! But you should also think critically about the ideas of others (including and perhaps especially Dr.~Weisberg.) And, when you criticize an idea: focus your criticism on the idea not on the person who came up with (including yourself!)
+\item
+  \textbf{You have the right to maintain a healthy work-life balance.} I hope that you love working in the lab, but this does not mean slavish devotion ;).
+\end{itemize}
+
+\hypertarget{responsibilities}{%
+\section{Responsibilities}\label{responsibilities}}
+
+\begin{itemize}
+\item
+  \textbf{All lab members will prioritize a healthy and supportive lab culture.}
+  The SCANN lab is deeply committed to maintaining a harrassment-free and inclusive culture. All lab members are expected to treat each other with respect, professionalism, and general courtesy. This also means you have a responsibility to ensuring you maintain a healthy work-life balance (whatever this means for you). We strive for diversity, anti-racism, and inclusivity. Some guiding principles are \href{https://coco-net.org/wp-content/uploads/2019/11/Coco-WhiteSupCulture-ENG4.pdf}{here}. We also follow \href{https://hr.ufl.edu/forms-policies/policies-managers/sexual-harassment/}{UF harrassment policy}.
+\item
+  \textbf{This is a professional work environment.}
+  We keep things professional both for ourselves and especially when we interact with people outside of the lab and \emph{most especially} participants. We owe our participants a huge debt of gratitude, regardless of their compensation, because they are taking the time to provide us with their data. Treat each one with the utmost respect and care. Professionalism means appropriate dress and respectful demeanor (cursing, loud music, messiness discouraged). Professionalism also means upholding your commitments - being on time for your shifts; cleaning up after yourself; sticking to deadlines. It also means communicating effectively. (To reiterate - you can make mistakes! Professionalism means communicating about them when you do!) Lastly, professionalism means appropriateness in all things (including humor; off-color jokes or jokes at the expense of others will not be tolerated). This applies for all times you're at work, but again \emph{especially} when running participants. Finally - professionalism does NOT MEAN no fun! Work should absolutely be fun in a way that is fun for everyone!
+\item
+  \textbf{You are a team member first.}
+  As a lab, we can only thrive by relying and counting on each other. Treat everyone in the lab (and anyone related to the lab, including participants, collaborators, mentors) with respect and care. Respect their time, their preferred hours, and their needs. Help them when they ask (within reason), and help build a culture of respect and honesty.
+  Work with care. Measure twice, cut once. Document your workflows. Save and backup all raw data and code (on a minimum of two of these locations: Hipergator, Dropbox, OneDrive). In preparation phase, make sure everything is clearly labeled, and the experimental paradigm captures data as expected. It is best practice to write analysis code on simulated or pilot data as proof of principle and good sanity checking. In the experiment phase, make sure raw data are being regularly backed up. In the analysis phase, make sure difficult-to-reproduce products are also backed up, and that all analyses are reproducible and documented. In the submission phase, all materials should be able to uploaded to OSF, OpenNeuro, or another online repository in preparation for submission.
+\item
+  \textbf{Our goal is research products}
+  Posters, presentations, and publications are the traditional academic products, and you will be expected to produce or contribute to these as a member of the lab. But we also value contributions of: data sets (documented and described), software packages (and analysis pipelines), and `reproducible sandboxes' (Jupyter Notebooks). These research products are rarely peer-reviewed, but provide invaluable tools for the broader research world and their creation is not taken lightly.
+\end{itemize}
+
+\hypertarget{personnel-expectations}{%
+\chapter{Personnel Expectations}\label{personnel-expectations}}
+
+\hypertarget{pi}{%
+\section{PI}\label{pi}}
+
+\begin{itemize}
+\tightlist
+\item
+  I am responsible for the overall lab vision and direction. This mainly includes developing project ideas and obtaining lab funding. But on a daily basis, it also means I am responsible for ensuring the lab produces research products.
+\item
+  I am responsible for contributing to the professional development of all lab members. I will try to prioritize this depending on the goals of each individual, but the better we can communicate about your goals, the more successful I will be in this regard.
+\item
+  I will support your general education in psychology, broader education in related fields, and specific education in the cognitive neuroscience of spatial navigation.
+\item
+  I will contribute to all ongoing projects in the form of: commenting on written drafts, presentations, and posters; helping develop and troubleshoot analyses; ensuring all resources needed for a project are available; providing opportunities for networking, collaboration, and professional development; designing and implementing experiments and protocols; helping manage the lab infrastructure (including analysis pipelines, data backup, and data storage).
+\item
+  I will support the physical and mental health and safety of everyone in the lab.
+\end{itemize}
+
+\hypertarget{phd-students}{%
+\section{PhD Students}\label{phd-students}}
+
+In general PhD students have a fairly loose leash as long as they are making progress on projects. In practice, this likely means there will crunch times where you're working hard to get things done and lighter times, when you can take it easy. Please let the PI know, though, if you plan to take extended time off (more than a few days).
+
+PhD students are expected to:
+
+\begin{itemize}
+\item
+  Develop and manage an independent project.
+\item
+  Know the literature and learn the skills related to their project.
+\item
+  Have a strong grasp of (nearly all aspects of) cognitive neuroscience; a breadth of knowledge from areas closely related (psychology, mostly); and a familiarity with related disciplines (biology, anthropology, philosophy, etc.)
+\item
+  Grow skills in writing, data analysis, experiment administration and protocols, and presentation.
+\item
+  Generate (ideally and roughly) one research product per year in the lab.
+\item
+  Seek out opportunities for awards (fellowships, travel awards)
+\item
+  Advocate for what they think and what they need to do their jobs
+\item
+  Develop (or maintain) healthy work habits and a good balance.
+\end{itemize}
+
+\hypertarget{lab-manager}{%
+\section{Lab Manager}\label{lab-manager}}
+
+The lab manager should have a more regular schedule to ensure a stability in the lab. Due to the nature of OPS positions at UF, 8 hours per day is expected, and these hours should occur roughly between 8am and 6pm. There will be exceptions to this - weekend or late night fMRI scanning sessions come to mind - and these hours can be `made up for' during the week. Time off requests can be somewhat informal, but should be submitted to the PI in writing so we have a record of such things.
+
+The Lab Manager is expected to:
+
+\begin{itemize}
+\item
+  Facilitate lab business, including:
+
+  \begin{itemize}
+  \item
+    Recruiting participants
+  \item
+    Organizing and documenting data storage and backups
+  \item
+    Updating the lab website and Twitter
+  \end{itemize}
+\item
+  Facilitate projects, including:
+
+  \begin{itemize}
+  \item
+    Managing human subject payments
+  \item
+    IRB protocol updates
+  \item
+    Putting projects online (via Prolific, M-Turk, Pavlovia, etc.)
+  \item
+    Running experiments
+  \end{itemize}
+\item
+  Contribute to their own project (this will depend on the particular person, but all lab managers will have the opportunity to work on their own research project(s)).
+\item
+  Develop and maintain code, including:
+
+  \begin{itemize}
+  \item
+    Lab github
+  \item
+    Lab Hipergator account(s)
+  \item
+    Virtual Silcton
+  \end{itemize}
+\item
+  Develop and maintain documentation, including:
+
+  \begin{itemize}
+  \item
+    Lab experimental and consent protocols
+  \item
+    fMRI administration checklists
+  \item
+    Virtual Silcton website administration protocols
+  \item
+    fMRI pipelines and data analysis
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{undergraduate-ras-psy4911}{%
+\section{Undergraduate RAs (PSY4911)}\label{undergraduate-ras-psy4911}}
+
+Undergraduate research assistants help with research duties. But, especially if this is your first time working in a research lab, you should not just blindly go about your work and do what your told. Look for ways you can actively contribute to the lab. This includes generating your own ideas, but also developing your own skills. You should not have empty time in the lab, but rather pick a skill you're interested in learning (consult with your grad mentor or Dr.~Weisberg if necessary), and spend your free lab time teaching yourself.
+
+Undergraduate research assistants are expected to:
+
+\begin{itemize}
+\item
+  Work in the lab 3-hours per credit per week; the general minimum is 9-hours per week (though the number of credits can be less than 3)
+\item
+  Contribute to a project, including:
+
+  \begin{itemize}
+  \item
+    Recruiting participants
+  \item
+    Running participants
+  \item
+    Developing a project (collecting stimuli, coding the study)
+  \item
+    Coding data
+  \item
+    Analyzing data (to some extent)
+  \end{itemize}
+\item
+  Develop their own skills, including:
+
+  \begin{itemize}
+  \item
+    Knowledge of fMRI
+  \item
+    Ability to code in Python, R, Matlab, and C\# (Unity3D).
+  \item
+    Knowledge of the literature of cognitive neuroscience as pertains to their projects.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{undergraduate-honors-students-tbd}{%
+\section{Undergraduate Honors Students (TBD)}\label{undergraduate-honors-students-tbd}}
+
+Section under construction
+
+\hypertarget{doing-science-in-the-scann-lab}{%
+\chapter{Doing Science in the SCANN Lab}\label{doing-science-in-the-scann-lab}}
+
+The SCANN lab is committed to open science, careful work practices, and multi-disciplinary shenanigans! What does this mean? There are three inter-related areas that are important to our approach.
+
+\hypertarget{open-science}{%
+\section{Open science}\label{open-science}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Data, material, and code from all projects will be hosted publicly and shared{[}\^{}Within a reasonable timeframe; obviously, nothing will be shared before we are ready to publish or while we are working through the data{]}. In practice, this means projects will be hosted on one or all of the following sources: \href{osf.io}{OSF}, \href{figshare.com}{Figshare}, \url{OpenNeuro.org}, \href{github.com}{Github}.
+\item
+  Projects will, whenever possible, be \textbf{pre-registered}. In practice, this means nearly all projects will be pre-registered in some form. Pilot projects may be the exception. See guides on \href{https://osf.io/prereg/}{OSF} and \href{aspredicted.org}{Aspredicted.org}.
+\item
+  Papers will be made available in pre-print form (e.g., \href{biorxiv.org}{biorxiv}, \href{https://psyarxiv.com/}{psyarxiv}).
+\end{enumerate}
+
+\hypertarget{data-management}{%
+\section{Data management}\label{data-management}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Data you collect in the lab will be backed up in two of these three locations (in addition to your local computer):
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  UF Onedrive (folder shared with lab manager and/or Dr.~Weisberg)
+\item
+  UF Hipergator (/orange)
+\item
+  Lab hard drives
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Raw data MUST be backed up and not touched following lab protocols (with Readme.md documentation). Always work on a copy of the raw data when conducting analyses.
+\item
+  De-identified or anonymized raw data may also be hosted online for sharing. For fMRI data, structural scans must be de-faced (\url{https://pypi.org/project/pydeface/}).
+\end{enumerate}
+
+\hypertarget{careful-work}{%
+\section{Careful work}\label{careful-work}}
+
+You will hear me use the term Sanity Check. We should all strive to be a little bit obsessive about our data and analyses. Mistakes absolutely happen, but we should do as much as we can to prevent them and detect them. The following practices have helped me immensely.
+
+\begin{itemize}
+\item
+  Develop a habit of documenting everything you do the \emph{second time you do it}. (Why the second time? If you do it the first time, you may never do it again. If you do it a second time, you will almost certainly need to do it a third - it is now likely worth the time to document it).
+\item
+  Use the \href{https://osf.io/d8ke4/}{Lab Wiki}.
+\end{itemize}
+
+\hypertarget{communication}{%
+\chapter{Communication}\label{communication}}
+
+Science, especially as practiced in the SCANN Lab, is a collaborative endeavor, which means good communication is key. Here are the main ways the lab communicates.
+
+One thing we often forget about is communicating with ourselves. This means \emph{good documentation} so people don't have to reinvent the wheel. We will follow
+
+\hypertarget{lab-meeting}{%
+\section{Lab meeting}\label{lab-meeting}}
+
+Lab meetings are held weekly during the semester (time TBD) and intermittently through the summer. Lab meetings are approximately two hours long. The first \textasciitilde20-30 minutes consist of lab updates in which each lab member briefly (5 minutes or so) explains what constituted the bulk of their work that week; what progress was made, what hurdles were hit; and any general info they encountered relevant to the lab. The remaining 1-1.5 hours is provided for one lab member to give a presentation. The presentation can range widely (almost all formats are acceptable). Here are a few examples:
+
+\begin{itemize}
+\item
+  A journal club / discussion of an article
+\item
+  A project proposal / plan
+\item
+  A discussion about a general issue in science (e.g., preregistration, p-hacking, etc.)
+\item
+  Technique or tutorial (relevant to almost anything in the lab - e.g., Git or how head direction cells work; an MVPA crash course or how to organize folders for a project)
+\item
+  A data talk (e.g., where you have data but need help thinking through what it means, what to do next, or what you might not have thought of)
+\item
+  A polished (practice) presentation or job talk
+\end{itemize}
+
+\hypertarget{in-person-meetings}{%
+\section{In-person meetings}\label{in-person-meetings}}
+
+In-person meetings (in person or via Zoom) are a great way to work directly and solve a particular problem or make a plan of action. But they are also usually very time-intensive. Lab members may have regularly scheduled meetings with me during the semester, but anyone should always feel free to schedule a meeting. Before asking about a meeting, however, ask yourself three things:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Could this be solved via email?
+  If yes, send email. If no\ldots{}
+\item
+  What is the purpose of the meeting? (In other words, what is the agenda?) Make sure the purpose is in the email to schedule it.
+\item
+  What are the necessary inputs to the meeting? (Do we have all information we need to facilitate the meeting; if not, what are we waiting for? Are all necessary people involved?)
+\item
+  What are the expected outputs? Always ask yourself at the end of the meeting whether you know what the action items are (who will do what).
+\end{enumerate}
+
+\hypertarget{slack}{%
+\section{Slack}\label{slack}}
+
+Our lab \href{scannlab.slack.com}{Slack} is the source for daily lab communication. Our communication via Slack takes three forms.
+
+\begin{itemize}
+\item
+  Easy instant messaging (\citet{everyone}; \citet{steve} weisberg)
+\item
+  Communication about a particular topic. This is the purpose for channels. (\#neurofeedback, \#lab-purchasing). Feel free to start your own channel about a specific topic. Don't forget to invite the relevant people!
+\item
+  Updates and integration with other services. Check out integrations with Google Calendar, Github, Trello, and more!
+\end{itemize}
+
+\hypertarget{trello}{%
+\section{Trello}\label{trello}}
+
+Our lab to-do lists. The {[}Onboarding checklist{]} is on Trello. I recommend that everyone use Trello as their own to-do list manager, but I would strongly encourage using the shared to-do list feature for projects we're working on. Note that cards can be assigned due dates and assigned to specific people, who can indicate when they are finished particular tasks.
+
+\hypertarget{email}{%
+\section{Email}\label{email}}
+
+Official communication, notifications, etc. I sometimes use interchangeably via Slack. The one difference is any communication regarding participants absolutely needs to happen through UF email.
+
+\hypertarget{resources}{%
+\chapter{Resources}\label{resources}}
+
+Under construction!
+
+\hypertarget{general-lab}{%
+\section{General Lab}\label{general-lab}}
+
+\hypertarget{rmarkdown}{%
+\subsection{RMarkdown}\label{rmarkdown}}
+
+\begin{itemize}
+\tightlist
+\item
+  This lab manual is written in RMarkdown. If you'd like to contribute, you should! You'll need access to the Git repo (as a member of the SCANN lab). Samuel Mehr and the Music Lab have a great guide on \href{https://handbook-public.themusiclab.org/themusiclab.org/using-atom-and-git}{using Atom and Git} that I highly recommend.
+\end{itemize}
+
+\hypertarget{zotero}{%
+\subsection{Zotero}\label{zotero}}
+
+\hypertarget{literature}{%
+\section{Literature}\label{literature}}
+
+Below are a few seminal lists of readings that any lab member can start with. Pick a topic and dive in.
+
+Active members of the lab would do well to track the literature on their own. Here a few tips for doing so:
+
+\begin{itemize}
+\item
+  Set up Google Scholar alerts
+\item
+  Set up Feedly and integrate that with journals you read regularly
+\item
+  Become active on Cog. Neuro Twitter (seriously, I find way more articles that I actually read in this way than the other two methods!)
+\end{itemize}
+
+\hypertarget{cognitive-neuroscience}{%
+\subsection{Cognitive Neuroscience}\label{cognitive-neuroscience}}
+
+\hypertarget{fmri}{%
+\subsection{fMRI}\label{fmri}}
+
+\hypertarget{spatial-navigation}{%
+\subsection{Spatial Navigation}\label{spatial-navigation}}
+
+\hypertarget{coding}{%
+\section{Coding}\label{coding}}
+
+\hypertarget{general}{%
+\subsection{General}\label{general}}
+
+\begin{itemize}
+\item
+  Git
+\item
+  Bash
+\item
+  Tools
+
+  \begin{itemize}
+  \item
+    Anaconda for Python
+  \item
+    Atom editor
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{fmri-1}{%
+\subsection{fMRI}\label{fmri-1}}
+
+\begin{itemize}
+\tightlist
+\item
+\end{itemize}
+
+\hypertarget{unity3d}{%
+\subsection{Unity3D}\label{unity3d}}
+
+\hypertarget{r}{%
+\subsection{R}\label{r}}
+
+\hypertarget{python}{%
+\subsection{Python}\label{python}}
+
+\hypertarget{matlab}{%
+\subsection{Matlab}\label{matlab}}
+
+\hypertarget{onboarding}{%
+\chapter{Onboarding checklist}\label{onboarding}}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

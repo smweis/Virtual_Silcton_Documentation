@@ -1,11 +1,13 @@
 
 # Resources
 
+Under construction! 
+
 ## General Lab
 
 ### RMarkdown
 
-* This lab manual is written in RMarkdown. If you'd like to contribute, you should!
+* This lab manual is written in RMarkdown. If you'd like to contribute, you should! You'll need access to the Git repo (as a member of the SCANN lab). Samuel Mehr and the Music Lab have a great guide on [using Atom and Git](https://handbook-public.themusiclab.org/themusiclab.org/using-atom-and-git) that I highly recommend.
 
 ### Zotero
 

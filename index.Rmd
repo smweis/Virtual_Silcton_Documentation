@@ -12,22 +12,22 @@ biblio-style: apalike
 link-citations: yes
 fontsize: 12pt
 linestretch: 1.5
-description: "My aim with this document is to coordinate the researchers working with me so that the output from their projects is compatible, and so that every new student who joins my lab, however temporary, can find what they need to efficiently carry out their work."
+description: "This lab manual outlines the main policies and procedures for working in the SCANN lab."
 ---
 
 # Welcome
 
-Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg. If you'd like to view this lab manual as a website, check it out [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Scann-Lab/Lab_Manual/master/SCANN_Lab_Manual.html?token=ABQDV4GZIYQLZUIZH3EPDO27H7JBC).
+Welcome to the [**Spatial Cognition and Navigational Neuroscience**](https://scannlab.psych.ufl.edu) Laboratory at the University of Florida, directed by Steven Weisberg.
 
-If you are new to the lab, your first job is to read through this manual, then go through the [Onboarding checklist].
+If you are new to the lab, your first job is to read through this manual, then go through the [Onboarding checklist](onboarding).
 
 Maybe you are just joining the lab or need a refresher on lab policy. Or maybe you're just curious about how we do things. Either way, we're glad you're here! This lab manual is an introduction to how we do work and science in the SCANN lab. The material you find here describes some overarching lab policies, the lab structure, and how to get started. It is also a living document and the manual itself is an introduction to some of the tools you will use when working in the lab (like RStudio, Git, and Slack).
 
 ![Lab logo](./SCANN_Lab_Logo_NoOutline_With_Text.png)
 
-Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [here](https://github.com/ContextLab/lab-manual), [here](https://handbook-public.themusiclab.org/welcome),  [here](https://github.com/alylab/labmanual), and [here](https://github.com/jpeelle/peellelab_manual/).
+Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [Jeremy Manning](https://github.com/ContextLab/lab-manual), [Samuel Mehr](https://handbook-public.themusiclab.org/welcome),  [Mariam Aly](https://github.com/alylab/labmanual), and [Jonathan Peelle](https://github.com/jpeelle/peellelab_manual/), and [Candice Morey](https://ccmorey.github.io/labHandbook/).
 
-You can also find SCANN lab:
+You can find the SCANN lab across the internet:
 
 - [On the web](https://scannlab.psych.ufl.edu)
 - [On Twitter](https://twitter.com/scannlab)
