@@ -3,7 +3,7 @@
 In the SCANN lab, we practice careful, deliberate, open science. This means that every person in the lab has a responsibility to make sure their projects are well-documented, reproducible, and undertaken with an eye toward the future. The following are a few more specific guidelines.
 
 ## Rights
-* **You have the right to a work environment free from prejudice, bias, harrassment, and discrimination**
+* **You have the right to a work environment free from prejudice, bias, harassment, and discrimination**
 We have a strong focus on inclusion, diversity, and a harassment-free workplace. At all times, we treat each other, our participants, and our science with respect. (This does not mean we cannot argue - passionately, if need be. Dissenting opinions and knowing when to stand up for your opinion and when to back down, are in fact critical aspects of the scientific process.) You have the right to a workplace culture that supports you, your career, and your expressions (as long as these rights don’t violate the rights of others.)
 
 * **You have the right to make mistakes.** No one is perfect. Dr. Weisberg has (probably) made bigger mistakes than you will during your time in the lab. (Ask him sometime.) Science is hard, and the work we do is at the edge of knowledge. This is very cool, but it also means we are much more likely to make mistakes that we don’t catch right away. Below, you’ll see what your responsibilities are if (when) you make a mistake.
