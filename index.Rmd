@@ -25,7 +25,7 @@ Maybe you are just joining the lab or need a refresher on lab policy. Or maybe y
 
 ![Lab logo](./SCANN_Lab_Logo_NoOutline_With_Text.png)
 
-Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual), but we have also borrowed heavily from others, including [Jeremy Manning](https://github.com/ContextLab/lab-manual), [Samuel Mehr](https://handbook-public.themusiclab.org/welcome),  [Mariam Aly](https://github.com/alylab/labmanual), and [Jonathan Peelle](https://github.com/jpeelle/peellelab_manual/), and [Candice Morey](https://ccmorey.github.io/labHandbook/).
+Our lab manual is open to the public and can be shared under a GNU-3.0 license (the Github repo is [here](https://github.com/scann-lab/lab_manual)), but we have also borrowed heavily from others, including [Jeremy Manning](https://github.com/ContextLab/lab-manual), [Samuel Mehr](https://handbook-public.themusiclab.org/welcome),  [Mariam Aly](https://github.com/alylab/labmanual), and [Jonathan Peelle](https://github.com/jpeelle/peellelab_manual/), and [Candice Morey](https://ccmorey.github.io/labHandbook/).
 
 You can find the SCANN lab across the internet:
 
