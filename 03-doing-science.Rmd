@@ -17,7 +17,7 @@ The SCANN lab is committed to open science, careful work practices, and multi-di
   * UF Hipergator (/orange)
   * Lab hard drives
 
-2. Raw data MUST be backed up and not touched following lab protocols (with Readme.md documentation). Always work on a copy of the raw data when conducting analyses.
+2. Raw data **MUST** be backed up and not touched following lab protocols (with Readme.md documentation). Always work on a copy of the raw data when conducting analyses.
 
 3. De-identified or anonymized raw data may also be hosted online for sharing. For fMRI data, structural scans must be de-faced (https://pypi.org/project/pydeface/).
 

@@ -1,7 +1,7 @@
 
 # Resources
 
-Under construction! 
+Under construction!
 
 ## General Lab
 
@@ -53,4 +53,4 @@ Active members of the lab would do well to track the literature on their own. He
 
 ### Python
 
-### Matlab
+### MATLAB

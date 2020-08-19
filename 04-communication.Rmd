@@ -3,10 +3,10 @@
 
 Science, especially as practiced in the SCANN Lab, is a collaborative endeavor, which means good communication is key. Here are the main ways the lab communicates.
 
-One thing we often forget about is communicating with ourselves. This means *good documentation* so people don't have to reinvent the wheel. We will follow
+One thing we often forget about is communicating with ourselves. This means *good documentation* so people don't have to reinvent the wheel. We will have the following:
 
 ## Lab meeting
-Lab meetings are held weekly during the semester (time TBD) and intermittently through the summer. Lab meetings are approximately two hours long. The first ~20-30 minutes consist of lab updates in which each lab member briefly (5 minutes or so) explains what constituted the bulk of their work that week; what progress was made, what hurdles were hit; and any general info they encountered relevant to the lab. The remaining 1-1.5 hours is provided for one lab member to give a presentation. The presentation can range widely (almost all formats are acceptable). Here are a few examples:
+Lab meetings are held weekly during the semester, Tuesday 12pm-2pm for the fall 2020 semester, and intermittently through the summer. Lab meetings are approximately two hours long. The first ~20-30 minutes consist of lab updates in which each lab member briefly (5 minutes or so) explains what constituted the bulk of their work that week; what progress was made, what hurdles were hit; and any general info they encountered relevant to the lab. The remaining 1-1.5 hours is provided for one lab member to give a presentation. The presentation can range widely (almost all formats are acceptable). Here are a few examples:
 
 * A journal club / discussion of an article
 
@@ -45,7 +45,7 @@ Our lab [Slack](scannlab.slack.com) is the source for daily lab communication. O
 
 ## Trello
 
-Our lab to-do lists. The [Onboarding checklist] is on Trello. I recommend that everyone use Trello as their own to-do list manager, but I would strongly encourage using the shared to-do list feature for projects we're working on. Note that cards can be assigned due dates and assigned to specific people, who can indicate when they are finished particular tasks.
+Our lab to-do lists. The [Onboarding checklist] is on Trello. I recommend that everyone use Trello as their own to-do list manager, but I would strongly encourage using the shared to-do list feature for projects we're working on. Note that cards can be assigned due dates and assigned to specific people, who can indicate when they have finished particular tasks.
 
 ## Email
 

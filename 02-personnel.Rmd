@@ -9,7 +9,7 @@
 * I will support the physical and mental health and safety of everyone in the lab.
 
 ## PhD Students
-In general PhD students have a fairly loose leash as long as they are making progress on projects. In practice, this likely means there will crunch times where you're working hard to get things done and lighter times, when you can take it easy. Please let the PI know, though, if you plan to take extended time off (more than a few days).
+In general PhD students have a fairly loose leash as long as they are making progress on projects. In practice, this likely means there will be crunch times where you're working hard to get things done, and lighter times when you can take it easy. Please let the PI know, though, if you plan to take extended time off (more than a few days).
 
 PhD students are expected to:
 
@@ -73,7 +73,7 @@ The Lab Manager is expected to:
   * fMRI pipelines and data analysis
 
 ## Undergraduate RAs (PSY4911)
-Undergraduate research assistants help with research duties. But, especially if this is your first time working in a research lab, you should not just blindly go about your work and do what your told. Look for ways you can actively contribute to the lab. This includes generating your own ideas, but also developing your own skills. You should not have empty time in the lab, but rather pick a skill you're interested in learning (consult with your grad mentor or Dr. Weisberg if necessary), and spend your free lab time teaching yourself.
+Undergraduate research assistants help with research duties. But, especially if this is your first time working in a research lab, you should not just blindly go about your work and do what you're told. Look for ways you can actively contribute to the lab. This includes generating your own ideas, but also developing your own skills. You should not have empty time in the lab, but rather pick a skill you're interested in learning (consult with your grad mentor or Dr. Weisberg if necessary), and spend your free lab time teaching yourself.
 
 Undergraduate research assistants are expected to:
 
