@@ -1,10 +1,5 @@
-# Lab_Manual
-The SCANN lab manual, including all lab policies.
+# Virtual Silcton Documentation
 
-This is the home of the living SCANN lab manual. 
+This repository hosts the code for the documentation for the Virtual Silcton experiment and materials. 
 
-If you're just joining the lab, your *first* job is to read through this manual, completing all tasks in the Orientation section. 
-
-First, download the PDF of the lab manual and read it through. Once you've read through, email a copy of the signed and dated checklist to <stevenweisberg@ufl.edu>. 
-
-To make edits, the lab manual is written in R Markdown. 
+View it in website form here: http://stevenmweisberg.com/Virtual_Silcton_Documentation/
