@@ -1,6 +1,19 @@
-book_filename: "SCANN_Lab_Manual"
+book_filename: "Virtual Silcton Documentation"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Section "
 delete_merged_file: true
 output_dir: "docs"
+
+rmd_files: [
+  "index.Rmd",
+
+  "intro-background.Rmd",
+
+  "website-studies.Rmd",
+  "website-administering.Rmd",
+  "website-silcton-measures.Rmd",
+  "website-other-measures.Rmd",
+
+  "analysis-data.Rmd"
+  ]

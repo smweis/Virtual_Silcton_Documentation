@@ -1,17 +1,29 @@
 bookdown::gitbook:
   css: style.css
+  highlight: tango
+  edit:
+   link: https://github.com/smweis/Virtual_Silcton_Documentation/edit/master/%s
+   text: "Suggest an edit"
   config:
     toc:
       before: |
-        <li><a href="./">Lab Handbook</a></li>
+        <li class="toc-logo"><a href="./"><img src="figs/Cover_Page.jpg"></a>
+        <a href="./">Virtual Silcton</a></li>
+      collapse: section
+      smooth_scroll: true
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
+        <li class="toc-logo"><a href="https://scannlab.psych.ufl.edu"><img src="figs/SCANN_Lab.png"></a>
     download: ["pdf", "epub"]
+    sharing:
+      facebook: no
+      github: yes
+      twitter: yes
+      all: ['github','twitter']
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: pdflatex
   citation_package: natbib
   keep_tex: yes
+  toc: true
 bookdown::epub_book: default

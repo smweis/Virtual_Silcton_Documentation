@@ -1,8 +1,29 @@
 \usepackage{titling}
+\usepackage{subcaption}
 
 \pretitle{%
   \begin{center}
   \LARGE
-  \includegraphics[width=12cm,height=6cm]{SCANN_Lab_Logo_NoOutline_With_Text.png}\\[\bigskipamount]
 }
-\posttitle{\end{center}}
+
+\posttitle{
+
+\includegraphics[width=12cm,height=6cm]{./figs/Cover_Page.jpg}\\[\bigskipamount]
+
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{./figs/Temple.jpg}
+  \caption*{}\label{fig:awesome_image1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{./figs/SILC.jpg}
+  \caption*{}\label{fig:awesome_image2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{./figs/SCANN_LAB.png}
+  \caption*{}\label{fig:awesome_image3}
+\endminipage
+\end{figure}
+
+\end{center}
+}
