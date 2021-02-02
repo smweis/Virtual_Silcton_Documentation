@@ -1,10 +1,10 @@
-# Lab_Manual
-The SCANN lab manual, including all lab policies.
+# Virtual Silcton Documentation
 
-This is the home of the living SCANN lab manual. 
+This repository hosts the code for the documentation for the Virtual Silcton experiment and materials. 
+View it in website form here: http://stevenmweisberg.com/Virtual_Silcton_Documentation/
 
-If you're just joining the lab, your *first* job is to read through this manual, completing all tasks in the Orientation section. 
+For the Silcton analysis code, check out the /analysis_scripts folder in this repo. 
 
-First, download the PDF of the lab manual and read it through. Once you've read through, email a copy of the signed and dated checklist to <stevenweisberg@ufl.edu>. 
+For the Unity Builds, visit the OSF site: https://osf.io/fykr7/
 
-To make edits, the lab manual is written in R Markdown. 
+For the raw Unity files, visit the repo here (email scannlab@psych.ufl.edu for permission): https://github.com/Scann-Lab/VirtualSilctonUnity
