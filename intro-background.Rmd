@@ -14,14 +14,7 @@ The initial Virtual Silcton experiments were designed to measure individual diff
 
 Beyond the initial experiments, a large number of labs and experimenters have used the Virtual Silcton software to measure individual differences in spatial navigation behavior. 
 
-[LET'S ASSEMBLE A PARTIAL LIST HERE!]
-
-My work 
-Nora Newcombe's lab (not me)
-Jennifer Sutton's work. 
-Marios Avraamides
-Stefanucci & Creem-Regehr
-Jiayan Zhao, Alex Klippel 
+For a list of publications that have used Virtual Silcton, please see here: 
 
 ## Who should use this? 
 

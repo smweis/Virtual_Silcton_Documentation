@@ -1,0 +1,9 @@
+# Data Sharing
+
+Virtual Silcton has the capability to provide large datasets, which can be made available to and analyzed by the research community at large. Here are the key aspects to data sharing on the website version of the Silcton platform: 
+
+1. Data will not be made public unless individual participants agree to release their anonymized data via the Web Data Release form.
+2. Data will not be made public for studies until 3 years after the study has been created (unless the study experimenter chooses to release the data earlier).
+3. Data will be download-able from the Silcton experimenter interface by any researcher who requests and is
+granted an account on the Silcton site.
+4. Studies that are ”Active” will be viewable (and can be accessed) by anyone with the general Silcton website. Studies that are ”Inactive” will be viewable (and can be accessed) only by those who know the website for that individual study. To avoid data contamination or dilution, it is highly recommended that all studies be made ”Inactive.”

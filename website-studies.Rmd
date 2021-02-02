@@ -1,5 +1,3 @@
-# (PART) Virtual Silcton Website {-}
-
 # Building Studies
 
 
