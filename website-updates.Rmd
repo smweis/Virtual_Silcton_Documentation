@@ -1,0 +1,12 @@
+# (PART) Virtual Silcton Website {-}
+
+## Updates to the pointing task
+In February 2020, a bug was brought to our attention affecting the standalone and website versions of the pointing tasks since we began using Virtual Silcton in 2010. 
+
+This bug was identified and fixed on both versions in May 2020. Data collected on the website is now identified on the website with a field for every pointing judgment that was affected (or potentially affected) by the issue. 
+
+Affected data: 2010 - May 2020
+Effects of bug: Pointing judgments collected during this time were stored as absolute angles, rather than as signed angles. This bug had the effect of reducing the possible error range for certain pointing judgments (depending on a relatively arbitrary "facing direction"). In sum, pointing judgments overall were scored with lower errors. This was the case for pointing judgments toward the building and away from the building. More details on the effects of this bug are forthcoming. 
+
+## Updates to the navigation logs
+In August 2020, we identified two irregularities with the navigation logs, which recorded facing direction and location (x,y) every .1 seconds. From when the navigation logs were instituted until May 2019, the logs only recorded the first ~4 minutes. But the data were correctly recorded. From May 2019 until September 11, 2020 (for the main routes), the navigation logs recorded the absolute value of the facing direction rather than the facing direction itself (the quarternion, to be precise). It is therefore possible, but difficult, to reconstruct the actual facing direction in most cases. From September 2020 on, the navigation logs recorded correctly. 

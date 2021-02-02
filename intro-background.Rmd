@@ -1,5 +1,28 @@
 # Virtual Silcton Background
 
+Thank you for using the Vitual Silcton (**S**patial **I**ntelligence **a**nd **L**earning **C**enter **T**est **o**f **N**avigation) navigation assessment. This documentation provides basic instructions, best practices, and documentation of experimental protocols and some data processing. The Virtual Silcton environment was initially developed by Victor R. Schinazi and Drew Dara-Abrams in a collaboration funded by the NSF as part of the Spatial Intelligence and Learning Center. Nora Newcombe and Russell Epstein spear-headed the initial project development until 2012, including developing the original 3D Unity files and placing the entire experiment on a website. Since 2012, Steven Weisberg has been responsible for maintaining and updating the Virtual Silcton platform. In 2019, the firm Gaia Solutions took over the web development side. 
+
+Virtual Silcton has been designed with the idea of creating a *semi-customizable* but largely standard 3D virtual environment measure of navigation behavior. Silcton trades off flexibility for stability. Although not all experimental designs are possible, this means that most studies which use Silcton are comparable because all participants experience largely the same environment, in mostly the same order, and are assessed the same way. 
+
 ## Real World Ambler Campus
 
+The Virtual Silcton environment is built as a virtual replica of Temple's Ambler campus outside Philadelphia, Pennsylvania. In that suburban college campus, Victor Schinazi and colleagues ran approximately 15 subjects through a real-world version of the Silcton experiment in three sessions. Among their findings, it was evident that subjects had wide variability for learning the environment successfully over time. It was time to scale up. 
+
 ## Virtual Silcton studies
+
+The initial Virtual Silcton experiments were designed to measure individual differences in spatial navigation behavior objectively and see if individual variability could be correlated with other measures of cognitive traits. These experiments (including [Weisberg et al., 2013](https://psycnet.apa.org/fulltext/2013-44238-001.html) and [Weisberg & Newcombe (2016)](https://psycnet.apa.org/fulltext/2015-52470-001.html)), revealed substantial variation in performance across people. Although performance on Silcton was correlated with a self-report measure of navigation behavior (the Santa Barbara Sense of Direction Scale), unique variance was explained by measures like the mental rotation test and working memory measures. 
+
+Beyond the initial experiments, a large number of labs and experimenters have used the Virtual Silcton software to measure individual differences in spatial navigation behavior. 
+
+[LET'S ASSEMBLE A PARTIAL LIST HERE!]
+
+My work 
+Nora Newcombe's lab (not me)
+Jennifer Sutton's work. 
+Marios Avraamides
+Stefanucci & Creem-Regehr
+Jiayan Zhao, Alex Klippel 
+
+## Who should use this? 
+
+Are you interested in measuring variability in spatial navigation behavior quickly and cheaply, but wish to go beyond self-report? The Virtual Silcton website may be what you're looking for. 

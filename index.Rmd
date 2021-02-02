@@ -24,10 +24,16 @@ cover-image: figs/Cover_Page.jpg
 
 Welcome to the documentation for **Virtual Silcton**.
 
-The Virtual Silcton environment was originally designed in [Unity3D](https://unity.com/) by [Victor Schinazi](vschinaz@bond.edu.au) and Drew Dara-Abrams. In 2011, Steven Weisberg began updating and maintaining the documentation and website for administration of the Virtual Silcton environment.
+The Virtual Silcton environment was originally designed in [Unity3D](https://unity.com/) by [Victor Schinazi](vschinaz@bond.edu.au) and Drew Dara-Abrams. In 2012, Steven Weisberg began updating and maintaining the documentation and website for administration of the Virtual Silcton environment.
 
 This documentation was drafted by [Steven M. Weisberg](scannlab.psych.ufl.edu) and last edited on the date at the top of this page.
 
 ![Virtual Silcton Image](./figs/Cover_Page.jpg)
 
 ## Important Links
+
+The Virtual Silcton website is available for use. Please email [stevenweisberg@ufl.edu](stevenweisberg@ufl.edu) to setup an experimenter account and receive information about testing. 
+
+The Virtual Silcton OFFLINE materials are available for download at the Open Science Framework: 
+https://osf.io/fykr7/
+
