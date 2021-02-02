@@ -1,4 +1,4 @@
-# (PART) Virtual Silcton Website {-}
+# Updates
 
 ## Updates to the pointing task
 In February 2020, a bug was brought to our attention affecting the standalone and website versions of the pointing tasks since we began using Virtual Silcton in 2010. 

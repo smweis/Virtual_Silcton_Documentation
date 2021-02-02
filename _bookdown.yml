@@ -15,6 +15,7 @@ rmd_files: [
   "website-administering.Rmd",
   "website-silcton-measures.Rmd",
   "website-other-measures.Rmd",
+  "website-updates.Rmd",
 
   "analysis-data.Rmd"
   ]
