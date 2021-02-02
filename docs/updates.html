@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Virtual Silcton Documentation</title>
+  <title>Section 8 Updates | Virtual Silcton Documentation</title>
   <meta name="description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Virtual Silcton Documentation" />
+  <meta property="og:title" content="Section 8 Updates | Virtual Silcton Documentation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="figs/Cover_Page.jpg" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Virtual Silcton Documentation" />
+  <meta name="twitter:title" content="Section 8 Updates | Virtual Silcton Documentation" />
   
   <meta name="twitter:description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   <meta name="twitter:image" content="figs/Cover_Page.jpg" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figs/favicon.ico" type="image/x-icon" />
-
-<link rel="next" href="virtual-silcton-background.html"/>
+<link rel="prev" href="other-measure-descriptions.html"/>
+<link rel="next" href="data-analysis-tips-and-scripts.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,36 +169,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Virtual Silcton Documentation</h1>
-<p class="author"><em>Steven M. Weisberg, PhD</em></p>
-<p class="date"><em>02 February, 2021</em></p>
+<div id="updates" class="section level1" number="8">
+<h1><span class="header-section-number">Section 8</span> Updates</h1>
+<div id="updates-to-the-pointing-task" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Updates to the pointing task</h2>
+<p>In February 2020, a bug was brought to our attention affecting the standalone and website versions of the pointing tasks since we began using Virtual Silcton in 2010.</p>
+<p>This bug was identified and fixed on both versions in May 2020. Data collected on the website is now identified on the website with a field for every pointing judgment that was affected (or potentially affected) by the issue.</p>
+<p>Affected data: 2010 - May 2020
+Effects of bug: Pointing judgments collected during this time were stored as absolute angles, rather than as signed angles. This bug had the effect of reducing the possible error range for certain pointing judgments (depending on a relatively arbitrary “facing direction”). In sum, pointing judgments overall were scored with lower errors. This was the case for pointing judgments toward the building and away from the building. More details on the effects of this bug are forthcoming.</p>
 </div>
-<div id="virtual-silcton-introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Section 1</span> Virtual Silcton Introduction</h1>
-<p>Welcome to the documentation for <strong>Virtual Silcton</strong>.</p>
-<p>The Virtual Silcton environment was originally designed in <a href="https://unity.com/">Unity3D</a> by <a href="vschinaz@bond.edu.au">Victor Schinazi</a> and Drew Dara-Abrams. In 2012, Steven Weisberg began updating and maintaining the documentation and website for administration of the Virtual Silcton environment.</p>
-<p>This documentation was drafted by <a href="scannlab.psych.ufl.edu">Steven M. Weisberg</a> and last edited on the date at the top of this page.</p>
-<div class="figure">
-<img src="figs/Cover_Page.jpg" alt="" />
-<p class="caption">Virtual Silcton Image</p>
-</div>
-<div id="important-links" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Important Links</h2>
-<p>The Virtual Silcton website is available for use. Please email <a href="mailto:stevenweisberg@ufl.edu">stevenweisberg@ufl.edu</a> to setup an experimenter account and receive information about testing.</p>
-<p>The Virtual Silcton materials are available offline for download at the Open Science Framework:
-<a href="https://osf.io/fykr7/" class="uri">https://osf.io/fykr7/</a></p>
-<p>There, you will also be able to find analysis tools and an explainer for the bug, once one is available.</p>
+<div id="updates-to-the-navigation-logs" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Updates to the navigation logs</h2>
+<p>In August 2020, we identified two irregularities with the navigation logs, which recorded facing direction and location (x,y) every .1 seconds. From when the navigation logs were instituted until May 2019, the logs only recorded the first ~4 minutes. But the data were correctly recorded. From May 2019 until September 11, 2020 (for the main routes), the navigation logs recorded the absolute value of the facing direction rather than the facing direction itself (the quarternion, to be precise). It is therefore possible, but difficult, to reconstruct the actual facing direction in most cases. From September 2020 on, the navigation logs recorded correctly.</p>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="virtual-silcton-background.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="other-measure-descriptions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-analysis-tips-and-scripts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
