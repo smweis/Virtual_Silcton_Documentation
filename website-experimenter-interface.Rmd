@@ -4,7 +4,7 @@
 
 If you are interested in collecting your own data using the Virtual Silcton *website*, start here. 
 
-To begin, you need to set up an account. Email Steven Weisberg [stevenweisberg at ufl dot edu](stevenweisberg@ufl.edu) using an institutional email and provide a current CV. You will receive instructions for how to login. 
+To begin, you need to set up an account. Email Steven Weisberg [stevenweisberg at ufl dot edu](mailto:stevenweisberg@ufl.edu) using an institutional email and provide a current CV. You will receive instructions for how to login. 
 
 ## A note about IRB Approval
 Temple University maintains an omnibus IRB protocol, which covers administrative access to the Virtual Silcton website. Steven Weisberg, Nora Newcombe, web developers in our employment will have access to data collected from all *Labs*. 

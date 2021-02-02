@@ -2,10 +2,27 @@
 
 # Building Studies
 
+
 ## Create Study
+
+In the Study tab of the Experimenter Interface, you can view all Studies you created along with their meta-data. Scrolling to the bottom of this list, you'll find a "Create Study" button. Clicking this will create a new Study. 
 
 ## Edit Study
 
+![Edit Study View](./figs/web_studies_1.png)
+When you first create a study (or, if you click "Edit Study" for a study you've already created), you will be able to customize it with the following options: 
+
+1. Name: How your study will be referenced throughout the Silcton website. 
+2. Lab: The lab the study is affiliated with. (Note, if you choose a lab you are not affiliated with, you will not have access to the data collected from it.)
+3. Primary Experimenter: The experimenter in charge of editing the study. (Note, Lab Managers will still be able to edit participants and studies for their lab. If an Experimenter is assigned this role, they will have these capabilities only for this Study).
+4. Active: If checked, the Study will be viewable by any visitor to the main web page. **ONLY CHECK THIS FOR STUDIES YOU HAVE IRB APPROVAL TO RECRUIT AND COLLECT DATA FOR ANYONE WHO FINDS THE WEBSITE**
+5. Ask for participant ID? (DEPRECATED - no custom IDs are possible.)
+6. When to Share Data: All data collected via the Virtual Silcton repository will be made public after a 3-year embargo period for Participants who agree to the Web Data Release. The experimenter has the option to make data public immediately rather than waiting 3-years. Public data are made available to all Virtual Silcton website users. 
+7. Instruments: The dropdown menu provides all instruments available through Virtual Silcton. See [Silcton Measures](Silcton Measures) and [Other Measures](Other Measures).
+8. Welcome Text: Text entered here will appear on the first page the participant sees. (HTML Tags can be used in this field.)
+9. Completion Text: Text entered here will appear after the final instrument is completed. (HTML Tags can be used in this field.)
+
+Once the study has been created, click Save Study. 
 ## View Study
 
 ## Active/Inactive

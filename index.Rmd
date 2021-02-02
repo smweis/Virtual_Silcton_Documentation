@@ -32,8 +32,10 @@ This documentation was drafted by [Steven M. Weisberg](scannlab.psych.ufl.edu) a
 
 ## Important Links
 
-The Virtual Silcton website is available for use. Please email [stevenweisberg@ufl.edu](stevenweisberg@ufl.edu) to setup an experimenter account and receive information about testing. 
+The Virtual Silcton website is available for use. Please email [stevenweisberg@ufl.edu](mailto:stevenweisberg@ufl.edu) to setup an experimenter account and receive information about testing. 
 
-The Virtual Silcton OFFLINE materials are available for download at the Open Science Framework: 
+The Virtual Silcton materials are available offline for download at the Open Science Framework: 
 https://osf.io/fykr7/
+
+There, you will also be able to find analysis tools and an explainer for the bug, once one is available. 
 
