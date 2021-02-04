@@ -18,4 +18,4 @@ Beyond the initial experiments, a large number of labs and experimenters have us
 
 ## Who should use this? 
 
-Are you interested in measuring variability in spatial navigation behavior quickly and cheaply, but wish to go beyond self-report? The Virtual Silcton website may be what you're looking for. Check out [Administering to Participants][# Administering to Participants].
+Are you interested in measuring variability in spatial navigation behavior quickly and cheaply, but wish to go beyond self-report? The Virtual Silcton website may be what you're looking for. Check out [Administering to Participants].
