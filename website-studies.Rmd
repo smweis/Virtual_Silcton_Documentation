@@ -16,7 +16,7 @@ When you first create a study (or, if you click "Edit Study" for a study you've 
 4. Active: If checked, the Study will be viewable by any visitor to the main web page. **ONLY CHECK THIS FOR STUDIES YOU HAVE IRB APPROVAL TO RECRUIT AND COLLECT DATA FOR ANYONE WHO FINDS THE WEBSITE**
 5. Ask for participant ID? (DEPRECATED - no custom IDs are possible.)
 6. When to Share Data: All data collected via the Virtual Silcton repository will be made public after a 3-year embargo period for Participants who agree to the Web Data Release. The experimenter has the option to make data public immediately rather than waiting 3-years. Public data are made available to all Virtual Silcton website users. 
-7. Instruments: The dropdown menu provides all instruments available through Virtual Silcton. See [Silcton Measures](Silcton Measures) and [Other Measures](Other Measures). Instruments can be added in any combination (including repetitions) to Studies. To add an Instrument, navigate to the Edit Study view for the study you wish to edit, select the Instrument from the dropdown menu, and click "Add." Once added to the list, Instruments can be dragged-and-dropped to any order you wish.
+7. Instruments: The dropdown menu provides all instruments available through Virtual Silcton. See [Silcton Measures] and [Other Measures]. Instruments can be added in any combination (including repetitions) to Studies. To add an Instrument, navigate to the Edit Study view for the study you wish to edit, select the Instrument from the dropdown menu, and click "Add." Once added to the list, Instruments can be dragged-and-dropped to any order you wish.
 8. Welcome Text: Text entered here will appear on the first page the participant sees. (HTML Tags can be used in this field.)
 9. Completion Text: Text entered here will appear after the final instrument is completed. (HTML Tags can be used in this field.)
 
@@ -36,7 +36,7 @@ View Participants will show you the Participants you collected thus far, their I
 
 ### Participant IDs
 
-Participants automatically receive two forms of ID in the Virtual Silcton study. A Participant UUID is a unique identifier assigned to every participant (whether supervised by an experimenter or not) who navigates to the Study Intro page (see [Other Measures](Other Measures)) and clicks Begin Experiment. 
+Participants automatically receive two forms of ID in the Virtual Silcton study. A Participant UUID is a unique identifier assigned to every participant (whether supervised by an experimenter or not) who navigates to the Study Intro page (see [Other Measures]) and clicks Begin Experiment. 
 
 The UUID is random and unique, but not very user friendly. 
 
@@ -50,7 +50,7 @@ In other words, if you collect Participant #100, delete that participant, and ru
 
 The data for Virtual Silcton is split up across the various measures. The View Data tab allows you to view and download the data for each study. Unfortunately, this can only be done per measure at the moment. 
 
-Clicking [Copy], [Excel], [CSV] will save the data in those formats. For more information, see [Silcton Measures](Silcton Measures) and [Other Measures](Other Measures). 
+Clicking [Copy], [Excel], [CSV] will save the data in those formats. For more information, see [Silcton Measures] and [Other Measures]. 
 
 ## Interface Bugs
 A quick note about the interface: It's a little clunky to move from the Study view to the Data view. In particular, the "View Study" button becomes highlighted during "Edit Study." The easiest way to navigate from Data to Study views is to click back on Studies on the top black bar. 
