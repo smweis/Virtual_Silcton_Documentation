@@ -9,10 +9,10 @@ rmd_files: [
   "index.Rmd",
 
   "intro-background.Rmd",
+  "intro-administering.Rmd",
   
   "website-experimenter-interface.Rmd",
   "website-studies.Rmd",
-  "website-administering.Rmd",
   "website-silcton-measures.Rmd",
   "website-other-measures.Rmd",
   "website-updates.Rmd",

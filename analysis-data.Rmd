@@ -2,8 +2,32 @@
 
 # Data Analysis Tips and Scripts
 
+The analysis github repository contains the available code for coding and analyzing some of the website data. Hopefully this capacity will be increased over time. 
+
 ## Onsite Pointing data
+
+For canonical analyses, the onsite pointing data can be aggregated within participant and different/same route judgments. 
 
 ## Navigation Logs
 
+Navigation log data are text files for each route the participant experienced. 
+
+These data have the following properties: 
+
+They begin 5 seconds into each route. 
+They record position and facing direction with the resolution of 10Hz. 
+Each position vector is: [x,y,z,theta]. y-values stay the same through the route because the participant does not move vertically. 
+
+Theta = 0 is a vector pointing "Up" on the Virtual Silcton map. 
+
+The corners of the map are defined with the coordinates: 
+  Lower left:  [-750, Y, -700]
+  Lower right: [700, Y, -700]
+  Upper left:  [-750, Y, 300]
+  Upper right: [700, Y, 300]
+
+![Virtual Silcton Map (Red lines highlight main routes)](./figs/Silcton_Map.png)
+
 ## Model Building Tasks
+
+The model building task data can be downloaded and analyzed using the scripts found in the /ModelBuilding directory of the [Analysis git repo](https://github.com/smweis/Virtual_Silcton_Analysis)

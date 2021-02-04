@@ -1,0 +1,52 @@
+# Administering to Participants
+
+Data collection can proceed through three main avenues, described in brief below.
+
+## Website Administration
+
+If you wish to take full advantage of the Silcton measures, setting up a lab account with the Virtual Silcton website is the way to go. 
+
+You'll have access to the [Silcton][#Silcton Measures] and [Other][#Other Measures]; your data will be stored and accessible via the cloud; you'll be able to customize your studies (which partition your data); and you can run all studies online. 
+
+However, your data will be public (for participants who agree, after a maximum of 3 years upon beginning the study) and accessible to all other website users. 
+
+You also have limited customization options. 
+
+## Standalone Builds
+
+If you are concerned about data security, a stable internet connection, or want to have a non-internet backup for the study, we provide the following measures as standalone Unity builds: 
+
+- Main routes
+- Connecting routes
+- Free exploration
+- Onsite pointing task
+
+See the OSF page for details: https://osf.io/fykr7/
+
+Note: The navigation logs and onsite pointing data will automatically export to your /Documents folder (Windows) or your Home folder (Mac). 
+
+We also provide analysis code for the onsite pointing data on our Github page: https://github.com/smweis/Virtual_Silcton_Analysis
+
+## Unity Files
+
+If you'd like something besides the encoding or retrieval measures we provide, we also have the Unity files available as a Github repository: http://github.com/Scann-Lab/VirtualSilctonUnity/
+
+There are two branches: 
+
+- Master: The standard Unity scenes for the website and Standalone
+- SilctonViveVR: The Unity scenes for use with the HTC Vive VR headset and Virtuix Omnidirectional treadmill. 
+
+Our ability to provide support for using these files is extremely limited. 
+
+## Canonical Silcton
+
+The "canonical Silcton" setup is as follows: 
+
+- SBSOD
+- Virtual Silcton Route Learning (Main Routes)
+- Virtual Silcton Route Learning (Main Routes)
+- Virtual Silcton Route Learning (Connecting Routes)
+- Virtual Silcton Route Learning (Connecting Routes)
+- Onsite Pointing
+- Model building
+
