@@ -9,7 +9,7 @@ To begin, you need to set up an account. Email Steven Weisberg [stevenweisberg a
 ## A note about IRB Approval
 Temple University maintains an omnibus IRB protocol, which covers administrative access to the Virtual Silcton website. Steven Weisberg, Nora Newcombe, web developers in our employment will have access to data collected from all *Labs*. 
 
-*THIS DOES NOT MEAN YOU DO NOT NEED YOUR OWN IRB APPROVAL*. To run your own study, you are required to provide informed consent at follow all protocols under a separate IRB from your home institution. Steven Weisberg and Nora Newcombe do not manage or maintain this information. 
+*YOU MUST OBTAIN YOUR OWN INSTITUTE'S IRB APPROVAL*. To run your own study, you are required to provide informed consent at follow all protocols under a separate IRB from your home institution. Steven Weisberg and Nora Newcombe do not manage or maintain this information. [See also Section 7.1](#consent)
 
 ## Setting up an Account
 
@@ -43,14 +43,14 @@ For the lab they belong to:
 For all labs:
 3. View publicly-available data. (See [Studies][Building Studies]).
 
-## Lab Managers
+### Lab Managers
 Have all the capabilities of Experimenters, PLUS:
 For the lab they belong to: 
 1. Can delete participants.
 2. Can view all lab data. 
 3. Can add, edit, and delete Lab Managers, Experimenters, and Studies.
 
-## Administrators
+### Administrators
 Have all the capabilities of Lab Managers, PLUS:
 For all labs: 
 1. Can delete participants.

@@ -32,7 +32,7 @@ This documentation was drafted by [Steven M. Weisberg](scannlab.psych.ufl.edu) a
 
 ## Important Links
 
-1. [Virtual Silcton website](virtualsilcton.com)
+1. [Virtual Silcton website](www.virtualsilcton.com)
 2. [The Virtual Silcton standalone builds (Routes, Free Exploration, Onsite Pointing)](https://osf.io/fykr7/)
 3. [Virtual Silcton analysis code repo](https://github.com/smweis/Virtual_Silcton_Analysis)
 4. [Virtual Silcton Unity files](https://github.com/Scann-Lab/VirtualSilctonUnity)

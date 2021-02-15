@@ -28,7 +28,7 @@ The names were also chosen in deference to notable geographers. In addition to b
 
 ## Encoding
 
-All methods of encoding also record the Participant's facing direction and location every 10ms. These data can be found under the Navigation Log section of View Data. 
+All methods of encoding also record the Participant's facing direction and location every 100ms. These data can be found under the Navigation Log section of View Data. 
 
 ### Routes
 
@@ -107,9 +107,11 @@ Similar to the Model Building Task, hovering over the names of the buildings or 
 
 ![Virtual Silcton Offsite Pointing](./figs/Offsite_Pointing.png)
 
-### Distance Estimation Task (Not recommended)
+### Distance Estimation Task
 
 The Distance Estimation Task requires the Participant to indicate the relative distances to and from each pair of landmarks. The Participant can view the distance from one landmark to another (in the figure below, the distance between Harris Hall and Batty House is set). The longest distance will always be the full length of the slider. The Participant must then set each other distance. Once all judgments have been made from one landmark (e.g., Harris Hall, below), clicking Next will load the next set of distance judgments with a new reference distance. 
+
+To my knowledge, data on this task has not been published, nor has it been validated with other measures. In my (SMW) experience, participants find it somewhat confusing. For that reason, we do not recommend it. 
 
 ![Virtual Silcton Distance Estimation](./figs/Distance_Estimation.png)
 

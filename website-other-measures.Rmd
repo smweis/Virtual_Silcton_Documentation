@@ -8,7 +8,7 @@ At the top of the Intro Page, the Welcome Text appears, along with the name of t
 
 The pilot subject checkbox is for experimenter internal use. If you wish to indicate that a Participant is just a Pilot Subject, indicate that by checking "Pilot subject." The only thing this changes is how the Participant's data is labeled on the "View Participants" page. 
 
-### Informed Consent
+### Informed Consent {#consent}
 The consent form and web data release are automatically included in all studies. 
 
 Again, be advised, IRB approval and consent procedures MUST BE SEPARATELY ADMINISTERED at the home institution of the Silcton user. 
@@ -44,12 +44,12 @@ The SBSOD is a self-report measure of navigation ability. For more information, 
 
 ## Philadelphia Verbal Ability Scale
 
-The PVAS is a self-report measure of verbal ability. 
+The PVAS is a self-report measure of verbal ability. More info [here.]( https://link.springer.com/chapter/10.1007/978-3-642-14749-4_10)
 
 ## Philadelphia Spatial Ability Scale
 
-The PSAS is a self-report measure of small-scale ability. 
+The PSAS is a self-report measure of small-scale ability. More info [here.]( https://link.springer.com/chapter/10.1007/978-3-642-14749-4_10)
 
 ## Mental Rotation Test
 
-The MRT is an objective measure of small-scale spatial ability requiring participants to match a target figure to two rotated versions of the figure (and correctly reject two non-identical figures). As administered here, the MRT consists of sample problems, practice problems (which the participant must get correct), and two sets of 10 test items. Each set of test items is timed, the Participant has 3 minutes per set. Once time expires, that set will end. 
+The MRT is an objective measure of small-scale spatial ability requiring participants to match a target figure to two rotated versions of the figure (and correctly reject two non-identical figures). As administered here, the MRT consists of sample problems, practice problems (which the participant must get correct), and two sets of 10 test items. Each set of test items is timed, the Participant has 3 minutes per set. Once time expires, that set will end. More info [here.](https://www.silc.northwestern.edu/library-of-shepard-and-metzler-type-mental-rotation-stimuli/)
