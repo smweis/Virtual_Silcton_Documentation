@@ -9,7 +9,7 @@ Thank you for using the Vitual Silcton (**S**patial **I**ntelligence and **L**ea
 
 Virtual Silcton has been designed with the idea of creating a *semi-customizable* but largely standard 3D virtual environment measure of navigation behavior. Silcton trades off flexibility for stability. Although not all experimental designs are possible, this means that most studies which use Silcton are comparable because all participants experience largely the same environment, in mostly the same order, and are assessed the same way. 
 
-![Virtual Silcton Map (Red lines highlight main routes)](./figs/Full_Info_Silcton_map_NoBG.jpg)
+![Virtual Silcton Map (Red lines highlight main routes)](./figs/Red_Lines_Added_Full_Info_Silcton_map_NoBG.jpg)
 
 ## Real World Ambler Campus
 
