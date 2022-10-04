@@ -7,7 +7,7 @@ If you are interested in collecting your own data using the Virtual Silcton *web
 To begin, you need to set up an account. Email Steven Weisberg [stevenweisberg at ufl dot edu](mailto:stevenweisberg@ufl.edu) using an institutional email and provide a current CV. You will receive instructions for how to login. 
 
 ## A note about IRB Approval
-Temple University maintains an omnibus IRB protocol, which covers administrative access to the Virtual Silcton website. Steven Weisberg, Nora Newcombe, web developers in our employment will have access to data collected from all *Labs*. 
+Temple University maintains an omnibus IRB protocol, which covers administrative access to the Virtual Silcton website. Steven Weisberg, Nora Newcombe, and web developers in our employment will have access to data collected from all *Labs*. 
 
 *YOU MUST OBTAIN YOUR OWN INSTITUTE'S IRB APPROVAL*. To run your own study, you are required to provide informed consent at follow all protocols under a separate IRB from your home institution. Steven Weisberg and Nora Newcombe do not manage or maintain this information. [See also Section 7.1](#consent)
 

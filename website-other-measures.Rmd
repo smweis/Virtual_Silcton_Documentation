@@ -48,7 +48,7 @@ The PVAS is a self-report measure of verbal ability. More info [here.]( https://
 
 ## Philadelphia Spatial Ability Scale
 
-The PSAS is a self-report measure of small-scale ability. More info [here.]( https://link.springer.com/chapter/10.1007/978-3-642-14749-4_10)
+The PSAS is a self-report measure of small-scale spatial ability. More info [here.]( https://link.springer.com/chapter/10.1007/978-3-642-14749-4_10)
 
 ## Mental Rotation Test
 
