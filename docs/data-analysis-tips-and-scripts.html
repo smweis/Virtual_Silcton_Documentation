@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 9 Data Analysis Tips and Scripts | Virtual Silcton Documentation</title>
   <meta name="description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 9 Data Analysis Tips and Scripts | Virtual Silcton Documentation" />
   <meta property="og:type" content="book" />
-  
-  <meta property="og:image" content="figs/Cover_Page.jpg" />
+  <meta property="og:image" content="/figs/Cover_Page.jpg" />
   <meta property="og:description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   
 
@@ -19,7 +18,7 @@
   <meta name="twitter:title" content="Section 9 Data Analysis Tips and Scripts | Virtual Silcton Documentation" />
   
   <meta name="twitter:description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
-  <meta name="twitter:image" content="figs/Cover_Page.jpg" />
+  <meta name="twitter:image" content="/figs/Cover_Page.jpg" />
 
 <meta name="author" content="Steven M. Weisberg, PhD" />
 
@@ -32,8 +31,8 @@
   <link rel="shortcut icon" href="figs/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="updates.html"/>
 
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,9 +48,16 @@
 
 
 
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -172,15 +178,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-analysis-tips-and-scripts" class="section level1" number="9">
-<h1><span class="header-section-number">Section 9</span> Data Analysis Tips and Scripts</h1>
+<div id="data-analysis-tips-and-scripts" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Section 9</span> Data Analysis Tips and Scripts<a href="data-analysis-tips-and-scripts.html#data-analysis-tips-and-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The analysis github repository contains the available code for coding and analyzing some of the website data. Hopefully this capacity will be increased over time.</p>
-<div id="onsite-pointing-data" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Onsite Pointing data</h2>
+<div id="onsite-pointing-data" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Onsite Pointing data<a href="data-analysis-tips-and-scripts.html#onsite-pointing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For canonical analyses, the onsite pointing data can be aggregated within participant and different/same route judgments.</p>
 </div>
-<div id="navigation-logs" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Navigation Logs</h2>
+<div id="navigation-logs" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Navigation Logs<a href="data-analysis-tips-and-scripts.html#navigation-logs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Navigation log data are text files for each route the participant experienced.</p>
 <p>These data have the following properties:</p>
 <p>They begin 5 seconds into each route.
@@ -192,13 +198,13 @@ Lower left: [-750, Y, -700]
 Lower right: [700, Y, -700]
 Upper left: [-750, Y, 300]
 Upper right: [700, Y, 300]</p>
-<div class="figure">
-<img src="figs/Silcton_Map.png" alt="" />
-<p class="caption">Virtual Silcton Map (Red lines highlight main routes)</p>
+<div class="float">
+<img src="figs/Silcton_Map.png" alt="Virtual Silcton Map (Red lines highlight main routes)" />
+<div class="figcaption">Virtual Silcton Map (Red lines highlight main routes)</div>
 </div>
 </div>
-<div id="model-building-tasks" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Model Building Tasks</h2>
+<div id="model-building-tasks" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Model Building Tasks<a href="data-analysis-tips-and-scripts.html#model-building-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The model building task data can be downloaded and analyzed using the scripts found in the /ModelBuilding directory of the <a href="https://github.com/smweis/Virtual_Silcton_Analysis">Analysis git repo</a></p>
 
 </div>
@@ -213,7 +219,6 @@ Upper right: [700, Y, 300]</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -232,6 +237,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["github", "twitter"]
 },
 "fontsettings": {
@@ -252,6 +258,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Virtual Silcton Documentation.pdf", "Virtual Silcton Documentation.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "smooth_scroll": true

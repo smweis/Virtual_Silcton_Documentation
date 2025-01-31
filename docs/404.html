@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 5 Building Studies | Virtual Silcton Documentation</title>
+  <title>Page not found | Virtual Silcton Documentation</title>
   <meta name="description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 5 Building Studies | Virtual Silcton Documentation" />
+  <meta property="og:title" content="Page not found | Virtual Silcton Documentation" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/figs/Cover_Page.jpg" />
   <meta property="og:description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 5 Building Studies | Virtual Silcton Documentation" />
+  <meta name="twitter:title" content="Page not found | Virtual Silcton Documentation" />
   
   <meta name="twitter:description" content="This documentation describes how to use the Virtual Silcton website for data collection." />
   <meta name="twitter:image" content="/figs/Cover_Page.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="figs/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="experimenter-interface.html"/>
-<link rel="next" href="silcton-measures.html"/>
+
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,70 +178,19 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="building-studies" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Section 5</span> Building Studies<a href="building-studies.html#building-studies" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="create-study" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Create Study<a href="building-studies.html#create-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the Study tab of the Experimenter Interface, you can view all Studies you created along with their meta-data. Scrolling to the bottom of this list, you’ll find a “Create Study” button. Clicking this will create a new Study.</p>
-</div>
-<div id="edit-study" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Edit Study<a href="building-studies.html#edit-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figs/web_studies_1.png" alt="Edit Study View" />
-When you first create a study (or, if you click “Edit Study” for a study you’ve already created), you will be able to customize it with the following options:</p>
-<ol style="list-style-type: decimal">
-<li>Name: How your study will be referenced throughout the Silcton website.</li>
-<li>Lab: The lab the study is affiliated with. (Note, if you choose a lab you are not affiliated with, you will not have access to the data collected from it.)</li>
-<li>Primary Experimenter: The experimenter in charge of editing the study. (Note, Lab Managers will still be able to edit participants and studies for their lab. If an Experimenter is assigned this role, they will have these capabilities only for this Study).</li>
-<li>Active: If checked, the Study will be viewable by any visitor to the main web page. <strong>ONLY CHECK THIS FOR STUDIES YOU HAVE IRB APPROVAL TO RECRUIT AND COLLECT DATA FOR ANYONE WHO FINDS THE WEBSITE</strong></li>
-<li>Ask for participant ID? (DEPRECATED - no custom IDs are possible.)</li>
-<li>When to Share Data: All data collected via the Virtual Silcton repository will be made public after a 3-year embargo period for Participants who agree to the Web Data Release. The experimenter has the option to make data public immediately rather than waiting 3-years. Public data are made available to all Virtual Silcton website users.</li>
-<li>Instruments: The dropdown menu provides all instruments available through Virtual Silcton. See <a href="silcton-measures.html#silcton-measures">Silcton Measures</a> and [Other Measures]. Instruments can be added in any combination (including repetitions) to Studies. To add an Instrument, navigate to the Edit Study view for the study you wish to edit, select the Instrument from the dropdown menu, and click “Add.” Once added to the list, Instruments can be dragged-and-dropped to any order you wish.</li>
-<li>Welcome Text: Text entered here will appear on the first page the participant sees. (HTML Tags can be used in this field.)</li>
-<li>Completion Text: Text entered here will appear after the final instrument is completed. (HTML Tags can be used in this field.)</li>
-</ol>
-<p>Once the study has been created, click Save Study.</p>
-<p>After you save the Study, you’ll see 4 tabs.</p>
-<div class="float">
-<img src="figs/web_studies_2.png" alt="Created Study View" />
-<div class="figcaption">Created Study View</div>
-</div>
-<p>View Study will show you the Study details.</p>
-<p>Edit Study will allow you to edit the Study as you did when you created it.</p>
-<p>View Participants will show you the Participants you collected thus far, their IDs, whether they’ve elected to share data, if they were designated a Pilot subject, and the date of data collection. You also have the option to Delete them, but <strong>this action is not undoable</strong> so use caution.</p>
-<div class="float">
-<img src="figs/web_studies_3.png" alt="View Participants" />
-<div class="figcaption">View Participants</div>
-</div>
-<div id="participant-ids" class="section level3 hasAnchor" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Participant IDs<a href="building-studies.html#participant-ids" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Participants automatically receive two forms of ID in the Virtual Silcton study. A Participant UUID is a unique identifier assigned to every participant (whether supervised by an experimenter or not) who navigates to the Study Intro page (see [Other Measures]) and clicks Begin Experiment.</p>
-<p>The UUID is random and unique, but not very user friendly.</p>
-<p>A Participant Identification number will also be assigned once the experiment has begun. This number will increment by 1 for all data that was COLLECTED for that study.</p>
-<p>In other words, if you collect Participant #100, delete that participant, and run another participant, the second participant’s number will be #101.</p>
-</div>
-</div>
-<div id="view-data" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> View Data<a href="building-studies.html#view-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="float">
-<img src="figs/web_studies_4.png" alt="View Data" />
-<div class="figcaption">View Data</div>
-</div>
-<p>The data for Virtual Silcton is split up across the various measures. The View Data tab allows you to view and download the data for each study. Unfortunately, this can only be done per measure at the moment.</p>
-<p>Clicking [Copy], [Excel], [CSV] will save the data in those formats. For more information, see <a href="silcton-measures.html#silcton-measures">Silcton Measures</a> and [Other Measures].</p>
-</div>
-<div id="interface-bugs" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Interface Bugs<a href="building-studies.html#interface-bugs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A quick note about the interface: It’s a little clunky to move from the Study view to the Data view. In particular, the “View Study” button becomes highlighted during “Edit Study.” The easiest way to navigate from Data to Study views is to click back on Studies on the top black bar.</p>
-
-</div>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="experimenter-interface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="silcton-measures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
